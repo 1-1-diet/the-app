@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonGrid, IonRow, IonCol } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonGrid, IonRow, IonCol, IonButton } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
 import kalMeter from '../Images/kalMeter.png'
@@ -7,11 +7,18 @@ import headerbackground from '../Images/headerbackground.png'
 const Tab1: React.FC = () => {
   return (
     <IonPage >
-      <IonHeader >
-        <IonToolbar className="headerbackground">
-          <IonTitle className="headerbackground">Tab 1</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+        <IonHeader className="background">
+          <IonToolbar>
+            <IonTitle >Maak jouw plan</IonTitle>
+            
+              <div>Ga met een van onze consultants in jouw buurt aan de slag om een plan te maken</div>
+            
+            <IonButton>
+              Start jouw dieet
+            </IonButton>
+          </IonToolbar>
+        </IonHeader>
+
       <IonContent>
         <IonGrid>
           <IonRow className="center">
@@ -35,6 +42,32 @@ const Tab1: React.FC = () => {
             </IonCol>
           </IonRow>
         </IonGrid>
+
+        <IonGrid>
+          <IonRow>
+            <div>
+              Tips voor vandaag
+            </div>
+            <div>
+              Toon alle
+            </div>
+          </IonRow>
+          <IonRow>
+            <IonButton>
+              Ontbijt
+            </IonButton>
+            <IonButton>
+              lunch
+            </IonButton>
+            <IonButton>
+              diner
+            </IonButton>
+            <IonButton>
+              snack
+            </IonButton>
+          </IonRow>
+        </IonGrid>
+
       </IonContent>
     </IonPage>
   );
