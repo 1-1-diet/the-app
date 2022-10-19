@@ -7,8 +7,13 @@ import {
   useIonModal,
   IonButton,
   IonInput,
-  IonItem,
+  IonPopover,
+  IonIcon,
+  IonRadioGroup,
+  IonRadio,
+  IonLabel,
 } from "@ionic/react";
+import { optionsOutline } from "ionicons/icons";
 import { useRef, useState } from "react";
 import "./Tab2.css";
 import { GoogleMap } from "@capacitor/google-maps";
@@ -43,7 +48,7 @@ const Tab2: React.FC = () => {
       config: mapConfig,
     });
 
-    newMap.setOnMarkerClickListener((marker) => markerClick(marker));
+    // newMap.setOnMarkerClickListener((marker) => markerClick(marker));
     addMapMarkers();
   };
 
@@ -64,14 +69,14 @@ const Tab2: React.FC = () => {
     onDidDismiss: () => dismiss(),
   };
 
-  const markerClick = (marker: any) => {
-    setSlectedMarker(
-      markers.filter(
-        (m: any) => m.lat === marker.latitude && m.lng === marker.longitude
-      )[0]
-    );
-    present(modalOptions);
-  };
+  // const markerClick = (marker: any) => {
+  //   setSlectedMarker(
+  //     markers.filter(
+  //       (m: any) => m.lat === marker.latitude && m.lng === marker.longitude
+  //     )[0]
+  //   );
+  //   present(modalOptions);
+  // };
 
   const addMapMarkers = () => markers.forEach((marker) => addMapMarker(marker));
 
@@ -82,14 +87,35 @@ const Tab2: React.FC = () => {
       <IonContent fullscreen>
         <div className="center">
           <IonRow className="searchBar">
-            <IonItem>
-              <IonInput placeholder="Jouw loactie"></IonInput>
-            </IonItem>
-            <IonCol>
-              <IonButton className="zoekBtn">Zoeken</IonButton>
-            </IonCol>
+            <IonInput className="input" placeholder="Jouw loactie"></IonInput>
+            <IonButton className="zoekBtn">Zoeken</IonButton>
           </IonRow>
         </div>
+        <IonButton shape="round" className="filterBtn" id="click-trigger">
+          <IonIcon className="icon" icon={optionsOutline} />
+        </IonButton>
+        <IonPopover trigger="click-trigger" triggerAction="click">
+          <IonRadioGroup value="custom-checked">
+            <IonRow>
+              <IonRadio value="custom"></IonRadio>
+              <IonLabel>Man</IonLabel>
+            </IonRow>
+            <IonRow>
+              <IonRadio value="custom-"></IonRadio>
+              <IonLabel>Vrouw</IonLabel>
+            </IonRow>
+          </IonRadioGroup>
+          <IonRadioGroup value="custom-checked">
+            <IonRow>
+              <IonRadio value="custom"></IonRadio>
+              <IonLabel>Onwards coach</IonLabel>
+            </IonRow>
+            <IonRow>
+              <IonRadio value="custom-"></IonRadio>
+              <IonLabel>Online coach</IonLabel>
+            </IonRow>
+          </IonRadioGroup>
+        </IonPopover>
         <IonRow>
           <IonCol>
             <capacitor-google-map ref={mapRef} id="map" />
