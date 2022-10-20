@@ -7,26 +7,33 @@ import headerbackground from '../Images/headerbackground.png'
 const Tab1: React.FC = () => {
   return (
     <IonPage >
-        <IonHeader className="background">
+        <IonHeader>
           <IonToolbar>
-            <IonTitle >Maak jouw plan</IonTitle>
+            <IonRow className="ion-margin">
+              <IonTitle>
+                <div className="ion-text-center">
+                  Maak jouw plan
+                </div>
+              </IonTitle>
+            </IonRow>
+              <div className="ion-margin ion-text-center">Ga met een van onze consultants in jouw buurt aan de slag om een plan te maken</div>
+            <IonRow className="ion-justify-content-center">
+              <IonButton className="ion-margin">
+                Start jouw dieet
+              </IonButton>
+            </IonRow>
             
-              <div>Ga met een van onze consultants in jouw buurt aan de slag om een plan te maken</div>
-            
-            <IonButton>
-              Start jouw dieet
-            </IonButton>
           </IonToolbar>
         </IonHeader>
 
       <IonContent>
         <IonGrid>
-          <IonRow className="center">
-            <IonCol>
-              <div>Resultaten van deze week</div>
+          <IonRow className="ion-margin">
+            <IonCol className="ion-text-center">
+              <div >Resultaten van deze week</div>
             </IonCol>
           </IonRow>
-          <IonRow>
+          <IonRow className="ion-margin">
             <IonCol>
               <div>
                 <p>Wat je bent verloren:</p>
@@ -35,8 +42,8 @@ const Tab1: React.FC = () => {
                 <h1>2</h1>
               </div>
             </IonCol>
-            <IonCol className="center">
-              <div>
+            <IonCol className="ion-margin">
+              <div className="ion-margin">
                 <img src={kalMeter} alt="kalMeter" />
               </div>
             </IonCol>
@@ -44,7 +51,7 @@ const Tab1: React.FC = () => {
         </IonGrid>
 
         <IonGrid>
-          <IonRow>
+          <IonRow className="ion-justify-content-between ion-padding">
             <div>
               Tips voor vandaag
             </div>
@@ -52,7 +59,7 @@ const Tab1: React.FC = () => {
               Toon alle
             </div>
           </IonRow>
-          <IonRow>
+          <IonRow className="ion-justify-content-between">
             <IonButton>
               Ontbijt
             </IonButton>
