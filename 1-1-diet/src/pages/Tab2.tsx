@@ -48,7 +48,7 @@ const Tab2: React.FC = () => {
       config: mapConfig,
     });
 
-    // newMap.setOnMarkerClickListener((marker) => markerClick(marker));
+    newMap.setOnMarkerClickListener((marker) => markerClick(marker));
     addMapMarkers();
   };
 
@@ -69,14 +69,14 @@ const Tab2: React.FC = () => {
     onDidDismiss: () => dismiss(),
   };
 
-  // const markerClick = (marker: any) => {
-  //   setSlectedMarker(
-  //     markers.filter(
-  //       (m: any) => m.lat === marker.latitude && m.lng === marker.longitude
-  //     )[0]
-  //   );
-  //   present(modalOptions);
-  // };
+  const markerClick = (marker: any) => {
+    setSlectedMarker(
+      markers.filter(
+        (m: any) => m.lat === marker.latitude && m.lng === marker.longitude
+      )[0]
+    );
+    present(modalOptions);
+  };
 
   const addMapMarkers = () => markers.forEach((marker) => addMapMarker(marker));
 
