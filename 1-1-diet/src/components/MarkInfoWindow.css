@@ -1,0 +1,49 @@
+* {
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.popupCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.profileIonBtn {
+  width: 95vw;
+  height: 13vh;
+}
+
+.profileBtn {
+  display: flex;
+  width: 100vw;
+  gap: 1em;
+}
+
+.profilePic {
+  width: 50px;
+  height: 50px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  text-align: center;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.callBtn {
+  width: 65vw;
+}
+
+.msgBtn {
+  width: 30vw;
+}
+
+h1 {
+  margin-left: 5vw;
+}

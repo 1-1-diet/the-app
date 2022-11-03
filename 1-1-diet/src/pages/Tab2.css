@@ -3,6 +3,14 @@
   margin: 0 0;
 }
 
+.popupTemp {
+  z-index: 10000;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+}
+
 .searchBar {
   position: fixed;
   margin-top: 15%;
@@ -30,7 +38,7 @@
   justify-content: center;
 }
 
-.RowCenter{
+.RowCenter {
   text-align: center;
 }
 

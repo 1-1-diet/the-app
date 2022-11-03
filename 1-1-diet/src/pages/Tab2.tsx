@@ -70,11 +70,11 @@ const Tab2: React.FC = () => {
   };
 
   const markerClick = (marker: any) => {
-    setSlectedMarker(
-      markers.filter(
-        (m: any) => m.lat === marker.latitude && m.lng === marker.longitude
-      )[0]
-    );
+    // setSlectedMarker(
+    //   markers.filter(
+    //     (m: any) => m.lat === marker.latitude && m.lng === marker.longitude
+    //   )[0]
+    // );
     present(modalOptions);
   };
 
@@ -116,6 +116,9 @@ const Tab2: React.FC = () => {
             </IonRow>
           </IonRadioGroup>
         </IonPopover>
+        <div className="popupTemp">
+          <MarkerInfoWindow />
+        </div>
         <IonRow>
           <IonCol>
             <capacitor-google-map ref={mapRef} id="map" />
