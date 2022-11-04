@@ -1,6 +1,11 @@
+:root {
+  --ion-color-secondary: #006600 !important;
+}
+
 * {
   padding: 0 0;
   margin: 0 0;
+  touch-action: none;
 }
 
 .searchBar {

@@ -25,10 +25,31 @@ const Tab2: React.FC = () => {
   const mapRef = useRef(null);
   let newMap: GoogleMap;
 
-  const [selectedMarker, setSelectedMarker] = useState<null | any>(null);
+  const [selectedMarker, setSelectedMarker] = useState<Marker>();
+
+  interface Marker {
+    lat: number;
+    lng: number;
+    title: string;
+    image: string;
+    name: string;
+    address: string;
+    phone: string;
+    mail: string;
+  }
+
+  interface MapCallBackData {
+    latitude: number;
+    longitude: number;
+  }
+
   const [present, dismiss] = useIonModal(MarkerInfoWindow, {
     marker: selectedMarker,
   });
+
+  const openModal = () => {
+    present(modalOptions);
+  };
 
   const [mapConfig, setMapConfig] = useState({
     zoom: 12,
@@ -63,16 +84,16 @@ const Tab2: React.FC = () => {
   };
 
   const modalOptions = {
-    initialBreakpoint: 0.4,
-    breakpoints: [0, 0, 4],
+    initialBreakpoint: 0.3,
+    breakpoints: [0, 0, 0.3],
     backdropBreakpoint: 0,
     onDidDismiss: () => dismiss(),
   };
 
-  const markerClick = (marker: any) => {
+  const markerClick = (marker: MapCallBackData) => {
     setSelectedMarker(
       markers.filter(
-        (m: any) => m.lat === marker.latitude && m.lng === marker.longitude
+        (m: Marker) => m.lat === marker.latitude && m.lng === marker.longitude
       )[0]
     );
     present(modalOptions);
@@ -88,7 +109,13 @@ const Tab2: React.FC = () => {
         <div className="center">
           <IonRow className="searchBar">
             <IonInput className="input" placeholder="Jouw loactie"></IonInput>
-            <IonButton className="zoekBtn">Zoeken</IonButton>
+            <IonButton
+              color="secondary"
+              className="zoekBtn"
+              onClick={() => openModal()}
+            >
+              Zoeken
+            </IonButton>
           </IonRow>
         </div>
         <IonButton
