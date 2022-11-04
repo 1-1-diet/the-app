@@ -34,14 +34,22 @@
   display: flex;
   flex-direction: column;
   text-align: left;
+  justify-content: center;
+  gap: 0.3em;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 95vw;
 }
 
 .callBtn {
-  width: 65vw;
+  width: 64vw;
 }
 
 .msgBtn {
-  width: 30vw;
+  width: 29vw;
 }
 
 h1 {

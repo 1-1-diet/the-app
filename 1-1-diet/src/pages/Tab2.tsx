@@ -25,7 +25,7 @@ const Tab2: React.FC = () => {
   const mapRef = useRef(null);
   let newMap: GoogleMap;
 
-  const [selectedMarker, setSlectedMarker] = useState(null);
+  const [selectedMarker, setSelectedMarker] = useState<null | any>(null);
   const [present, dismiss] = useIonModal(MarkerInfoWindow, {
     marker: selectedMarker,
   });
@@ -70,11 +70,11 @@ const Tab2: React.FC = () => {
   };
 
   const markerClick = (marker: any) => {
-    // setSlectedMarker(
-    //   markers.filter(
-    //     (m: any) => m.lat === marker.latitude && m.lng === marker.longitude
-    //   )[0]
-    // );
+    setSelectedMarker(
+      markers.filter(
+        (m: any) => m.lat === marker.latitude && m.lng === marker.longitude
+      )[0]
+    );
     present(modalOptions);
   };
 
@@ -91,7 +91,12 @@ const Tab2: React.FC = () => {
             <IonButton className="zoekBtn">Zoeken</IonButton>
           </IonRow>
         </div>
-        <IonButton shape="round" className="filterBtn" id="click-trigger">
+        <IonButton
+          color="danger"
+          shape="round"
+          className="filterBtn"
+          id="click-trigger"
+        >
           <IonIcon className="icon" icon={optionsOutline} />
         </IonButton>
         <IonPopover trigger="click-trigger" triggerAction="click">
@@ -116,9 +121,6 @@ const Tab2: React.FC = () => {
             </IonRow>
           </IonRadioGroup>
         </IonPopover>
-        <div className="popupTemp">
-          <MarkerInfoWindow />
-        </div>
         <IonRow>
           <IonCol>
             <capacitor-google-map ref={mapRef} id="map" />

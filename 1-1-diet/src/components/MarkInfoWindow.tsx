@@ -27,12 +27,12 @@ export const MarkerInfoWindow = ({ marker, dismiss }: any) => {
             <div className="profileBtn">
               <div className="profilePic"></div>
               <div className="profileInfo">
-                <label>Naam consulent</label>
-                <label>Locatie consulent</label>
+                <label>{marker.name}</label>
+                <label>{marker.address}</label>
               </div>
             </div>
           </IonButton>
-          <IonRow>
+          <IonRow className="contactContainer">
             <IonButton className="callBtn" color="medium">
               call
             </IonButton>
