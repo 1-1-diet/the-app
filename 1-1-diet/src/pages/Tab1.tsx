@@ -4,7 +4,21 @@ import './Tab1.css';
 import kalMeter from '../Images/kalMeter.png'
 import headerbackground from '../Images/headerbackground.png'
 
+
+
 const Tab1: React.FC = () => {
+  let timeOfDay;
+  const date = new Date();
+  const hours = date.getHours();
+  
+  if (hours < 12) {
+    timeOfDay = 'morgen';
+  } else if (hours >= 12 && hours < 17) {
+    timeOfDay = 'middag'
+  } else {
+    timeOfDay = 'Avond'
+  }
+
   return (
     <IonPage >
         <IonHeader>
@@ -28,6 +42,11 @@ const Tab1: React.FC = () => {
 
       <IonContent>
         <IonGrid>
+          <IonRow className="ion-margin">
+            <IonCol className="ion-text-center">
+              <div >Goeie {timeOfDay}</div>
+            </IonCol>
+          </IonRow>
           <IonRow className="ion-margin">
             <IonCol className="ion-text-center">
               <div >Resultaten van deze week</div>
