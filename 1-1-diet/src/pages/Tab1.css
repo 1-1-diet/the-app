@@ -13,7 +13,7 @@
 
 }
 .logoeen{
-    background-image:url("/Users/kzeibra/Desktop/Sprint 4/1-1-diet/Photos/2mensen op de bank.png");
+    background-image:url("/Photos/2mensen op de bank.png");
     width :200px;
     background-repeat: no-repeat;
     height: 150px;
@@ -27,14 +27,14 @@
         margin-left: 10%;
         margin-right: 10%;
         border-radius: 30px;
-        background-image:url("/Users/kzeibra/Desktop/Sprint 4/1-1-diet/Photos/Screen Shot 2022-10-19 at 2.21.35 AM.png");
+        background-image:url("/Photos/Screen Shot 2022-10-19 at 2.21.35 AM.png");
         background-position: center;
         display: flex;
     
 
 }
 .logotwee{
-    background-image:url("/Users/kzeibra/Desktop/Sprint 4/1-1-diet/Photos/ervaringen 1.png");
+    background-image:url("/Photos/ervaringen 1.png");
     width: 200px;
     background-repeat: no-repeat;
     height: 200px;
