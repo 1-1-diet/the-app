@@ -36,7 +36,6 @@ const Tab1: React.FC = () => {
                 Start jouw dieet
               </IonButton>
             </IonRow>
-            
           </IonToolbar>
         </IonHeader>
 
@@ -44,7 +43,7 @@ const Tab1: React.FC = () => {
         <IonGrid>
           <IonRow className="ion-margin">
             <IonCol className="ion-text-center">
-              <div >Goeie {timeOfDay}</div>
+              <div >Goeie {timeOfDay}!</div>
             </IonCol>
           </IonRow>
           <IonRow className="ion-margin">
