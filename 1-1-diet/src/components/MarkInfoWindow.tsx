@@ -1,20 +1,4 @@
-import {
-  IonButton,
-  IonCol,
-  IonContent,
-  IonGrid,
-  IonIcon,
-  IonLabel,
-  IonNote,
-  IonRow,
-} from "@ionic/react";
-import {
-  globeOutline,
-  heartOutline,
-  locationOutline,
-  navigateOutline,
-  phonePortraitOutline,
-} from "ionicons/icons";
+import { IonButton, IonCol, IonContent, IonRow } from "@ionic/react";
 import "./MarkInfoWindow.css";
 
 export const MarkerInfoWindow = ({ marker, dismiss }: any) => {

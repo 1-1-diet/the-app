@@ -14,7 +14,7 @@ import {
   IonLabel,
 } from "@ionic/react";
 import { optionsOutline } from "ionicons/icons";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import "./Tab2.css";
 import { GoogleMap } from "@capacitor/google-maps";
 import { markers } from "../components/index";
@@ -46,10 +46,6 @@ const Tab2: React.FC = () => {
   const [present, dismiss] = useIonModal(MarkerInfoWindow, {
     marker: selectedMarker,
   });
-
-  const openModal = () => {
-    present(modalOptions);
-  };
 
   const [mapConfig, setMapConfig] = useState({
     zoom: 12,
@@ -109,17 +105,13 @@ const Tab2: React.FC = () => {
         <div className="center">
           <IonRow className="searchBar">
             <IonInput className="input" placeholder="Jouw loactie"></IonInput>
-            <IonButton
-              color="secondary"
-              className="zoekBtn"
-              onClick={() => openModal()}
-            >
+            <IonButton color="navigatie" className="zoekBtn">
               Zoeken
             </IonButton>
           </IonRow>
         </div>
         <IonButton
-          color="danger"
+          color="secondary"
           shape="round"
           className="filterBtn"
           id="click-trigger"
