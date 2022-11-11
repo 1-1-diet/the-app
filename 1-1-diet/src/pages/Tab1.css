@@ -3,11 +3,11 @@
     margin: auto;
 }
 
-.headerbackground {
+/* .headerbackground {
     background: url(../Images/headerbackground.png);
     background-repeat: no-repeat;
     background-size: auto;
-}
+} */
 
 .stats-background {
     background-color: #dadada;
