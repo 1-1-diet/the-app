@@ -1,7 +1,3 @@
-.background { 
-    background: red;
-}
-
 .center {
     width: 60%;
     margin: auto;
@@ -11,4 +7,10 @@
     background: url(../Images/headerbackground.png);
     background-repeat: no-repeat;
     background-size: auto;
+}
+
+.stats-background {
+    background-color: #dadada;
+    margin: 16px;
+    border-radius: 4px;
 }
