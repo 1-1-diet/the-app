@@ -43,25 +43,6 @@ class Header extends Component {
           </IonGrid>
         </div>
       </div>
-
-      // <div className="headerbackground">
-      //   <IonHeader>
-      //     <IonToolbar>
-      //       <IonRow className="ion-margin">
-      //         <IonTitle>
-      //           <div className="ion-text-center">Maak jouw plan</div>
-      //         </IonTitle>
-      //       </IonRow>
-      //       <div className="ion-margin ion-text-center">
-      //         Ga met een van onze consultants in jouw buurt aan de slag om een
-      //         plan te maken
-      //       </div>
-      //       <IonRow className="ion-justify-content-center">
-      //         <IonButton className="ion-margin">Start jouw dieet</IonButton>
-      //       </IonRow>
-      //     </IonToolbar>
-      //   </IonHeader>
-      // </div>
     );
   }
 }
