@@ -53,6 +53,32 @@
   height: 2em;
 }
 
+ion-popover {
+  --width: fit-content;
+}
+
+.popup {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5em;
+  overflow-x: hidden;
+  margin: 1em;
+  width: 63vw;
+  height: fit-content;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.textCenter {
+  display: flex;
+  align-items: center;
+  margin-left: 0.2em;
+}
+
 capacitor-google-map {
   display: inline-block;
   width: 100%;

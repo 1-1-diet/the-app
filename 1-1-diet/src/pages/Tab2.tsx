@@ -118,27 +118,44 @@ const Tab2: React.FC = () => {
         >
           <IonIcon className="icon" icon={optionsOutline} />
         </IonButton>
-        <IonPopover trigger="click-trigger" triggerAction="click">
-          <IonRadioGroup value="custom-checked">
-            <IonRow>
-              <IonRadio value="custom"></IonRadio>
-              <IonLabel>Man</IonLabel>
-            </IonRow>
-            <IonRow>
-              <IonRadio value="custom-"></IonRadio>
-              <IonLabel>Vrouw</IonLabel>
-            </IonRow>
-          </IonRadioGroup>
-          <IonRadioGroup value="custom-checked">
-            <IonRow>
-              <IonRadio value="custom"></IonRadio>
-              <IonLabel>Onwards coach</IonLabel>
-            </IonRow>
-            <IonRow>
-              <IonRadio value="custom-"></IonRadio>
-              <IonLabel>Online coach</IonLabel>
-            </IonRow>
-          </IonRadioGroup>
+        <IonPopover
+          trigger="click-trigger"
+          side="bottom"
+          alignment="center"
+          triggerAction="click"
+        >
+          <div className="popup">
+            <IonRadioGroup className="content" value="custom-checked">
+              <IonLabel>Geslacht</IonLabel>
+              <IonRow>
+                <IonRadio value="custom"></IonRadio>
+                <IonLabel className="textCenter">Man</IonLabel>
+              </IonRow>
+              <IonRow>
+                <IonRadio value="custom-"></IonRadio>
+                <IonLabel className="textCenter">Vrouw</IonLabel>
+              </IonRow>
+              <IonRow>
+                <IonRadio value="custom--"></IonRadio>
+                <IonLabel className="textCenter">Allebij</IonLabel>
+              </IonRow>
+            </IonRadioGroup>
+            <IonRadioGroup className="content" value="custom-checked">
+              <IonLabel className="textCenter">Specialisatie</IonLabel>
+              <IonRow>
+                <IonRadio value="custom"></IonRadio>
+                <IonLabel className="textCenter">Onwards coach</IonLabel>
+              </IonRow>
+              <IonRow>
+                <IonRadio value="custom-"></IonRadio>
+                <IonLabel className="textCenter">Online coach</IonLabel>
+              </IonRow>
+              <IonRow>
+                <IonRadio value="custom--"></IonRadio>
+                <IonLabel className="textCenter">Allebij</IonLabel>
+              </IonRow>
+            </IonRadioGroup>
+          </div>
         </IonPopover>
         <IonRow>
           <IonCol>
