@@ -19,6 +19,8 @@ import "./Tab2.css";
 import { GoogleMap } from "@capacitor/google-maps";
 import { markers } from "../components/index";
 import { MarkerInfoWindow } from "../components/MarkInfoWindow";
+import GooglePlacesAutocomplete from "react-google-places-autocomplete";
+// import { geocodeByAddress, getLatLng } from 'react-google-places-autocomplete';
 
 const Tab2: React.FC = () => {
   const key = "AIzaSyBQoikjV2k-ithxstHq7Qp0WsHfyzmXIVE";
@@ -26,6 +28,7 @@ const Tab2: React.FC = () => {
   let newMap: GoogleMap;
 
   const [selectedMarker, setSelectedMarker] = useState<Marker>();
+  const [value, setValue] = useState(null);
 
   interface Marker {
     lat: number;
@@ -42,6 +45,14 @@ const Tab2: React.FC = () => {
     latitude: number;
     longitude: number;
   }
+
+  // const getLatLng = (result: google.maps.GeocoderResult): Promise<any>;
+
+  // geocodeByAddress('Montevideo, Uruguay')
+  // .then(results => getLatLng(results[0]))
+  // .then(({ lat, lng }) =>
+  //   console.log('Successfully got latitude and longitude', { lat, lng })
+  // );
 
   const [present, dismiss] = useIonModal(MarkerInfoWindow, {
     marker: selectedMarker,
@@ -104,10 +115,17 @@ const Tab2: React.FC = () => {
       <IonContent fullscreen>
         <div className="center">
           <IonRow className="searchBar">
-            <IonInput className="input" placeholder="Jouw loactie"></IonInput>
-            <IonButton color="navigatie" className="zoekBtn">
-              Zoeken
-            </IonButton>
+            <GooglePlacesAutocomplete
+              apiKey={key}
+              apiOptions={{ language: "nl", region: "nl" }}
+              onLoadFailed={(error) =>
+                console.error("Could not inject Google script", error)
+              }
+              selectProps={{
+                value,
+                onChange: setValue,
+              }}
+            />
           </IonRow>
         </div>
         <IonButton

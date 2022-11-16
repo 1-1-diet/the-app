@@ -6,12 +6,11 @@
 
 .searchBar {
   position: fixed;
-  margin-top: 15%;
+  top: 4em;
   background-color: white;
   width: 90vw;
   height: auto;
-  padding: 2%;
-  padding-left: 3%;
+  padding: 0.5em;
   z-index: 1;
   border-radius: 10px;
 }
@@ -77,6 +76,9 @@ ion-popover {
   display: flex;
   align-items: center;
   margin-left: 0.2em;
+}
+.css-2b097c-container {
+  width: 100%;
 }
 
 capacitor-google-map {
