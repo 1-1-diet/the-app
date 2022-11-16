@@ -1,34 +1,33 @@
 .headerbackground {
-    background-color: #2B2E6B;
-    background-size: cover;
-    height: auto;
-    position: relative;
-    width: 100vw;
-    height: auto;
-    border-bottom-right-radius: 60px;
-    border-bottom-left-radius: 60px;
+  background-color: #2b2e6b;
+  background-size: cover;
+  height: auto;
+  position: relative;
+  width: 100vw;
+  height: auto;
+  border-radius: 0% 0% 50% 50% / 20%;
 }
 
 .headercontent {
-    top: 0;
+  top: 0;
 }
 
 .headerptrn {
-    position: absolute;
-    width: 100vw;
-    height: auto;
-    z-index: 10;
+  position: absolute;
+  width: 100vw;
+  height: auto;
+  z-index: 10;
 }
 
 .headerlogo {
-    position: absolute;
+  position: absolute;
 }
 
 .headertitle {
-    color: white;
-    text-align: center;
+  color: white;
+  text-align: center;
 }
 
 .headerbutton {
-    z-index: 11;
+  z-index: 11;
 }
