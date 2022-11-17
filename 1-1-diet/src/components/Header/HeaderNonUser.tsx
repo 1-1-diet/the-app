@@ -14,7 +14,7 @@ import "./Header.css";
 import ptrn from "../../Images/ptrn.svg";
 import logo from "../../Images/logo.svg";
 
-class Header extends Component {
+class HeaderNonUser extends Component {
   render() {
     return (
       <div className="headerbackground">
@@ -47,4 +47,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default HeaderNonUser;

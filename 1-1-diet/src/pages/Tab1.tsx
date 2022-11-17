@@ -10,34 +10,19 @@ import {
   IonButton,
 } from "@ionic/react";
 import "./Tab1.css";
-import Header from "../components/Header/Header";
+import Header from "../components/Header/HeaderUser";
+import HeaderNonUser from "../components/Header/HeaderNonUser";
 import Footer from "../components/Footer/Footer";
 import kalMeter from "../Images/kalMeter.png";
 
 const Tab1: React.FC = () => {
-  let timeOfDay;
-  const date = new Date();
-  const hours = date.getHours();
-
-  if (hours < 12) {
-    timeOfDay = "morgen";
-  } else if (hours >= 12 && hours < 17) {
-    timeOfDay = "middag";
-  } else {
-    timeOfDay = "avond";
-  }
-
+  
   return (
     <IonPage>
       <IonContent>
-        <Header />
+        <Header/>
         <div className="stats-background">
           <IonGrid>
-            <IonRow className="ion-margin">
-              <IonCol className="ion-text-center">
-                <div>Goeie {timeOfDay}!</div>
-              </IonCol>
-            </IonRow>
             <IonRow className="ion-margin">
               <IonCol className="ion-text-center">
                 <div>Resultaten van deze week</div>

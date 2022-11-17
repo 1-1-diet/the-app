@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { logoFacebook } from "ionicons/icons";
+import { logoFacebook, logoInstagram, logoTwitter, logoPinterest, logoYoutube } from "ionicons/icons";
 import {
   IonContent,
   IonHeader,
@@ -34,22 +34,39 @@ class Footer extends Component {
                   Join us!
                 </IonCol>
                 <IonCol>
-                  <IonButton>
+                  <a>
                     <IonIcon icon={ logoFacebook }/>
-                  </IonButton>
+                  </a>
                 </IonCol>
                 <IonCol>
-                <IonButton>
-                    <IonIcon icon={ logoFacebook }/>
-                  </IonButton>
+                  <a>
+                    <IonIcon icon={ logoInstagram }/>
+                  </a>
                 </IonCol>
                 <IonCol>
-                  <IonButton>
-                    <IonIcon icon={ logoFacebook }/>
-                  </IonButton>
+                  <a>
+                    <IonIcon icon={ logoTwitter }/>
+                  </a>
+                </IonCol>
+                <IonCol>
+                  <a>
+                    <IonIcon icon={ logoPinterest }/>
+                  </a>
+                </IonCol>
+                <IonCol>
+                  <a>
+                    <IonIcon icon={ logoYoutube }/>
+                  </a>
                 </IonCol>
               </IonRow>
             </IonCol>
+            <IonRow>
+              <IonCol className="ion-margin">
+                <p>
+                  De 1:1 Diet ondersteunt onderzoek aan het Erasmus MC. Patienten met diabetes worden in dit onderzoek persoonlijk begeleid door dietisten met behulp van een dieet app.
+                </p>
+              </IonCol>
+            </IonRow>
           </IonGrid>
         </IonFooter>
       

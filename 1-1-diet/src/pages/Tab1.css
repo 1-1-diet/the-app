@@ -3,14 +3,11 @@
     margin: auto;
 }
 
-/* .headerbackground {
-    background: url(../Images/headerbackground.png);
-    background-repeat: no-repeat;
-    background-size: auto;
-} */
+
 
 .stats-background {
     background-color: #dadada;
     margin: 16px;
-    border-radius: 4px;
+    border-radius: 24px;
+    z-index: 12;
 }
