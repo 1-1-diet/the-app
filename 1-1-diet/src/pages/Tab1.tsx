@@ -1,9 +1,6 @@
 import {
   IonContent,
-  
   IonPage,
-  
- 
   IonGrid,
   IonRow,
   IonCol,
@@ -16,11 +13,10 @@ import Footer from "../components/Footer/Footer";
 import kalMeter from "../Images/kalMeter.png";
 
 const Tab1: React.FC = () => {
-  
   return (
     <IonPage>
       <IonContent>
-        <Header/>
+        <Header />
         <div className="stats-background">
           <IonGrid>
             <IonRow className="ion-margin">
