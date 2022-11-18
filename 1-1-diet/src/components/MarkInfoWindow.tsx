@@ -5,7 +5,7 @@ export const MarkerInfoWindow = ({ marker, dismiss }: any) => {
   return (
     <IonContent>
       <IonCol>
-        <h1>Zoek een consulent</h1>
+        <h1 id="markerTitle">Zoek een consulent</h1>
         <div className="popupCard">
           <IonButton color="medium" className="profileIonBtn">
             <div className="profileBtn">
