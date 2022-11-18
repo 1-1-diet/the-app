@@ -28,7 +28,7 @@ class Footer extends Component {
       <IonFooter>
         <IonGrid>
           <IonCol>
-            <h1>Zoek een consultent</h1>
+            <h1>Zoek een consultent!</h1>
           </IonCol>
           <IonCol>
             <IonSearchbar placeholder="Zoek een postcode of plaats"></IonSearchbar>
