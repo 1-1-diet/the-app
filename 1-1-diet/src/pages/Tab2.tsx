@@ -118,7 +118,7 @@ const Tab2: React.FC = () => {
             <GooglePlacesAutocomplete
               apiKey={key}
               apiOptions={{ language: "nl", region: "nl" }}
-              onLoadFailed={(error) =>
+              onLoadFailed={(error: any) =>
                 console.error("Could not inject Google script", error)
               }
               selectProps={{
