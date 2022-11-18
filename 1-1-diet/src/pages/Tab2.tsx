@@ -143,34 +143,34 @@ const Tab2: React.FC = () => {
           triggerAction="click"
         >
           <div className="popup">
-            <IonRadioGroup className="content" value="custom-checked">
+            <IonRadioGroup className="content2" value="custom-checked">
               <IonLabel>Geslacht</IonLabel>
               <IonRow>
                 <IonRadio value="custom"></IonRadio>
-                <IonLabel className="textCenter">Man</IonLabel>
+                <IonLabel className="textCenter2">Man</IonLabel>
               </IonRow>
               <IonRow>
                 <IonRadio value="custom-"></IonRadio>
-                <IonLabel className="textCenter">Vrouw</IonLabel>
+                <IonLabel className="textCenter2">Vrouw</IonLabel>
               </IonRow>
               <IonRow>
                 <IonRadio value="custom--"></IonRadio>
-                <IonLabel className="textCenter">Allebij</IonLabel>
+                <IonLabel className="textCenter2">Allebij</IonLabel>
               </IonRow>
             </IonRadioGroup>
-            <IonRadioGroup className="content" value="custom-checked">
-              <IonLabel className="textCenter">Specialisatie</IonLabel>
+            <IonRadioGroup className="content2" value="custom-checked">
+              <IonLabel className="textCenter2">Specialisatie</IonLabel>
               <IonRow>
                 <IonRadio value="custom"></IonRadio>
-                <IonLabel className="textCenter">Onwards coach</IonLabel>
+                <IonLabel className="textCenter2">Onwards coach</IonLabel>
               </IonRow>
               <IonRow>
                 <IonRadio value="custom-"></IonRadio>
-                <IonLabel className="textCenter">Online coach</IonLabel>
+                <IonLabel className="textCenter2">Online coach</IonLabel>
               </IonRow>
               <IonRow>
                 <IonRadio value="custom--"></IonRadio>
-                <IonLabel className="textCenter">Allebij</IonLabel>
+                <IonLabel className="textCenter2">Allebij</IonLabel>
               </IonRow>
             </IonRadioGroup>
           </div>

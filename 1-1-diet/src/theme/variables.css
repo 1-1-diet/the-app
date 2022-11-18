@@ -83,12 +83,3 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-navigatie-shade: #5187b7;
   --ion-color-navigatie-tint: #6ca3d5;
 }
-
-.ion-color-navigatie {
-  --ion-color-base: var(--ion-color-navigatie);
-  --ion-color-base-rgb: var(--ion-color-navigatie-rgb);
-  --ion-color-contrast: var(--ion-color-navigatie-contrast);
-  --ion-color-contrast-rgb: var(--ion-color-navigatie-contrast-rgb);
-  --ion-color-shade: var(--ion-color-navigatie-shade);
-  --ion-color-tint: var(--ion-color-navigatie-tint);
-}

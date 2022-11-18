@@ -1,0 +1,28 @@
+.headerbackground {
+  background-color: #2b2e6b;
+  background-size: cover;
+  height: auto;
+  position: relative;
+  width: 100vw;
+  border-radius: 0% 0% 50% 50% / 20%;
+}
+
+.headerptrn {
+  position: absolute;
+  width: 100vw;
+  height: auto;
+  z-index: 10;
+}
+
+.headerlogo {
+  position: absolute;
+}
+
+.headertitle {
+  color: white;
+  text-align: center;
+}
+
+.headerbutton {
+  z-index: 11;
+}
