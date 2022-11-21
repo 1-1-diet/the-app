@@ -4,12 +4,6 @@ import styles from "./TipsVoorVandaag.module.css";
 import ReceptCard from "./ReceptCard";
 
 export default function TipsVoorVandaag() {
-  useEffect(() => {
-    const left = getComputedStyle(document.documentElement).getPropertyValue(
-      "--position-change"
-    );
-  });
-
   function setLeft(left: any) {
     document.documentElement.style.setProperty("--position-change", left);
   }
