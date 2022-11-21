@@ -11,6 +11,7 @@ import Header from "../components/Header/HeaderUser";
 import HeaderNonUser from "../components/Header/HeaderNonUser";
 import Footer from "../components/Footer/Footer";
 import kalMeter from "../Images/kalMeter.png";
+import TipsVoorVandaag from "../components/TipsVoorVandaag";
 
 const Tab1: React.FC = () => {
   return (
@@ -41,19 +42,10 @@ const Tab1: React.FC = () => {
             </IonRow>
           </IonGrid>
         </div>
+        <div className="TipsVoorVandaag">
+          <TipsVoorVandaag />
+        </div>
 
-        <IonGrid>
-          <IonRow className="ion-justify-content-between ion-padding">
-            <div>Tips voor vandaag</div>
-            <div>Toon alle</div>
-          </IonRow>
-          <IonRow className="ion-justify-content-between">
-            <IonButton>Ontbijt</IonButton>
-            <IonButton>lunch</IonButton>
-            <IonButton>diner</IonButton>
-            <IonButton>snack</IonButton>
-          </IonRow>
-        </IonGrid>
         <Footer />
       </IonContent>
     </IonPage>

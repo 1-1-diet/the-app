@@ -1,0 +1,55 @@
+:root {
+    --position-change: 1.3em;
+}
+
+.mainContent {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerContent {
+    width: 90vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.titleContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#toonAlle {
+    font-size: 1em;
+    color: #5c99d0;
+}
+
+.btnContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btnSelector {
+    position: absolute;
+    background-color: #5c99d0;
+    width: 22vw;
+    height: 6vh;
+    border-radius: 1em;
+    left: var(--position-change);
+}
+
+.carrouselContent {
+    width: 90vw;
+    height: 70vh;
+}
