@@ -15,12 +15,6 @@ export default function TipsVoorVandaag() {
     yummies: string;
   }
 
-  // title={
-  //   element.title === undefined
-  //     ? "Geen title gekozen"
-  //     : element.title
-  // }
-
   return (
     <div className={styles.mainContent}>
       <div className={styles.centerHeader}>
