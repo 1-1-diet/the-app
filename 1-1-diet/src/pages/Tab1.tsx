@@ -42,10 +42,7 @@ const Tab1: React.FC = () => {
             </IonRow>
           </IonGrid>
         </div>
-        <div className="TipsVoorVandaag">
-          <TipsVoorVandaag />
-        </div>
-
+        <TipsVoorVandaag />
         <Footer />
       </IonContent>
     </IonPage>

@@ -1,6 +1,7 @@
 import { IonIcon, IonLabel } from "@ionic/react";
 import styles from "./ReceptCard.module.css";
 import aardbij from "../Images/aardbij.png";
+import { location, home, person, cart, heart } from "ionicons/icons";
 
 export default function ReceptCard() {
   return (
@@ -13,8 +14,8 @@ export default function ReceptCard() {
           <IonIcon></IonIcon>
         </div>
         <div>
-          <IonLabel className={styles.subTitle}>+150 Yummies</IonLabel>
-          <IonIcon></IonIcon>
+          <IonIcon className={styles.icon} icon={heart} />
+          <IonLabel className={styles.subTitle}>150 Yummies</IonLabel>
         </div>
       </div>
     </div>
