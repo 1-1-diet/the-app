@@ -75,11 +75,37 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
 
-  /** navigatie **/
-  --ion-color-navigatie: #5c99d0;
-  --ion-color-navigatie-rgb: 92, 153, 208;
-  --ion-color-navigatie-contrast: #ffffff;
-  --ion-color-navigatie-contrast-rgb: 0, 0, 0;
-  --ion-color-navigatie-shade: #5187b7;
-  --ion-color-navigatie-tint: #6ca3d5;
+  /** navigation **/
+	--ion-color-navigation: #5c99d0;
+	--ion-color-navigation-rgb: 92,153,208;
+	--ion-color-navigation-contrast: #000000;
+	--ion-color-navigation-contrast-rgb: 0,0,0;
+	--ion-color-navigation-shade: #5187b7;
+	--ion-color-navigation-tint: #6ca3d5;
+
+    /** background **/
+  --ion-color-background: #fffff;
+	--ion-color-background-rgb: 15,255,255;
+	--ion-color-background-contrast: #000000;
+	--ion-color-background-contrast-rgb: 0,0,0;
+	--ion-color-background-shade: #0de0e0;
+	--ion-color-background-tint: #27ffff;
+}
+
+.ion-color-navigation {
+	--ion-color-base: var(--ion-color-navigation);
+	--ion-color-base-rgb: var(--ion-color-navigation-rgb);
+	--ion-color-contrast: var(--ion-color-navigation-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-navigation-contrast-rgb);
+	--ion-color-shade: var(--ion-color-navigation-shade);
+	--ion-color-tint: var(--ion-color-navigation-tint);
+}
+
+.ion-color-background {
+	--ion-color-base: var(--ion-color-background);
+	--ion-color-base-rgb: var(--ion-color-background-rgb);
+	--ion-color-contrast: var(--ion-color-background-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-background-contrast-rgb);
+	--ion-color-shade: var(--ion-color-background-shade);
+	--ion-color-tint: var(--ion-color-background-tint);
 }

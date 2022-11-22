@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
 }
 
 #title {
@@ -51,7 +51,7 @@
     width: 22vw;
     height: 6vh;
     border-radius: 1em;
-    left: var(--position-change);
+    /* left: var(--position-change); */
 }
 
 .carrouselContent {
