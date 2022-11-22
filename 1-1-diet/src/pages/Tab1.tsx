@@ -14,6 +14,7 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import kalMeter from "../Images/kalMeter.png";
 
+
 const Tab1: React.FC = () => {
   let timeOfDay;
   const date = new Date();
