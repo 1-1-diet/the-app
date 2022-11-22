@@ -1,7 +1,9 @@
 import { IonButton, IonLabel } from "@ionic/react";
+import "swiper/css";
 import styles from "./TipsVoorVandaag.module.css";
 import ReceptCard from "./ReceptCard";
 import { Recept } from "./recept";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function TipsVoorVandaag() {
   function setLeft(left: any) {
@@ -19,7 +21,7 @@ export default function TipsVoorVandaag() {
       <div className={styles.centerHeader}>
         <div className={styles.headerContent}>
           <div className={styles.titleContent}>
-            <IonLabel id={styles.title}>Tip voor vandaag</IonLabel>
+            <IonLabel id={styles.title}>wajow</IonLabel>
             <IonLabel id={styles.toonAlle}>Toon alle</IonLabel>
           </div>
           <div className={styles.btnContent}>
@@ -40,15 +42,19 @@ export default function TipsVoorVandaag() {
         </div>
       </div>
       <div className={styles.carrouselContent}>
-        {Recept?.map((element) => {
-          return (
-            <ReceptCard
-              title={element.title}
-              bakeTime={element.bakeTime}
-              yummies={element.yummies}
-            />
-          );
-        })}
+        <Swiper slidesPerView={1.5} grabCursor={true} className={styles.swiper}>
+          {Recept?.map((element) => {
+            return (
+              <SwiperSlide key={element.title}>
+                <ReceptCard
+                  title={element.title}
+                  bakeTime={element.bakeTime}
+                  yummies={element.yummies}
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </div>
     </div>
   );

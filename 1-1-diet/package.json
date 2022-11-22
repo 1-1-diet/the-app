@@ -8,6 +8,7 @@
     "@capacitor/core": "4.3.0",
     "@capacitor/google-maps": "^4.2.1",
     "@capacitor/haptics": "4.0.1",
+    "@capacitor/ios": "4.3.0",
     "@capacitor/keyboard": "4.0.1",
     "@capacitor/status-bar": "4.0.1",
     "@ionic/react": "^6.3.7",
@@ -27,6 +28,7 @@
     "react-google-places-autocomplete": "^3.4.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
+    "swiper": "^8.4.5",
     "web-vitals": "^0.2.4",
     "workbox-background-sync": "^5.1.4",
     "workbox-broadcast-update": "^5.1.4",
@@ -67,6 +69,7 @@
   },
   "devDependencies": {
     "@capacitor/cli": "4.3.0",
+    "@ionic/cli": "6.20.4",
     "react-scripts": "5.0.1",
     "typescript": "^4.8.4"
   },
