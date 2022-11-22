@@ -1,11 +1,17 @@
 import { IonButton, IonLabel } from "@ionic/react";
-import { useEffect } from "react";
 import styles from "./TipsVoorVandaag.module.css";
 import ReceptCard from "./ReceptCard";
+import { Recept } from "./recept";
 
 export default function TipsVoorVandaag() {
   function setLeft(left: any) {
     document.documentElement.style.setProperty("--position-change", left);
+  }
+
+  interface Recept {
+    title: string;
+    bakeTime: string;
+    yummies: string;
   }
 
   return (
@@ -34,11 +40,15 @@ export default function TipsVoorVandaag() {
         </div>
       </div>
       <div className={styles.carrouselContent}>
-        <ReceptCard />
-        <ReceptCard />
-        <ReceptCard />
-        <ReceptCard />
-        <ReceptCard />
+        {Recept?.map((element) => {
+          return (
+            <ReceptCard
+              title={element.title}
+              bakeTime={element.bakeTime}
+              yummies={element.yummies}
+            />
+          );
+        })}
       </div>
     </div>
   );

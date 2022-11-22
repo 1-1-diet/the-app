@@ -58,5 +58,4 @@
     display: flex;
     gap: 1.5em;
     width: fit-content;
-    overflow: auto;
 }
