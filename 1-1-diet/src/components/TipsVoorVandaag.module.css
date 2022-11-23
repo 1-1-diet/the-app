@@ -1,64 +1,70 @@
 :root {
-    --position-change: 1.3em;
+  --position-change: 1.3em;
 }
 
 .mainContent {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100vw;
+  margin-bottom: 1em;
 }
 
 .centerHeader {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
 }
 
 .headerContent {
-    width: 90vw;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+  width: 90vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .titleContent {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 #title {
-    font-size: 2em;
-    font-weight: bold;
+  font-size: 2em;
+  font-weight: bold;
 }
 
 #toonAlle {
-    font-size: 1em;
-    color: #5c99d0;
+  font-size: 1em;
+  color: #5c99d0;
 }
 
 .btnContent {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.btn {
+  --box-shadow: none;
 }
 
 .btnSelector {
-    position: absolute;
-    background-color: #5c99d0;
-    width: 22vw;
-    height: 6vh;
-    border-radius: 1em;
-    /* left: var(--position-change); */
+  position: absolute;
+  background-color: #5c99d0;
+  width: 22vw;
+  height: 6vh;
+  border-radius: 1em;
+  /* left: var(--position-change); */
 }
 
 .carrouselContent {
-    display: flex;
-    width: 100vw;
+  display: flex;
+  width: 100vw;
 }
 
 .swiper {
-    padding-left: 1em;
+  padding-left: 1em;
 }

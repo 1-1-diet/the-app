@@ -9,12 +9,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 export default function TipsVoorVandaag() {
   const [page, setPage] = useState(1);
 
-  interface Recept {
-    title: string;
-    bakeTime: string;
-    yummies: string;
-  }
-
   return (
     <div className={styles.mainContent}>
       <div className={styles.centerHeader}>
@@ -26,24 +20,28 @@ export default function TipsVoorVandaag() {
           <div className={styles.btnContent}>
             {/* <div className={styles.btnSelector}></div> */}
             <IonButton
+              className={styles.btn}
               color={page === 1 ? "navigation" : "background"}
               onClick={() => setPage(1)}
             >
               Ontbijt
             </IonButton>
             <IonButton
+              className={styles.btn}
               color={page === 2 ? "navigation" : "background"}
               onClick={() => setPage(2)}
             >
               Lunch
             </IonButton>
             <IonButton
+              className={styles.btn}
               color={page === 3 ? "navigation" : "background"}
               onClick={() => setPage(3)}
             >
               Diner
             </IonButton>
             <IonButton
+              className={styles.btn}
               color={page === 4 ? "navigation" : "background"}
               onClick={() => setPage(4)}
             >
@@ -61,6 +59,7 @@ export default function TipsVoorVandaag() {
                   title={element.title}
                   bakeTime={element.bakeTime}
                   yummies={element.yummies}
+                  img={element.img}
                 />
               </SwiperSlide>
             );
