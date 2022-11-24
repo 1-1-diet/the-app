@@ -14,26 +14,39 @@ import {
   IonCardHeader,
   IonCardSubtitle,
   IonCardTitle,
+  IonLabel,
 } from "@ionic/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 import "./RecomendedBlogs.css";
+import { Blogs } from "./Blogs";
 
 const RecomendedBlogs: React.FC = () => {
   return (
-    <IonCard>
-      <img
-        alt="Silhouette of mountains"
-        src="https://ionicframework.com/docs/img/demos/card-media.png"
-      />
-      <IonCardHeader>
-        <IonCardTitle>Card Title</IonCardTitle>
-        <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
-      </IonCardHeader>
-
-      <IonCardContent>
-        Here's a small text description for the card content. Nothing more,
-        nothing less.
-      </IonCardContent>
-    </IonCard>
+    <div>
+      <div>
+        <h1>Hello world?</h1>
+      </div>
+      <Swiper slidesPerView={1.5} grabCursor={true}>
+        {Blogs?.map((element: any) => {
+          return (
+            <SwiperSlide key={element.title}>
+              <IonCard>
+                <img
+                  alt={element.title}
+                  src={require(`../../Images/${element.img}`)}
+                />
+                <IonCardHeader>
+                  <IonCardTitle>{element.title} </IonCardTitle>
+                  <IonCardSubtitle>{element.readTime}</IonCardSubtitle>
+                  <IonCardSubtitle>{element.date}</IonCardSubtitle>
+                </IonCardHeader>
+              </IonCard>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+    </div>
   );
 };
 
