@@ -4,21 +4,21 @@ export const Recept = [
     bakeTime: "5 min",
     yummies: "150 yummies",
     img: "aardbij.png",
-    filter: "ontbijt",
+    time: "ontbijt",
   },
   {
     title: "Aardbij",
     bakeTime: "85 min",
     yummies: "33 yummies",
     img: "advocado.png",
-    filter: "ontbijt",
+    time: "ontbijt",
   },
   {
     title: "Appel",
     bakeTime: "4 min",
     yummies: "2 yummies",
     img: "aardbij.png",
-    filter: "ontbijt",
+    time: "ontbijt",
   },
 
   {
@@ -26,21 +26,21 @@ export const Recept = [
     bakeTime: "5 min",
     yummies: "150 yummies",
     img: "aardbij.png",
-    filter: "lunch",
+    time: "lunch",
   },
   {
     title: "Havermout",
     bakeTime: "85 min",
     yummies: "33 yummies",
     img: "aardbij.png",
-    filter: "lunch",
+    time: "lunch",
   },
   {
     title: "Conrflaks",
     bakeTime: "4 min",
     yummies: "2 yummies",
     img: "aardbij.png",
-    filter: "lunch",
+    time: "lunch",
   },
 
   {
@@ -48,21 +48,21 @@ export const Recept = [
     bakeTime: "5 min",
     yummies: "150 yummies",
     img: "aardbij.png",
-    filter: "Diner",
+    time: "diner",
   },
   {
     title: "Tri colere",
     bakeTime: "85 min",
     yummies: "33 yummies",
     img: "aardbij.png",
-    filter: "Diner",
+    time: "diner",
   },
   {
     title: "Aardappels",
     bakeTime: "4 min",
     yummies: "2 yummies",
     img: "aardbij.png",
-    filter: "Diner",
+    time: "diner",
   },
 
   {
@@ -70,20 +70,20 @@ export const Recept = [
     bakeTime: "5 min",
     yummies: "150 yummies",
     img: "aardbij.png",
-    filter: "Snacks",
+    time: "snack",
   },
   {
     title: "Chocola",
     bakeTime: "85 min",
     yummies: "33 yummies",
     img: "aardbij.png",
-    filter: "Snacks",
+    time: "snack",
   },
   {
     title: "Pepernoten",
     bakeTime: "4 min",
     yummies: "2 yummies",
     img: "aardbij.png",
-    filter: "Snacks",
+    time: "snack",
   },
 ];
