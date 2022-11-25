@@ -19,6 +19,7 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "./RecomendedBlogs.css";
+
 import { Blogs } from "./Blogs";
 
 const RecomendedBlogs: React.FC = () => {
@@ -27,20 +28,22 @@ const RecomendedBlogs: React.FC = () => {
       <div>
         <h1>Hello world?</h1>
       </div>
-      <Swiper slidesPerView={1.5} grabCursor={true}>
+      <Swiper slidesPerView={1.3} grabCursor={true}>
         {Blogs?.map((element: any) => {
           return (
             <SwiperSlide key={element.title}>
-              <IonCard>
+              <IonCard className="BlogImg">
                 <img
                   alt={element.title}
                   src={require(`../../Images/${element.img}`)}
                 />
-                <IonCardHeader>
-                  <IonCardTitle>{element.title} </IonCardTitle>
-                  <IonCardSubtitle>{element.readTime}</IonCardSubtitle>
-                  <IonCardSubtitle>{element.date}</IonCardSubtitle>
-                </IonCardHeader>
+                <div className="BlogText">
+                  <p>{element.title} </p>
+                  <div className="Ptext">
+                    <p>{element.readTime}</p>
+                    <p>{element.date}</p>
+                  </div>
+                </div>
               </IonCard>
             </SwiperSlide>
           );

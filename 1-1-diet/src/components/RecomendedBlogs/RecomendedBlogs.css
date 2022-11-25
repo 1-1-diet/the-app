@@ -1,0 +1,36 @@
+.BlogImg {
+  display: flex;
+  justify-content: bottom;
+  height: 11em;
+  width: 21em;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+p {
+  margin: 0 0;
+}
+
+.BlogText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  color: white;
+  background: linear-gradient(#4785ef00, #000000);
+  width: 100%;
+  height: 100%;
+}
+
+.Ptext {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+}
