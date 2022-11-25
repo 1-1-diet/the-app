@@ -11,22 +11,19 @@ import Header from "../components/Header/HeaderUser";
 import HeaderNonUser from "../components/Header/HeaderNonUser";
 import Stats from "../components/Stats/Stats";
 import Footer from "../components/Footer/Footer";
-import kalMeter from "../Images/kalMeter.png";
 
 const Tab1: React.FC = () => {
   return (
     <IonPage>
       <IonContent>
         <Header />
-        <div className="stats-background">
-          <IonGrid>
-            <Stats />
-          </IonGrid>
-        </div>
+        <IonGrid className="stats-background">
+          <Stats />
+        </IonGrid>
         <IonGrid>
           <IonRow className="ion-justify-content-between ion-padding">
-            <div>Tips voor vandaag</div>
-            <div>Toon alle</div>
+            <p>Tips voor vandaag</p>
+            <p>Toon alle</p>
           </IonRow>
           <IonRow className="ion-justify-content-between">
             <IonButton>Ontbijt</IonButton>

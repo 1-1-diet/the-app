@@ -1,12 +1,28 @@
 .slideStats {
     height: 40vh;
-    margin: 8px;
-    padding: 4px;
-    background-color: #dadada;
+    margin: 16px;
+    padding: 8px;
+    background-color: #ece9e9;
     border-radius: 24px;
     z-index: 12;
 }
 
 .swiperDots {
     height: 45vh;
+}
+
+.statsTitle {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.statsText {
+    font-weight: bolder;
+    color: #DC6099;
+    font-size: x-large;
+}
+
+.statsText2 {
+    font-weight: bold;
+    
 }

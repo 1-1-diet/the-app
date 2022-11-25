@@ -1,19 +1,6 @@
 import React from "react";
-import { Navigation, Pagination, Scrollbar, A11y, Virtual } from "swiper";
-import {
-  IonText,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-  IonGrid,
-  IonRow,
-  IonCol,
-  IonButton,
-  IonContent,
-  IonSlides,
-  IonSlide,
-} from "@ionic/react";
+import { Pagination, Virtual } from "swiper";
+import { IonText, IonGrid, IonRow, IonCol } from "@ionic/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "./Stats.css";
@@ -30,41 +17,40 @@ export default function Stats() {
         className="swiperDots"
       >
         <SwiperSlide>
-          <div className="slideStats">
-            <IonGrid>
-              <IonRow className="ion-margin">
-                <IonCol className="ion-text-center">
-                  <div>Resultaten van deze week</div>
-                </IonCol>
-              </IonRow>
-              <IonRow className="ion-margin">
-                <IonCol>
-                  <div>
-                    <p>Wat je bent verloren:</p>
-                    <h1>-4kg</h1>
-                    <p>Jij bent bij stap:</p>
-                    <h1>2</h1>
-                  </div>
-                </IonCol>
-                <IonCol className="ion-margin">
-                  <div className="ion-margin">
-                    <img src={Chart} alt={Chart} />
-                  </div>
-                </IonCol>
-              </IonRow>
-            </IonGrid>
-          </div>
+          <IonGrid className="slideStats">
+            <IonRow>
+              <IonCol className="ion-text-center">
+                <p className="statsTitle">Resultaten van deze week</p>
+              </IonCol>
+            </IonRow>
+            <IonRow>
+              <IonCol>
+                <IonText>
+                  <p>Wat je bent verloren:</p>
+                  <h1 className="statsText">-4kg</h1>
+                  <p>Jij bent bij stap:</p>
+                  <h1 className="statsText">2</h1>
+                </IonText>
+              </IonCol>
+              <IonCol>
+                <div>
+                  <img src={Chart} alt={Chart}></img>
+                </div>
+                <div className="ion-text-center">
+                  <p className="statsText">502Kcal</p>
+                </div>
+              </IonCol>
+            </IonRow>
+          </IonGrid>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slideStats">
-            <IonGrid>
-              <IonRow>
-                <IonCol>
-                  <div>graph</div>
-                </IonCol>
-              </IonRow>
-            </IonGrid>
-          </div>
+          <IonGrid className="slideStats">
+            <IonRow>
+              <IonCol>
+                <div>graph</div>
+              </IonCol>
+            </IonRow>
+          </IonGrid>
         </SwiperSlide>
       </Swiper>
     </div>
