@@ -9,6 +9,7 @@ import {
 import "./Tab1.css";
 import Header from "../components/Header/HeaderUser";
 import HeaderNonUser from "../components/Header/HeaderNonUser";
+import Stats from "../components/Stats/Stats";
 import Footer from "../components/Footer/Footer";
 import kalMeter from "../Images/kalMeter.png";
 
@@ -19,29 +20,9 @@ const Tab1: React.FC = () => {
         <Header />
         <div className="stats-background">
           <IonGrid>
-            <IonRow className="ion-margin">
-              <IonCol className="ion-text-center">
-                <div>Resultaten van deze week</div>
-              </IonCol>
-            </IonRow>
-            <IonRow className="ion-margin">
-              <IonCol>
-                <div>
-                  <p>Wat je bent verloren:</p>
-                  <h1>-4kg</h1>
-                  <p>Jij bent bij stap:</p>
-                  <h1>2</h1>
-                </div>
-              </IonCol>
-              <IonCol className="ion-margin">
-                <div className="ion-margin">
-                  <img src={kalMeter} alt="kalMeter" />
-                </div>
-              </IonCol>
-            </IonRow>
+            <Stats />
           </IonGrid>
         </div>
-
         <IonGrid>
           <IonRow className="ion-justify-content-between ion-padding">
             <div>Tips voor vandaag</div>

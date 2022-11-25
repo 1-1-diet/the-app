@@ -10,7 +10,16 @@
 .headerptrn {
   position: absolute;
   width: 100vw;
-  height: auto;
+  height: 17vh;
+  object-fit: cover;
+  z-index: 10;
+}
+
+.headerptrnNonUser {
+  position: absolute;
+  width: 100vw;
+  height: 40vh;
+  object-fit: cover;
   z-index: 10;
 }
 

@@ -18,7 +18,7 @@ class HeaderNonUser extends Component {
   render() {
     return (
       <div className="headerbackground">
-        <img src={ptrn} alt="food ptrn" className="headerptrn" />
+        <img src={ptrn} alt="food ptrn" className="headerptrnNonUser" />
         <img src={logo} alt="Pech hij doet t niet" className="headerlogo" />
         <div className="content">
           <IonGrid>

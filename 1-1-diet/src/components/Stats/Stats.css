@@ -1,0 +1,12 @@
+.slideStats {
+    height: 40vh;
+    margin: 8px;
+    padding: 4px;
+    background-color: #dadada;
+    border-radius: 24px;
+    z-index: 12;
+}
+
+.swiperDots {
+    height: 45vh;
+}
