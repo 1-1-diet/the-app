@@ -1,0 +1,21 @@
+.mainContainer {
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.btnContainer {
+    width: 31vw;
+    height: fit-content;
+    padding: 1em;
+    background-color: #EFF5FB;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}

@@ -24,7 +24,6 @@ export default function TipsVoorVandaag() {
             <IonLabel id={styles.toonAlle}>Toon alle</IonLabel>
           </div>
           <div className={styles.btnContent}>
-            {/* <div className={styles.btnSelector}></div> */}
             <IonButton
               color={page === 1 ? "navigation" : "background"}
               onClick={() => setPage(1)}

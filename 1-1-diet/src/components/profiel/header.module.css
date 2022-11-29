@@ -39,7 +39,7 @@
     z-index: 1;
 }
 
-#profileImg {
+.profileImg {
     position: relative;
     width: 50%;
     border-radius: 50%;

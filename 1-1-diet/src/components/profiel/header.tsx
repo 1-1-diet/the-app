@@ -12,7 +12,11 @@ export default function header(profile: any) {
         <img className={styles.ptrn} src={ptrn} alt="overlay patroon" />
       </div>
       <div className={styles.profile}>
-        <img id={styles.profileImg} src={profileImg} alt="Jouw profile foto" />
+        <img
+          className={styles.profileImg}
+          src={profileImg}
+          alt="Jouw profiel foto"
+        />
         <div id={styles.icon}>
           <IonIcon
             icon={createOutline}
