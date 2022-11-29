@@ -1,11 +1,4 @@
-import {
-  IonContent,
-  IonPage,
-  IonGrid,
-  IonRow,
-  IonCol,
-  IonButton,
-} from "@ionic/react";
+import { IonContent, IonPage, IonGrid, IonRow, IonCol } from "@ionic/react";
 import "./Tab1.css";
 import Header from "../components/Header/HeaderUser";
 import HeaderNonUser from "../components/Header/HeaderNonUser";
