@@ -8,7 +8,7 @@ import {
   Zoom,
   Virtual,
 } from "swiper";
-import "/Users/kzeibra/Desktop/4444/the-app/1-1-diet/src/components/Invite-friend-card/Invite-friend-card.css";
+import "./Invite-friend-card.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
