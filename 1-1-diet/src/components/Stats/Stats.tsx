@@ -5,9 +5,40 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "./Stats.css";
 import "swiper/css/pagination";
-import Chart from "../Chart/Chart.svg";
+import { Chart, ArcElement } from 'chart.js'
+import { Doughnut } from 'react-chartjs-2'
+
+Chart.register(ArcElement)
 
 export default function Stats() {
+
+  const data = {
+    labals: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    datasets: [
+      {
+        label: '# of Weightlost',
+        data: [18, 9],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          'rgba(255, 159, 64, 0.2)',
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)',
+        ],
+        borderWidth: 2,
+      },
+    ],
+  };
+
   return (
     <div>
       <Swiper
@@ -34,7 +65,7 @@ export default function Stats() {
               </IonCol>
               <IonCol>
                 <div>
-                  <img src={Chart} alt={Chart}></img>
+                  <Doughnut data={data} />
                 </div>
                 <div className="ion-text-center">
                   <p className="statsText">502Kcal</p>
