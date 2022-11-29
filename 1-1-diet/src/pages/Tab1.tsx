@@ -11,7 +11,8 @@ import ExploreContainer from "../components/ExploreContainer";
 import "./Tab1.css";
 import React from "react";
 import { IonSlides, IonSlide, IonContent } from "@ionic/react";
-import Infocards from "../components/Inforcards/Inforcard";
+import Invite from "../components/Invite-friend-card/Invite-friend-card";
+import Inforcard from "../components/Inforcards/Inforcard";
 
 const Tab1: React.FC = () => {
   return (
@@ -22,7 +23,8 @@ const Tab1: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <Infocards />
+        <Inforcard />
+        <Invite />
       </IonContent>
     </IonPage>
   );

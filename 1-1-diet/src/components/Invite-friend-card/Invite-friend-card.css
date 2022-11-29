@@ -1,0 +1,40 @@
+.ivite-card {
+  width: 80%;
+  height: 200px;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 30px;
+  background-color: "red";
+  background-position: center;
+  display: flex;
+  background-image: url("/Photos/Screen Shot 2022-10-19 at 2.19.56 AM.png");
+}
+.ivite-card-logo {
+  width: 200px;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-image: url("/Photos/istockphoto-1365310330-612x612 1.png");
+}
+.ivite-card-logo-coins {
+  width: 200px;
+  background-repeat: no-repeat;
+  height: 100%;
+  margin-left: auto;
+  background-image: url("/Photos/Gold Coins.png");
+}
+
+.ivite-card-text {
+  color: aliceblue;
+  font-size: 20;
+  font-weight: bold;
+  height: 50%;
+  font-size: 15px;
+}
+
+.textbox {
+  width: 60%;
+  height: 110%;
+  margin-left: 5%;
+  margin-right: 5%;
+}

@@ -1,21 +1,11 @@
-.cardeen {
-  width: 80%;
-  height: 200px;
-  margin-top: 5%;
-  margin-left: 10%;
-  margin-right: 10%;
-  border-radius: 30px;
-  background-image: url("/Photos/Screen Shot 2022-10-19 at 2.19.56 AM.png");
-  background-position: center;
-  display: flex;
+:root {
+  --swiper-pagination-bullet-width: 10vw;
 }
-.logoeen {
-  background-image: url("/Photos/2mensen op de bank.png");
-  width: 200px;
-  background-repeat: no-repeat;
-  height: 150px;
+
+.swiper-pagination-bullet {
+  border-radius: 1em !important;
 }
-.cardtwee {
+.cardone {
   width: 80%;
   height: 200px;
   margin-top: 5%;
@@ -26,20 +16,37 @@
   background-position: center;
   display: flex;
 }
-.logotwee {
+.logoone {
+  background-image: url("/Photos/2mensen op de bank.png");
+  width: 200px;
+  background-repeat: no-repeat;
+  height: 150px;
+}
+.cardtwo {
+  width: 80%;
+  height: 200px;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 30px;
+  background-image: url("/Photos/Screen Shot 2022-10-19 at 2.21.35 AM.png");
+  background-position: center;
+  display: flex;
+}
+.logotwo {
   background-image: url("/Photos/ervaringen 1.png");
   width: 200px;
   background-repeat: no-repeat;
   height: 200px;
 }
-.cardeentext {
-  color: aliceblue;
+.cardonetext {
+  color: #dc6099;
   font-size: 20;
   font-weight: bold;
   height: 50%;
   font-size: 15px;
 }
-.cardtweetext {
+.cardtwotext {
   color: #dc6099;
   font-size: 20;
   font-weight: bold;
@@ -48,24 +55,16 @@
 }
 
 .textbox {
-  width: 50%;
+  width: 60%;
   margin-left: 5%;
   margin-right: 5%;
-}
-.swiper-pagination-bullet {
-  color: #d9d9d9;
-  opacity: 0.5;
-  width: 75px;
-  height: 5px;
-  border-radius: 0%;
-}
-
-.swiper-pagination-bullet-active {
-  opacity: 2;
-  color: #5c99d0;
 }
 .button {
   width: auto;
   margin: auto;
   float: right;
+}
+.info-swiper {
+  height: 270px;
+  margin-top: 5%;
 }
