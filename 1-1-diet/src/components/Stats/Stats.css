@@ -1,5 +1,5 @@
 .slideStats {
-    height: 40vh;
+    height: auto;
     margin: 16px;
     padding: 8px;
     background-color: #ece9e9;
@@ -8,7 +8,8 @@
 }
 
 .swiperDots {
-    height: 45vh;
+    
+    height: 50vh;
 }
 
 .statsTitle {

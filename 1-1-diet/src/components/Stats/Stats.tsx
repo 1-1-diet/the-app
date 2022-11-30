@@ -6,6 +6,7 @@ import "swiper/css";
 import "./Stats.css";
 import "swiper/css/pagination";
 import Chart from "../Chart/Chart.svg";
+import { Doughnut } from "react-chartjs-2";
 
 export default function Stats() {
   return (
@@ -33,9 +34,9 @@ export default function Stats() {
                 </IonText>
               </IonCol>
               <IonCol>
-                <div>
+                {/* <div>
                   <img src={Chart} alt={Chart}></img>
-                </div>
+                </div> */}
                 <div className="ion-text-center">
                   <p className="statsText">502Kcal</p>
                 </div>
