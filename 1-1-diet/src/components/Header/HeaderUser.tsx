@@ -1,14 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import {
-  IonText,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar,
+  
   IonGrid,
-  IonRow,
+  
   IonCol,
-  IonButton,
+  
 } from "@ionic/react";
 import "./Header.css";
 import ptrn from "../../Images/ptrn.svg";
@@ -18,6 +14,7 @@ const Header: React.FC = () => {
   let timeOfDay;
   const date = new Date();
   const hours = date.getHours();
+  const name = ['Hendrick', ' Fredd', ' Jan']
 
   if (hours < 12) {
     timeOfDay = "morgen";
@@ -36,6 +33,7 @@ const Header: React.FC = () => {
           <IonGrid className="ion-margin">
             <IonCol className="ion-text-center headertitle">
               <h1>Goeie {timeOfDay}!</h1>
+              <h1>{name}</h1>
             </IonCol>
           </IonGrid>
         </IonGrid>

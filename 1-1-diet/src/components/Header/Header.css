@@ -10,7 +10,7 @@
 .headerptrn {
   position: absolute;
   width: 100vw;
-  height: 17vh;
+  height: 25vh;
   object-fit: cover;
   z-index: 10;
 }
