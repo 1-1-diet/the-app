@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  
-  IonGrid,
-  
-  IonCol,
-  
-} from "@ionic/react";
+import { IonGrid, IonCol } from "@ionic/react";
 import "./Header.css";
 import ptrn from "../../Images/ptrn.svg";
 import logo from "../../Images/logo.svg";
@@ -14,7 +8,7 @@ const Header: React.FC = () => {
   let timeOfDay;
   const date = new Date();
   const hours = date.getHours();
-  const name = ['Hendrick', ' Fredd', ' Jan']
+  const name = ["Hendrick", " Fredd", " Jan"];
 
   if (hours < 12) {
     timeOfDay = "morgen";
