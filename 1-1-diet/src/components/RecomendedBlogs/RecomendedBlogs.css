@@ -1,8 +1,13 @@
 .BlogImg {
   display: flex;
   justify-content: bottom;
-  height: 11em;
-  width: 21em;
+  height: 25vh;
+  width: 80vw;
+  border-radius: 1em;
+}
+
+.swiper {
+  margin-top: none;
 }
 
 img {
@@ -11,8 +16,18 @@ img {
   object-fit: cover;
 }
 
-p {
-  margin: 0 0;
+.titleContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 1.5em;
+}
+
+/* Moet later gelinkt worden naar de blogs pagina */
+#toonAlle {
+  color: blue;
+  font-size: 0.8em;
+  padding-right: 1em;
 }
 
 .BlogText {
@@ -21,7 +36,8 @@ p {
   justify-content: flex-end;
   position: absolute;
   bottom: 0;
-  text-align: center;
+  text-align: left;
+  padding-left: 1em;
   color: white;
   background: linear-gradient(#4785ef00, #000000);
   width: 100%;
@@ -32,5 +48,11 @@ p {
   display: flex;
   flex-direction: row;
   gap: 5px;
-  justify-content: center;
+  justify-content: left;
+  align-items: baseline;
+  color: rgba(255, 255, 255, 0.74);
+}
+
+h1 {
+  padding-left: 1em;
 }
