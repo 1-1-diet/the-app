@@ -95,7 +95,7 @@ function Invite() {
               </IonItem>
               <IonItem>
                 <IonAvatar slot="start">
-                  <IonImg src="https://thumbs.dreamstime.com/b/document-paper-outline-icon-isolated-note-thin-line-style-graphic-web-design-simple-flat-symbol-pixel-perfect-vector-114666487.jpg" />
+                  <IonImg src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUA7MG3vYHRFDOnDzsUUXBP3tKG2wbDBHLDh-UliAo2zr50fx_spbaKWKcpSz88dhn5q0&usqp=CAU" />
                 </IonAvatar>
                 <IonLabel>
                   <h2>Kopie link </h2>
