@@ -1,15 +1,15 @@
 import React from "react";
 import { IonCard, IonButton, IonText } from "@ionic/react";
-import "./Non-users-card.css";
+import styles from "./Non-users-card.module.css";
 
 const Home: React.FC = () => {
   return (
-    <IonCard className="non-user-card">
-      <div className="non-user-card-logo">
-        <IonText className="non-user-card-text">
+    <IonCard className={styles.nonUserCard}>
+      <div className={styles.nonUserCardLogo}>
+        <IonText className={styles.nonUserCardText}>
           Register nu en krijg 20 procent korting op je volgende bestelling
         </IonText>
-        <IonButton className="non-user-card-button" color="light">
+        <IonButton className={styles.nonUserCardButton} color="light">
           Register nu
         </IonButton>
       </div>

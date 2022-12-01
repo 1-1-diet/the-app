@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import {
   logoFacebook,
   logoInstagram,
@@ -7,20 +7,14 @@ import {
   logoYoutube,
 } from "ionicons/icons";
 import {
-  IonContent,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar,
   IonGrid,
   IonRow,
   IonCol,
-  IonButton,
   IonSearchbar,
   IonFooter,
   IonIcon,
 } from "@ionic/react";
-import "./Footer.css";
+import styles from "./Footer.module.css";
 
 class Footer extends Component {
   render() {

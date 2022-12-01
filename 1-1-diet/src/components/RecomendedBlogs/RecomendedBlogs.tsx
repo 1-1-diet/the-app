@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import { IonCard, IonIcon, IonLabel } from "@ionic/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "./RecomendedBlogs.css";
+import styles from "./RecomendedBlogs.module.css";
 import { book } from "ionicons/icons";
 
 import { Blogs } from "./Blogs";
@@ -10,22 +10,25 @@ import { Blogs } from "./Blogs";
 const RecomendedBlogs: React.FC = () => {
   return (
     <div>
-      <div className="titleContent">
-        <h1 id="Title">Aanbevolen blogs</h1>
-        <IonLabel id="toonAlle">Toon Alle</IonLabel>
+      <div className={styles.titleContent}>
+        <IonLabel id={styles.title}>Aanbevolen blogs</IonLabel>
+        <IonLabel id={styles.toonAlle}>Toon Alle</IonLabel>
       </div>
-      <Swiper className="swiper" slidesPerView={1.2} grabCursor={true}>
+      <Swiper className={styles.swiper} slidesPerView={1.2} grabCursor={true}>
         {Blogs?.map((element: any) => {
           return (
             <SwiperSlide key={element.title}>
-              <IonCard className="BlogImg">
+              <IonCard className={styles.BlogImg}>
                 <img
                   alt={element.title}
                   src={require(`../../Images/${element.img}`)}
+                  className={styles.img}
                 />
-                <div className="BlogText">
-                  <IonLabel className="titleContent">{element.title} </IonLabel>
-                  <div className="Ptext">
+                <div className={styles.BlogText}>
+                  <IonLabel className={styles.titleContent}>
+                    {element.title}{" "}
+                  </IonLabel>
+                  <div className={styles.Ptext}>
                     <p>{element.readTime}</p>
                     <IonIcon icon={book} />
                     <p>{element.date}</p>

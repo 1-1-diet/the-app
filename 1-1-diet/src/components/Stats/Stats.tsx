@@ -3,7 +3,7 @@ import { Pagination, Virtual } from "swiper";
 import { IonText, IonGrid, IonRow, IonCol } from "@ionic/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "./Stats.css";
+import styles from "./Stats.module.css";
 import "swiper/css/pagination";
 import { Chart, ArcElement } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
@@ -44,22 +44,22 @@ export default function Stats() {
         modules={[Pagination, Virtual]}
         pagination={{ clickable: true }}
         virtual
-        className="swiperDots"
+        className={styles.swiperDots}
       >
         <SwiperSlide>
-          <IonGrid className="slideStats">
+          <IonGrid className={styles.slideStats}>
             <IonRow>
               <IonCol className="ion-text-center">
-                <p className="statsTitle">Resultaten van deze week</p>
+                <p className={styles.statsTitle}>Resultaten van deze week</p>
               </IonCol>
             </IonRow>
             <IonRow>
               <IonCol>
                 <IonText>
                   <p>Wat je bent verloren:</p>
-                  <h1 className="statsText">-4kg</h1>
+                  <h1 className={styles.statsText}>-4kg</h1>
                   <p>Jij bent bij stap:</p>
-                  <h1 className="statsText">2</h1>
+                  <h1 className={styles.statsText}>2</h1>
                 </IonText>
               </IonCol>
               <IonCol>
@@ -67,14 +67,14 @@ export default function Stats() {
                   <Doughnut data={data} />
                 </div>
                 <div className="ion-text-center">
-                  <p className="statsText">502Kcal</p>
+                  <p className={styles.statsText}>502Kcal</p>
                 </div>
               </IonCol>
             </IonRow>
           </IonGrid>
         </SwiperSlide>
         <SwiperSlide>
-          <IonGrid className="slideStats">
+          <IonGrid className={styles.slideStats}>
             <IonRow>
               <IonCol>
                 <div>graph</div>

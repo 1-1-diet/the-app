@@ -1,6 +1,6 @@
 import React from "react";
 import { IonGrid, IonCol } from "@ionic/react";
-import "./Header.css";
+import styles from "./Header.module.css";
 import ptrn from "../../Images/ptrn.svg";
 import logo from "../../Images/logo.svg";
 
@@ -19,13 +19,17 @@ const Header: React.FC = () => {
   }
 
   return (
-    <div className="headerbackground">
-      <img src={ptrn} alt="food ptrn" className="headerptrn" />
-      <img src={logo} alt="Pech hij doet t niet" className="headerlogo" />
-      <div className="content">
+    <div className={styles.headerbackground}>
+      <img src={ptrn} alt="food ptrn" className={styles.headerptrn} />
+      <img
+        src={logo}
+        alt="Pech hij doet t niet"
+        className={styles.headerlogo}
+      />
+      <div className={styles.content}>
         <IonGrid>
           <IonGrid className="ion-margin">
-            <IonCol className="ion-text-center headertitle">
+            <IonCol className={styles.headertitle}>
               <h1>Goeie {timeOfDay}!</h1>
               <h1>{name}</h1>
             </IonCol>

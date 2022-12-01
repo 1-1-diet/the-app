@@ -1,26 +1,26 @@
 import { IonButton, IonCol, IonContent, IonRow } from "@ionic/react";
-import "./MarkInfoWindow.css";
+import styles from "./MarkInfoWindow.module.css";
 
 export const MarkerInfoWindow = ({ marker, dismiss }: any) => {
   return (
     <IonContent>
       <IonCol>
-        <h1 id="markerTitle">Zoek een consulent</h1>
-        <div className="popupCard">
-          <IonButton color="medium" className="profileIonBtn">
-            <div className="profileBtn">
-              <div className="profilePic"></div>
-              <div className="profileInfo">
+        <h1 id={styles.markerTitle}>Zoek een consulent</h1>
+        <div className={styles.popupCard}>
+          <IonButton color="medium" className={styles.profileIonBtn}>
+            <div className={styles.profileBtn}>
+              <div className={styles.profilePic}></div>
+              <div className={styles.profileInfo}>
                 <label>{marker.name}</label>
                 <label>{marker.address}</label>
               </div>
             </div>
           </IonButton>
-          <IonRow className="contactContainer">
-            <IonButton className="callBtn" color="medium">
+          <IonRow className={styles.contactContainer}>
+            <IonButton className={styles.callBtn} color="medium">
               call
             </IonButton>
-            <IonButton className="msgBtn" color="danger">
+            <IonButton className={styles.msgBtn} color="danger">
               msg
             </IonButton>
           </IonRow>

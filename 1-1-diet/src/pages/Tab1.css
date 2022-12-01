@@ -14,3 +14,13 @@
   width: 100vw;
   height: 100vh;
 }
+
+.swiper-pagination-bullet {
+  border-radius: 1em !important;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
