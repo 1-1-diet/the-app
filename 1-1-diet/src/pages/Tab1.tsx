@@ -3,15 +3,19 @@ import {
   IonPage,
   IonGrid,
   IonRow,
-  IonCol,
+  IonTitle,
   IonButton,
+  IonHeader,
+  IonToolbar,
 } from "@ionic/react";
 import "./Tab1.css";
 import Header from "../components/Header/HeaderUser";
 import HeaderNonUser from "../components/Header/HeaderNonUser";
 import Stats from "../components/Stats/Stats";
 import Footer from "../components/Footer/Footer";
-
+import Invite from "../components/Invite-friend-card/Invite-friend-card";
+import Info from "../components/Inforcards/Inforcard";
+import Nonusercard from "../components/Non-users-card/Non-users-card";
 
 const Tab1: React.FC = () => {
   return (

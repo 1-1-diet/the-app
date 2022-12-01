@@ -1,0 +1,74 @@
+:root {
+  --swiper-pagination-bullet-width: 10vw;
+}
+
+.swiper-pagination-bullet {
+  border-radius: 1em !important;
+}
+.cardone {
+  width: 80%;
+  height: 30%;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 30px;
+  background-image: url("/Photos/Screen Shot 2022-10-19 at 2.21.35 AM.png");
+  background-position: center;
+  display: flex;
+}
+.logoone {
+  background-image: url("/Photos/2mensen op de bank.png");
+  width: 200px;
+  background-repeat: no-repeat;
+  height: 150px;
+  border-radius: 30%;
+}
+.cardtwo {
+  width: 80%;
+  height: 30%;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 30px;
+  background-image: url("/Photos/Screen Shot 2022-10-19 at 2.21.35 AM.png");
+  background-position: center;
+  display: flex;
+}
+.logotwo {
+  background-image: url("/Photos/ervaringen 1.png");
+  width: 200px;
+  background-repeat: no-repeat;
+  height: 200px;
+  border-radius: 30%;
+}
+.cardonetext {
+  color: #dc6099;
+  font-size: 20;
+  font-weight: bold;
+  height: 50%;
+  font-size: 15px;
+}
+.cardtwotext {
+  color: #dc6099;
+  font-size: 20;
+  font-weight: bold;
+  height: 50%;
+  font-size: 15px;
+}
+
+.textbox {
+  width: 60%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.button {
+  width: auto;
+  margin: auto;
+  float: right;
+  margin-top: 3%;
+  font-weight: bold;
+}
+.info-swiper {
+  height: 270px;
+  margin-top: 5%;
+}
