@@ -12,6 +12,7 @@ import HeaderNonUser from "../components/Header/HeaderNonUser";
 import Stats from "../components/Stats/Stats";
 import Footer from "../components/Footer/Footer";
 
+
 const Tab1: React.FC = () => {
   return (
     <IonPage>
