@@ -1,18 +1,10 @@
-import {
-  IonButton,
-  IonCard,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-  IonText,
-} from "@ionic/react";
-import ExploreContainer from "../components/ExploreContainer";
+import { IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react";
 import "./Tab1.css";
 import React from "react";
-import { IonSlides, IonSlide, IonContent } from "@ionic/react";
+import { IonContent } from "@ionic/react";
 import Invite from "../components/Invite-friend-card/Invite-friend-card";
-import Inforcard from "../components/Inforcards/Inforcard";
+import Info from "../components/Inforcards/Inforcard";
+import Nonusercard from "../components/Non-users-card/Non-users-card";
 
 const Tab1: React.FC = () => {
   return (
@@ -23,7 +15,6 @@ const Tab1: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <Inforcard />
         <Invite />
       </IonContent>
     </IonPage>

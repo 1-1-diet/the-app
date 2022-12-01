@@ -1,0 +1,33 @@
+.non-user-card {
+  width: 95%;
+  height: 200px;
+  margin-top: 5%;
+  margin-left: 2.5%;
+  margin-right: 10%;
+  border-radius: 30px;
+  background-color: #fecb38;
+}
+.non-user-card-logo {
+  background-image: url("https://img.freepik.com/free-photo/young-fashion-woman-holding-shopping-bags-credit-card-through-torn-paper-hole-wall_140725-104990.jpg?w=360");
+  width: 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.non-user-card-text {
+  width: 40%;
+  height: 50%;
+  margin-top: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
+  float: right;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+}
+.non-user-card-button {
+  float: right;
+  margin-top: 5%;
+  margin: 10%;
+  font-weight: bold;
+}

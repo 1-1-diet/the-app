@@ -63,7 +63,7 @@ function Invite() {
             <IonToolbar>
               <IonTitle>Nodig je vriend nu uit </IonTitle>
               <IonButtons slot="end">
-                <IonButton onClick={() => dismiss()}>Close</IonButton>
+                <IonButton onClick={() => dismiss()}>Terug</IonButton>
               </IonButtons>
             </IonToolbar>
           </IonHeader>
@@ -71,34 +71,34 @@ function Invite() {
             <IonList>
               <IonItem>
                 <IonAvatar slot="start">
-                  <IonImg src="https://i.pravatar.cc/300?u=b" />
+                  <IonImg src="https://w7.pngwing.com/pngs/922/489/png-transparent-whatsapp-icon-logo-whatsapp-logo-whatsapp-logo-text-trademark-grass-thumbnail.png" />
                 </IonAvatar>
                 <IonLabel>
-                  <h2>Connor Smith</h2>
+                  <h2>Stuur link via WhatsApp</h2>
                 </IonLabel>
               </IonItem>
               <IonItem>
                 <IonAvatar slot="start">
-                  <IonImg src="https://i.pravatar.cc/300?u=a" />
+                  <IonImg src="https://play-lh.googleusercontent.com/ldcQMpP7OaVmglCF6kGas9cY_K0PsJzSSosx2saw9KF1m3RHaEXpH_9mwBWaYnkmctk" />
                 </IonAvatar>
                 <IonLabel>
-                  <h2>Daniel Smith</h2>
+                  <h2>Stuur link via Facebook</h2>
                 </IonLabel>
               </IonItem>
               <IonItem>
                 <IonAvatar slot="start">
-                  <IonImg src="https://i.pravatar.cc/300?u=d" />
+                  <IonImg src="https://helpdeskgeek.com/wp-content/pictures/2021/03/scan-qr-code.jpg" />
                 </IonAvatar>
                 <IonLabel>
-                  <h2>Greg Smith</h2>
+                  <h2>Maak een QR code</h2>
                 </IonLabel>
               </IonItem>
               <IonItem>
                 <IonAvatar slot="start">
-                  <IonImg src="https://i.pravatar.cc/300?u=e" />
+                  <IonImg src="https://thumbs.dreamstime.com/b/document-paper-outline-icon-isolated-note-thin-line-style-graphic-web-design-simple-flat-symbol-pixel-perfect-vector-114666487.jpg" />
                 </IonAvatar>
                 <IonLabel>
-                  <h2>Zoey Smith</h2>
+                  <h2>Kopie link </h2>
                 </IonLabel>
               </IonItem>
             </IonList>

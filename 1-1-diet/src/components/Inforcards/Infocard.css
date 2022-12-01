@@ -21,6 +21,7 @@
   width: 200px;
   background-repeat: no-repeat;
   height: 150px;
+  border-radius: 30%;
 }
 .cardtwo {
   width: 80%;
@@ -38,6 +39,7 @@
   width: 200px;
   background-repeat: no-repeat;
   height: 200px;
+  border-radius: 30%;
 }
 .cardonetext {
   color: #dc6099;
@@ -63,6 +65,8 @@
   width: auto;
   margin: auto;
   float: right;
+  margin-top: 3%;
+  font-weight: bold;
 }
 .info-swiper {
   height: 270px;

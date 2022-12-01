@@ -33,7 +33,7 @@ const Home: React.FC = () => {
             </IonText>
 
             <IonButton className="button" color="primary">
-              <h5>Lees meer</h5>
+              Lees meer
             </IonButton>
           </div>
         </IonCard>
@@ -50,9 +50,7 @@ const Home: React.FC = () => {
               </h5>
             </IonText>
 
-            <IonButton color="primary">
-              <h5>Lees meer</h5>
-            </IonButton>
+            <IonButton color="primary">Lees meer</IonButton>
           </div>
         </IonCard>
       </SwiperSlide>
