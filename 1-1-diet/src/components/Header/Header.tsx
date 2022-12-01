@@ -14,11 +14,11 @@ import "./Header.css";
 import ptrn from "../../Images/ptrn.svg";
 import logo from "../../Images/logo.svg";
 
-class HeaderNonUser extends Component {
+class Header extends Component {
   render() {
     return (
       <div className="headerbackground">
-        <img src={ptrn} alt="food ptrn" className="headerptrnNonUser" />
+        <img src={ptrn} alt="food ptrn" className="headerptrn" />
         <img src={logo} alt="Pech hij doet t niet" className="headerlogo" />
         <div className="content">
           <IonGrid>
@@ -47,4 +47,4 @@ class HeaderNonUser extends Component {
   }
 }
 
-export default HeaderNonUser;
+export default Header;
