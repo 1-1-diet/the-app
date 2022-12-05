@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { Share } from "@capacitor/share";
 import {
   IonButtons,
   IonButton,
@@ -12,6 +13,7 @@ import {
   IonLabel,
   IonAvatar,
   IonImg,
+  useIonAlert,
 } from "@ionic/react";
 import { IonCard, IonText } from "@ionic/react";
 import styles from "./Invite-friend-card.module.css";
@@ -19,6 +21,10 @@ import styles from "./Invite-friend-card.module.css";
 function Invite() {
   const modal = useRef<HTMLIonModalElement>(null);
   const page = useRef(null);
+  const [isOpen, SetIsOpen] = useState(false);
+  var isVisible = false;
+
+  const [presentAlert] = useIonAlert();
 
   const [presentingElement, setPresentingElement] =
     useState<HTMLElement | null>(null);
@@ -27,9 +33,18 @@ function Invite() {
     setPresentingElement(page.current);
   }, []);
 
-  function dismiss() {
-    modal.current?.dismiss();
-  }
+  async function openModal() {
+    if (await (await Share.canShare()).value === true) {
+      await Share.share({
+        title: "Hey, ik gebruik het 1 op 1 dieët misschien is het ook wat voor jou!",
+        text: "Als jij via mijn link je aanmeld krijgen we alle 2 een leuke bonus",
+        url: "1op1dieet.nl",
+        dialogTitle: "Korting delen"
+      })
+    } else {  
+      SetIsOpen(true)
+    }
+  };
 
   return (
     <div className={styles.mainContainer}>
@@ -37,12 +52,12 @@ function Invite() {
         <div className={styles.textBox}>
           <IonText>
             <h5 className={styles.iviteCardText}>
-              Nodig je vriend via de uit en krijg 20 euro kortting op je
+              Nodig je vriend via de uit en krijg 20 euro korting op je
               volgende besteling
             </h5>
           </IonText>
 
-          <IonButton id="openModal" expand="block">
+          <IonButton expand="block" onClick={() => openModal()}>
             Lees Meer
           </IonButton>
         </div>
@@ -54,20 +69,20 @@ function Invite() {
 
       <IonModal
         ref={modal}
-        trigger="openModal"
+        isOpen={isOpen}
         presentingElement={presentingElement!}
       >
         <IonHeader>
           <IonToolbar>
             <IonTitle>Nodig je vriend nu uit </IonTitle>
             <IonButtons slot="end">
-              <IonButton onClick={() => dismiss()}>Terug</IonButton>
+              <IonButton onClick={() => SetIsOpen(false)}>Terug</IonButton>
             </IonButtons>
           </IonToolbar>
         </IonHeader>
         <IonContent className="ion-padding">
           <IonList>
-            <IonItem>
+            <IonItem href="https://wa.me/?text=Als%20jij%20via%20mijn%20link%20je%20aanmeld%20krijgen%20we%20alle%202%20een%20leuke%20bonus%0a1op1dieet.nl">
               <IonAvatar slot="start">
                 <IonImg src="https://w7.pngwing.com/pngs/922/489/png-transparent-whatsapp-icon-logo-whatsapp-logo-whatsapp-logo-text-trademark-grass-thumbnail.png" />
               </IonAvatar>
@@ -75,15 +90,14 @@ function Invite() {
                 <h2>Stuur link via WhatsApp</h2>
               </IonLabel>
             </IonItem>
-            <IonItem>
-              <IonAvatar slot="start">
-                <IonImg src="https://play-lh.googleusercontent.com/ldcQMpP7OaVmglCF6kGas9cY_K0PsJzSSosx2saw9KF1m3RHaEXpH_9mwBWaYnkmctk" />
-              </IonAvatar>
-              <IonLabel>
-                <h2>Stuur link via Facebook</h2>
-              </IonLabel>
-            </IonItem>
-            <IonItem>
+            <IonItem button onClick={() =>
+        presentAlert({
+          header: 'Alert',
+          subHeader: 'QR code',
+          message: '<img src="http://api.qrserver.com/v1/create-qr-code/?data=1op1dieet%C2%B7nl">',
+          buttons: ['Klaar'],
+        })
+      }>
               <IonAvatar slot="start">
                 <IonImg src="https://helpdeskgeek.com/wp-content/pictures/2021/03/scan-qr-code.jpg" />
               </IonAvatar>
@@ -91,7 +105,7 @@ function Invite() {
                 <h2>Maak een QR code</h2>
               </IonLabel>
             </IonItem>
-            <IonItem>
+            <IonItem button onClick={async () => await navigator.clipboard.writeText("1op1dieet.nl")}>
               <IonAvatar slot="start">
                 <IonImg src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUA7MG3vYHRFDOnDzsUUXBP3tKG2wbDBHLDh-UliAo2zr50fx_spbaKWKcpSz88dhn5q0&usqp=CAU" />
               </IonAvatar>
