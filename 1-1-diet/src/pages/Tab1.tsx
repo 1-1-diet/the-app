@@ -20,7 +20,7 @@ const Tab1: React.FC = () => {
           <TipsVoorVandaag />
           <RecomendedBlogs />
           <Invite />
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </IonContent>
     </IonPage>
