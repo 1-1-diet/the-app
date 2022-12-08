@@ -13,15 +13,17 @@ import {
   LinearScale,
   PointElement,
   LineElement,
+  BarElement,
   Title,
   Tooltip,
   Legend,
 } from "chart.js";
-import { Doughnut, Line } from "react-chartjs-2";
+import { Doughnut, Line, Bar } from "react-chartjs-2";
 
 ChartJS.register(
   CategoryScale,
   LinearScale,
+  BarElement,
   PointElement,
   LineElement,
   Title,
@@ -33,14 +35,11 @@ Chart.register(ArcElement);
 
 export const options = {
   responsive: true,
+  maintainAspectRatio: false,
   scales: {
     y: {
-      min: 0,
-      max: 250,
-    },
-    x: {
-      min: 0,
-      max: 4,
+      min: -30,
+      max: 30,
     },
   },
   plugins: {
@@ -49,7 +48,7 @@ export const options = {
     },
     title: {
       display: true,
-      text: "Gewicht afname per week",
+      text: "Wekelijkse gewichts afname",
     },
   },
 };
@@ -64,18 +63,18 @@ const labels = [
   "Zondag",
 ];
 
-export const data2 = {
+const data2 = {
   labels,
   datasets: [
     {
-      label: "Gewenst gewicht",
-      data: [120, 100, 80, 60, 40, 20, 0],
+      label: "Gewenste afname",
+      data: [-5, 5, -3, -5, 7, 8, -5],
       borderColor: "rgb(255, 99, 132)",
       backgroundColor: "rgba(255, 99, 132, 0.5)",
     },
     {
-      label: "Verloren gewicht",
-      data: [40, 75, 69, 34, 40, 15, 69],
+      label: "Daadwerkelijke afname",
+      data: [3, -5, 6, 4, -8, 3, 5],
       borderColor: "rgb(53, 162, 235)",
       backgroundColor: "rgba(53, 162, 235, 0.5)",
     },
@@ -147,13 +146,11 @@ export default function Stats() {
         </SwiperSlide>
         <SwiperSlide>
           <IonGrid className={styles.slideStats}>
-            <IonRow>
-              <IonCol>
-                <div className={styles.lineChart}>
-                  <Line options={options} data={data2}></Line>
-                </div>
-              </IonCol>
-            </IonRow>
+            <IonCol>
+              <div className={styles.lineChart}>
+                <Line options={options} data={data2} />
+              </div>
+            </IonCol>
           </IonGrid>
         </SwiperSlide>
         <SwiperSlide></SwiperSlide>
