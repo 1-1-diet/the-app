@@ -33,6 +33,12 @@ ChartJS.register(
 
 Chart.register(ArcElement);
 
+const randomNumber = Math.floor(Math.random() * 11);
+
+const randomNumber2 = Math.floor(Math.random() * 101);
+
+const randomNumber3 = Math.floor(Math.random() * 1001);
+
 export const options = {
   responsive: true,
   maintainAspectRatio: false,
@@ -82,27 +88,13 @@ const data2 = {
 };
 
 const data = {
-  labals: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+  labals: ["Red", "Blue"],
   datasets: [
     {
       label: "# of Weightlost",
-      data: [420, 69],
-      backgroundColor: [
-        "rgba(255, 99, 132, 0.2)",
-        "rgba(54, 162, 235, 0.2)",
-        "rgba(255, 206, 86, 0.2)",
-        "rgba(75, 192, 192, 0.2)",
-        "rgba(153, 102, 255, 0.2)",
-        "rgba(255, 159, 64, 0.2)",
-      ],
-      borderColor: [
-        "rgba(255, 99, 132, 1)",
-        "rgba(54, 162, 235, 1)",
-        "rgba(255, 206, 86, 1)",
-        "rgba(75, 192, 192, 1)",
-        "rgba(153, 102, 255, 1)",
-        "rgba(255, 159, 64, 1)",
-      ],
+      data: [randomNumber2, randomNumber],
+      backgroundColor: ["rgba(255, 99, 132, 0.2)", "rgba(54, 162, 235, 0.2)"],
+      borderColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
       borderWidth: 2,
     },
   ],
@@ -128,7 +120,7 @@ export default function Stats() {
               <IonCol>
                 <IonText>
                   <p>Wat je bent verloren:</p>
-                  <h1 className={styles.statsText}>-4kg</h1>
+                  <h1 className={styles.statsText}>{randomNumber}kg</h1>
                   <p>Jij bent bij stap:</p>
                   <h1 className={styles.statsText}>2</h1>
                 </IonText>
@@ -138,7 +130,7 @@ export default function Stats() {
                   <Doughnut data={data} />
                 </div>
                 <div className="ion-text-center">
-                  <p className={styles.statsText}>502Kcal</p>
+                  <p className={styles.statsText}>{randomNumber3}Kcal</p>
                 </div>
               </IonCol>
             </IonRow>
@@ -153,7 +145,15 @@ export default function Stats() {
             </IonCol>
           </IonGrid>
         </SwiperSlide>
-        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>
+          <IonGrid className={styles.slideStats}>
+            <IonCol>
+              <div className={styles.lineChart}>
+                <Bar options={options} data={data2} />
+              </div>
+            </IonCol>
+          </IonGrid>
+        </SwiperSlide>
       </Swiper>
     </div>
   );
