@@ -47,24 +47,46 @@ function Invite() {
   }
 
   function createAlert() {
-    presentAlert ({
-    header: "Alert",
-    subHeader: "QR code",
-    message:
-      '<img src="http://api.qrserver.com/v1/create-qr-code/?data=1op1dieet%C2%B7nl">',
-    buttons: ["Klaar"]
-    })
+    presentAlert({
+      header: "Alert",
+      subHeader: "QR code",
+      message:
+        '<img src="http://api.qrserver.com/v1/create-qr-code/?data=1op1dieet%C2%B7nl">',
+      buttons: ["Klaar"],
+    });
   }
 
-  async function copyText() { 
-    await navigator.clipboard.writeText("1op1dieet.nl")
+  const frikandel: any = () => {
+    console.log("deze werkt");
+  };
+
+  async function copyText() {
+    await navigator.clipboard.writeText("1op1dieet.nl");
   }
 
   const modalLinks = [
-    {title:1, href: "https://wa.me/?text=Als%20jij%20via%20mijn%20link%20je%20aanmeld%20krijgen%20we%20alle%202%20een%20leuke%20bonus%0a1op1dieet.nl", onClick:console.log('1'),img:"https://w7.pngwing.com/pngs/922/489/png-transparent-whatsapp-icon-logo-whatsapp-logo-whatsapp-logo-text-trademark-grass-thumbnail.png",label:"Stuur link via WhatsApp"},
-    {title:2, href: "#!", onClick:createAlert() ,img:"https://helpdeskgeek.com/wp-content/pictures/2021/03/scan-qr-code.jpg",label:"Maak een QR code"},
-    {title:3, href: "#!", onClick:copyText(),img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUA7MG3vYHRFDOnDzsUUXBP3tKG2wbDBHLDh-UliAo2zr50fx_spbaKWKcpSz88dhn5q0&usqp=CAU",label:"Kopie link"}
-  ]
+    {
+      title: 1,
+      href: "https://wa.me/?text=Als%20jij%20via%20mijn%20link%20je%20aanmeld%20krijgen%20we%20alle%202%20een%20leuke%20bonus%0a1op1dieet.nl",
+      onClick: frikandel,
+      img: "https://w7.pngwing.com/pngs/922/489/png-transparent-whatsapp-icon-logo-whatsapp-logo-whatsapp-logo-text-trademark-grass-thumbnail.png",
+      label: "Stuur link via WhatsApp",
+    },
+    {
+      title: 2,
+      href: "#!",
+      onClick: createAlert,
+      img: "https://helpdeskgeek.com/wp-content/pictures/2021/03/scan-qr-code.jpg",
+      label: "Maak een QR code",
+    },
+    {
+      title: 3,
+      href: "#!",
+      onClick: copyText,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUA7MG3vYHRFDOnDzsUUXBP3tKG2wbDBHLDh-UliAo2zr50fx_spbaKWKcpSz88dhn5q0&usqp=CAU",
+      label: "Kopie link",
+    },
+  ];
 
   return (
     <div className={styles.mainContainer}>
@@ -92,7 +114,6 @@ function Invite() {
         isOpen={isOpen}
         presentingElement={presentingElement!}
       >
-        
         <IonHeader>
           <IonToolbar>
             <IonTitle>Nodig je vriend nu uit </IonTitle>
@@ -104,26 +125,24 @@ function Invite() {
         <IonContent className="ion-padding">
           <IonList>
             <div>
-          {modalLinks.map((links) => {
-              return (
-                <IonItem button
-                  key={links.title}
-                  href={links.href}
-                  onClick={() => {
-                    console.log(links.title)
-                    // {links.onClick}
-                  }}
-                >
-                  <IonAvatar slot="start"></IonAvatar>
-                  <IonImg src={links.img}/>
-                  <IonLabel>
-                  <h2>{links.label}</h2>
-                  </IonLabel>
-                </IonItem>
-              )
-          })}
-              </div>
-            <IonItem href="https://wa.me/?text=Als%20jij%20via%20mijn%20link%20je%20aanmeld%20krijgen%20we%20alle%202%20een%20leuke%20bonus%0a1op1dieet.nl">
+              {modalLinks.map((links) => {
+                return (
+                  <IonItem
+                    button
+                    key={links.title}
+                    href={links.href}
+                    onClick={links.onClick}
+                  >
+                    <IonAvatar slot="start"></IonAvatar>
+                    <IonImg src={links.img} />
+                    <IonLabel>
+                      <h2>{links.label}</h2>
+                    </IonLabel>
+                  </IonItem>
+                );
+              })}
+            </div>
+            {/* <IonItem href="https://wa.me/?text=Als%20jij%20via%20mijn%20link%20je%20aanmeld%20krijgen%20we%20alle%202%20een%20leuke%20bonus%0a1op1dieet.nl">
               <IonAvatar slot="start">
                 <IonImg src="https://w7.pngwing.com/pngs/922/489/png-transparent-whatsapp-icon-logo-whatsapp-logo-whatsapp-logo-text-trademark-grass-thumbnail.png" />
               </IonAvatar>
@@ -131,9 +150,7 @@ function Invite() {
                 <h2>Stuur link via WhatsApp</h2>
               </IonLabel>
             </IonItem>
-            <IonItem
-              button
-            >
+            <IonItem button>
               <IonAvatar slot="start">
                 <IonImg src="https://helpdeskgeek.com/wp-content/pictures/2021/03/scan-qr-code.jpg" />
               </IonAvatar>
@@ -141,16 +158,14 @@ function Invite() {
                 <h2>Maak een QR code</h2>
               </IonLabel>
             </IonItem>
-            <IonItem
-              button
-            >
+            <IonItem button>
               <IonAvatar slot="start">
                 <IonImg src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUA7MG3vYHRFDOnDzsUUXBP3tKG2wbDBHLDh-UliAo2zr50fx_spbaKWKcpSz88dhn5q0&usqp=CAU" />
               </IonAvatar>
               <IonLabel>
                 <h2>Kopie link </h2>
               </IonLabel>
-            </IonItem>
+            </IonItem> */}
           </IonList>
         </IonContent>
       </IonModal>
