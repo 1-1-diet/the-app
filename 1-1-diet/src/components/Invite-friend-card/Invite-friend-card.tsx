@@ -57,8 +57,15 @@ function Invite() {
   }
 
   function sendToWhatsapp() {
-    window.location.href ="https://wa.me/?text=Als%20jij%20via%20mijn%20link%20je%20aanmeld%20krijgen%20we%20alle%202%20een%20leuke%20bonus%0a1op1dieet.nl"
-  };
+    window.location.href =
+      "https://wa.me/?text=Als%20jij%20via%20mijn%20link%20je%20aanmeld%20krijgen%20we%20alle%202%20een%20leuke%20bonus%0a1op1dieet.nl";
+  }
+
+  function sendToTelegram() {
+    console.log("wtf");
+    window.location.href =
+      "https://t.me/share/url?url=1op1dieet.nl&text=Als%20jij%20via%20mijn%20link%20je%20aanmeld%20krijgen%20we%20alle%202%20een%20leuke%20bonus";
+  }
 
   async function copyText() {
     await navigator.clipboard.writeText("1op1dieet.nl");
@@ -82,6 +89,12 @@ function Invite() {
       onClick: copyText,
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUA7MG3vYHRFDOnDzsUUXBP3tKG2wbDBHLDh-UliAo2zr50fx_spbaKWKcpSz88dhn5q0&usqp=CAU",
       label: "Kopie link",
+    },
+    {
+      title: 4,
+      onClick: sendToTelegram,
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png",
+      label: "Stuur link via telegram",
     },
   ];
 
@@ -124,13 +137,9 @@ function Invite() {
             <div>
               {modalLinks.map((links) => {
                 return (
-                  <IonItem
-                    button
-                    key={links.title}
-                    onClick={links.onClick}
-                  >
+                  <IonItem button key={links.title} onClick={links.onClick}>
                     <IonAvatar slot="start">
-                    <IonImg src={links.img} />
+                      <IonImg src={links.img} />
                     </IonAvatar>
                     <IonLabel>
                       <h2>{links.label}</h2>
