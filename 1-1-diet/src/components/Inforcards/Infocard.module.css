@@ -1,35 +1,20 @@
 :root {
   --swiper-pagination-bullet-width: 10vw;
 }
-
 .cardone {
   width: 90vw;
   height: 30vh;
   border-radius: 30px;
-  background-image: url("/Photos/Screen Shot 2022-10-19 at 2.21.35 AM.png");
+  background-image: url("/Photos/Screen Shot 2022-10-19 at 2.19.56 AM.png");
   background-position: center;
   display: flex;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
 }
 
 .logoone {
   background-image: url("/Photos/2mensen op de bank.png");
-  width: 200px;
-  background-repeat: no-repeat;
-  height: 150px;
-  border-radius: 30%;
-}
-
-.cardtwo {
-  width: 90vw;
-  height: 30vh;
-  border-radius: 30px;
-  background-image: url("/Photos/Screen Shot 2022-10-19 at 2.21.35 AM.png");
-  background-position: center;
-  display: flex;
-}
-
-.logotwo {
-  background-image: url("/Photos/ervaringen 1.png");
   width: 200px;
   background-repeat: no-repeat;
   height: 200px;
@@ -37,25 +22,20 @@
 }
 
 .cardonetext {
-  color: #dc6099;
+  color: white;
   font-size: 20;
   font-weight: bold;
   height: 50%;
   font-size: 15px;
-}
-
-.cardtwotext {
-  color: #dc6099;
-  font-size: 20;
-  font-weight: bold;
-  height: 50%;
-  font-size: 15px;
+  display: flex;
+  justify-content: center;
 }
 
 .textbox {
   width: 60%;
   margin-left: 5%;
   margin-right: 5%;
+  text-align: center;
 }
 
 .button {
@@ -66,12 +46,9 @@
   font-weight: bold;
 }
 
-.swiper {
-  width: 100vw;
-  height: 35vh;
+h2 {
+  color: #2b2e6b;
 }
-
-.center {
-  display: flex;
-  justify-content: center;
+p {
+  color: #dc6099;
 }

@@ -1,0 +1,12 @@
+.img {
+  background-image: url("/Photos/DividerLogo.png");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.dividerbox {
+  height: 15vh;
+  background-color: white;
+}
