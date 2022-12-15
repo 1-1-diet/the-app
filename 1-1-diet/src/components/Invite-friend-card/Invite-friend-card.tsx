@@ -62,7 +62,6 @@ function Invite() {
   }
 
   function sendToTelegram() {
-    console.log("wtf");
     window.location.href =
       "https://t.me/share/url?url=1op1dieet.nl&text=Als%20jij%20via%20mijn%20link%20je%20aanmeld%20krijgen%20we%20alle%202%20een%20leuke%20bonus";
   }
