@@ -19,6 +19,7 @@ import Info from "../components/Inforcards/Inforcard";
 import NonUserCard from "../components/Non-users-card/Non-users-card";
 import TipsVoorVandaag from "../components/TipsVoorVandaag";
 import RecomendedBlogs from "../components/RecomendedBlogs/RecomendedBlogs";
+import ProductSwiper from "../components/ProductSwiper/ProductSwiper";
 
 const Tab1: React.FC = () => {
   return (
@@ -29,6 +30,7 @@ const Tab1: React.FC = () => {
           <Stats />
           <TipsVoorVandaag />
           <RecomendedBlogs />
+          <ProductSwiper />
           <Invite />
           {/* <Footer /> */}
         </div>
