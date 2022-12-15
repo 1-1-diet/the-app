@@ -1,0 +1,89 @@
+.mainContainer {
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+.mainContent {
+    position: relative;
+    width: 90vw;
+    height: 18vh;
+    background-color: #ece9e9;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.iconContainer {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.icon {
+    width: 70%;
+    height: 50%;
+    background-color: white;
+    border-radius: 50%;
+    padding: 0.5em;
+    color: #698CE6;
+}
+
+.textContainer {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    z-index: 2;
+}
+
+.counterContainer {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.waterWave {
+    position: absolute;
+    width: 200vw;
+    height: 65vh;
+    background: url(../../Images/waves.svg);
+    z-index: 1;
+}
+
+.waterWave:hover {
+    animation: move 4s ease-in forwards;
+}
+
+@keyframes move {
+    0% {
+        top: -5em;
+        left: 0;
+    }
+    100% {
+        top: -10em;
+        left: -110vw;
+    }
+}
+
+#title {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+#counter {
+    font-size: 2em;
+    font-weight: bold;
+}
