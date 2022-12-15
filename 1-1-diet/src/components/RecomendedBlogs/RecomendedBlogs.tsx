@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import styles from "./RecomendedBlogs.module.css";
 import { book } from "ionicons/icons";
-
 import { Blogs } from "./Blogs";
 
 const RecomendedBlogs: React.FC = () => {
@@ -26,7 +25,7 @@ const RecomendedBlogs: React.FC = () => {
                 />
                 <div className={styles.BlogText}>
                   <IonLabel className={styles.titleContent}>
-                    {element.title}{" "}
+                    {element.title}
                   </IonLabel>
                   <div className={styles.Ptext}>
                     <p>{element.readTime}</p>

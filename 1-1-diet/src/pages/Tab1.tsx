@@ -26,6 +26,8 @@ const Tab1: React.FC = () => {
           <Divider />
           <Watereffect />
           <Divider />
+          <RecomendedBlogs />
+          <ProductSwiper />
           <Invite />
           <Footer />
         </div>
