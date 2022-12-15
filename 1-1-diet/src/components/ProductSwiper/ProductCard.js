@@ -4,7 +4,7 @@ export const ProductCard = [
     img: "warmemaaltijden.jpg",
   },
   {
-    title: "Soeppen",
+    title: "Soepen",
     img: "soep.jpg",
   },
   {
