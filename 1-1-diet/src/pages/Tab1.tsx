@@ -5,6 +5,8 @@ import Stats from "../components/Stats/Stats";
 import TipsVoorVandaag from "../components/TipsVoorVandaag";
 import RecomendedBlogs from "../components/RecomendedBlogs/RecomendedBlogs";
 import Water from "../components/WaterTracker/WaterTracker";
+import Invite from "../components/Invite-friend-card/Invite-friend-card";
+import Footer from "../components/Footer/Footer";
 
 const Tab1: React.FC = () => {
   return (
