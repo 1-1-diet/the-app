@@ -16,18 +16,26 @@
   object-fit: cover;
 }
 
+.centerHeader {
+  display: flex;
+  justify-content: center;
+}
+
 .ComponentTitle {
+  width: 90vw;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  font-size: 1.5em;
-  padding-left: 1em;
+}
+
+#title {
+  font-size: 2em;
+  font-weight: bold;
 }
 
 #toonAlle {
-  color: blue;
-  font-size: 0.8em;
-  padding-right: 1em;
+  font-size: 1em;
+  color: #5c99d0;
 }
 
 .ProText {

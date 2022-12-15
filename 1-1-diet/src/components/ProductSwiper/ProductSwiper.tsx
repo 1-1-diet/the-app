@@ -9,9 +9,11 @@ import { ProductCard } from "./ProductCard";
 const ProductSwiper: React.FC = () => {
   return (
     <div>
-      <div className={styles.ComponentTitle}>
-        <IonLabel id={styles.title}>Onze Producten</IonLabel>
-        <IonLabel id={styles.toonAlle}>Toon Alle</IonLabel>
+      <div className={styles.centerHeader}>
+        <div className={styles.ComponentTitle}>
+          <IonLabel id={styles.title}>Onze Producten</IonLabel>
+          <IonLabel id={styles.toonAlle}>Toon Alle</IonLabel>
+        </div>
       </div>
       <Swiper className={styles.swiper} slidesPerView={1.2} grabCursor={true}>
         {ProductCard?.map((element: any) => {

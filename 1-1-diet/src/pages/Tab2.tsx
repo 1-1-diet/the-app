@@ -32,6 +32,7 @@ import Blogs from "../components/RecomendedBlogs/RecomendedBlogs";
 import Recepten from "../components/TipsVoorVandaag";
 import Footer from "../components/Footer/Footer";
 import Faq from "../components/Inforcards/Inforcard";
+import Product from "../components/ProductSwiper/ProductSwiper";
 
 const Tab2: React.FC = () => {
   // const key = "AIzaSyBQoikjV2k-ithxstHq7Qp0WsHfyzmXIVE";
@@ -127,7 +128,7 @@ const Tab2: React.FC = () => {
         <Header />
         <Promo />
         <Devider />
-
+        <Product />
         <Blogs />
         <Recepten />
         <Faq />
