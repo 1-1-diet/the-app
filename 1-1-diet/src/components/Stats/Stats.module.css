@@ -25,3 +25,9 @@
 .statsText2 {
   font-weight: bold;
 }
+
+.lineChart {
+  height: 30vh;
+  width: auto;
+  
+}
