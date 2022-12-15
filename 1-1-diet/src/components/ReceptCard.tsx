@@ -1,5 +1,5 @@
-import { IonIcon, IonLabel } from "@ionic/react";
 import styles from "./ReceptCard.module.css";
+import { IonIcon, IonLabel } from "@ionic/react";
 import { heart } from "ionicons/icons";
 
 export const ReceptCard = (recept: any) => {

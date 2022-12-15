@@ -1,3 +1,7 @@
+:root {
+  --swiper-pagination-bullet-width: 10vw;
+}
+
 .cardone {
   width: 90vw;
   height: 35vh;
@@ -61,9 +65,6 @@
 .swiperbox {
   width: 100vw;
   height: 44vh;
-}
-:root {
-  --swiper-pagination-bullet-width: 10vw;
 }
 .button {
   float: left;
