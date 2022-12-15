@@ -8,7 +8,6 @@ import Info from "../components/Inforcards/Inforcard";
 import Divider from "../components/Divider/Divider";
 import UitlegCard from "../components/UitlegCard/UitlegCard";
 import TipsVoorVandaag from "../components/TipsVoorVandaag";
-import Watereffect from "../components/Watereffect/Watereffect";
 import Invite from "../components/Invite-friend-card/Invite-friend-card";
 import Footer from "../components/Footer/Footer";
 
@@ -19,12 +18,10 @@ const Tab1: React.FC = () => {
         <div className="mainContainer">
           <Header />
           <Stats />
+          <Divider />
           <Water />
           <TipsVoorVandaag />
-          <Divider />
-          <Info />
-          <Divider />
-          <Watereffect />
+          <RecomendedBlogs />
           <Divider />
           <Invite />
           <Footer />

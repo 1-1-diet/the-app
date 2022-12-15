@@ -16,22 +16,27 @@
   object-fit: cover;
 }
 
+.centerHeader {
+  display: flex;
+  justify-content: center;
+}
+
 .titleContent {
+  width: 90vw;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  font-size: 1.5em;
 }
 
 /* Moet later gelinkt worden naar de blogs pagina */
-#toonAlle {
-  color: blue;
-  font-size: 0.8em;
-  padding-right: 1em;
+#title {
+  font-size: 2em;
+  font-weight: bold;
 }
 
-#title {
-  padding-left: 1em;
+#toonAlle {
+  font-size: 1em;
+  color: #5c99d0;
 }
 
 .BlogText {
