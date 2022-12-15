@@ -9,9 +9,11 @@ import { Blogs } from "./Blogs";
 const RecomendedBlogs: React.FC = () => {
   return (
     <div>
-      <div className={styles.titleContent}>
-        <IonLabel id={styles.title}>Aanbevolen blogs</IonLabel>
-        <IonLabel id={styles.toonAlle}>Toon Alle</IonLabel>
+      <div className={styles.centerHeader}>
+        <div className={styles.titleContent}>
+          <IonLabel id={styles.title}>Aanbevolen blogs</IonLabel>
+          <IonLabel id={styles.toonAlle}>Toon Alle</IonLabel>
+        </div>
       </div>
       <Swiper className={styles.swiper} slidesPerView={1.2} grabCursor={true}>
         {Blogs?.map((element: any) => {

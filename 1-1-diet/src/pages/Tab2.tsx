@@ -25,6 +25,14 @@ import "./Tab2.css";
 // import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 // import { geocodeByAddress, getLatLng } from 'react-google-places-autocomplete';
 
+import Header from "../components/Header/HeaderNonUser";
+import Promo from "../components/UitlegCard/UitlegCard";
+import Devider from "../components/Divider/Divider";
+import Blogs from "../components/RecomendedBlogs/RecomendedBlogs";
+import Recepten from "../components/TipsVoorVandaag";
+import Footer from "../components/Footer/Footer";
+import Faq from "../components/Inforcards/Inforcard";
+
 const Tab2: React.FC = () => {
   // const key = "AIzaSyBQoikjV2k-ithxstHq7Qp0WsHfyzmXIVE";
   // const mapRef = useRef(null);
@@ -116,11 +124,14 @@ const Tab2: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Work in progress</IonTitle>
-          </IonToolbar>
-        </IonHeader>
+        <Header />
+        <Promo />
+        <Devider />
+
+        <Blogs />
+        <Recepten />
+        <Faq />
+        <Footer />
         {/* <div className="center">
           <IonRow className="searchBar">
             <GooglePlacesAutocomplete
