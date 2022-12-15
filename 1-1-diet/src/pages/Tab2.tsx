@@ -19,6 +19,7 @@ import {
 // import { optionsOutline } from "ionicons/icons";
 // import { useRef, useState, useEffect } from "react";
 import "./Tab2.css";
+import styles from "./Tab2.module.css";
 // import { GoogleMap } from "@capacitor/google-maps";
 // import { markers } from "../components/index";
 // import { MarkerInfoWindow } from "../components/MarkInfoWindow";

@@ -57,11 +57,11 @@ export const Info = (vragen: any) => {
                 <IonAccordion value={vragen.title} key={vragen.title}>
                   <IonItem slot="header" color="light">
                     <IonLabel>
-                      <h2>{vragen.title}</h2>
+                      <h2 className={styles.h2}>{vragen.title}</h2>
                     </IonLabel>
                   </IonItem>
                   <div className="ion-padding" slot="content">
-                    <p>{vragen.antwoord}</p>
+                    <p className={styles.p}>{vragen.antwoord}</p>
                   </div>
                 </IonAccordion>
               );
