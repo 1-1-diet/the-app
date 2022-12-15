@@ -17,11 +17,7 @@ import {
 import styles from "./Footer.module.css";
 
 export default function Footer() {
-  return (
-    <div>
-      <p>Hello kanker</p>
-    </div>
-  );
+  return <div></div>;
 }
 
 // class Footer extends Component {
