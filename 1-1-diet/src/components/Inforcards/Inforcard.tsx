@@ -1,53 +1,76 @@
-import React from "react";
-import { IonCard, IonButton, IonText } from "@ionic/react";
-import { Pagination, Virtual } from "swiper";
+import React, { useRef } from "react";
+import {
+  createAnimation,
+  IonButtons,
+  IonButton,
+  IonModal,
+  IonContent,
+  IonToolbar,
+  IonTitle,
+  IonItem,
+  IonLabel,
+  IonHeader,
+  IonText,
+  IonImg,
+  IonAccordion,
+  IonAccordionGroup,
+  IonPage,
+} from "@ionic/react";
 import styles from "./Infocard.module.css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
+import {} from "@ionic/react";
+import { info } from "console";
+import { Vragen } from "./vragen";
 
-const Home: React.FC = () => {
+export const Info = (vragen: any) => {
+  const modal = useRef<HTMLIonModalElement>(null);
+  function dismiss() {
+    modal.current?.dismiss();
+  }
   return (
-    <Swiper
-      modules={[Pagination, Virtual]}
-      pagination={{ clickable: true }}
-      virtual
-      className={styles.swiper}
-    >
-      <SwiperSlide className={styles.center}>
-        <div className={styles.cardone}>
-          <div className={styles.logoone}></div>
-          <div className={styles.textbox}>
-            <IonText>
-              <h5 className={styles.cardonetext}>
-                Met The 1:1 Diet val je af en ga je naar een gezonde leefstijl,
-                voor nu én later!
-              </h5>
-            </IonText>
+    <div className={styles.cardone}>
+      <div className={styles.logoone} />
+      <div className={styles.textbox}>
+        <IonText>
+          <h5 className={styles.cardonetext}>
+            Heb Jij nog vragen, lees nog de meeste gestelde vragen
+          </h5>
+        </IonText>
+        <IonButton id="open-modal" expand="block">
+          Lees meer
+        </IonButton>
+      </div>
 
-            <IonButton className={styles.button} color="primary">
-              Lees meer
-            </IonButton>
-          </div>
-        </div>
-      </SwiperSlide>
-
-      <SwiperSlide className={styles.center}>
-        <div className={styles.cardtwo}>
-          <div className={styles.logotwo}></div>
-          <div className={styles.textbox}>
-            <IonText>
-              <h5 className={styles.cardtwotext}>
-                Al 25 jaar meer dan alleen een dieet! Ruim 1,2 miljoen cliënten
-                gingen je voor.
-              </h5>
-            </IonText>
-
-            <IonButton color="primary">Lees meer</IonButton>
-          </div>
-        </div>
-      </SwiperSlide>
-    </Swiper>
+      <IonModal id="example-modal" ref={modal} trigger="open-modal">
+        <IonContent>
+          <IonHeader>
+            <IonToolbar>
+              <IonTitle>Meeste gestelde vragen</IonTitle>
+              <IonButtons slot="end">
+                <IonButton onClick={() => dismiss()}>Terug</IonButton>
+              </IonButtons>
+            </IonToolbar>
+          </IonHeader>
+          <IonImg src="https://www.one2onediet-westafrica.com/getmedia/Yoga-Lady-and-Consultant-on-sofa-320x320.png" />
+          <IonAccordionGroup>
+            {Vragen?.map((vragen: any) => {
+              return (
+                <IonAccordion value={vragen.title} key={vragen.title}>
+                  <IonItem slot="header" color="light">
+                    <IonLabel>
+                      <h2>{vragen.title}</h2>
+                    </IonLabel>
+                  </IonItem>
+                  <div className="ion-padding" slot="content">
+                    <p>{vragen.antwoord}</p>
+                  </div>
+                </IonAccordion>
+              );
+            })}
+          </IonAccordionGroup>
+        </IonContent>
+      </IonModal>
+    </div>
   );
 };
-export default Home;
+
+export default Info;

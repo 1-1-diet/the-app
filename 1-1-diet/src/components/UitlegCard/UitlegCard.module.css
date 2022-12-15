@@ -1,0 +1,73 @@
+.cardone {
+  width: 90vw;
+  height: 35vh;
+  border-radius: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/Photos/Screen Shot 2022-10-19 at 2.21.35 AM.png");
+}
+.cardtwo {
+  width: 90vw;
+  height: 35vh;
+  border-radius: 30px;
+  background-position: center;
+  background-image: url("https://post.healthline.com/wp-content/uploads/2022/01/1891906-CLONE-A-Dietitians-Picks-of-the-10-Best-Nutrition-Apps-to-Download-in-2022-1200x628-facebook-1200x628.jpg");
+}
+
+.gif {
+  background-image: url("/Photos/Phone-screens-remix--unscreen.gif");
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  background-position: center;
+}
+
+.slidebox {
+  display: flex;
+  justify-content: center;
+}
+.cardonetext {
+  color: #dc6099;
+  font-size: 30px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.cardtwotext {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.textbox {
+  width: 100%;
+  height: 2vh;
+  display: flex;
+  margin-top: 2%;
+  justify-content: center;
+  text-align: center;
+}
+.textboxtwo {
+  width: 60%;
+  height: vh;
+  display: flex;
+  margin-top: 5%;
+  text-align: center;
+}
+.swiperbox {
+  width: 100vw;
+  height: 44vh;
+}
+:root {
+  --swiper-pagination-bullet-width: 10vw;
+}
+.button {
+  float: left;
+  margin-top: 7%;
+  font-weight: bold;
+  margin-left: 10%;
+}

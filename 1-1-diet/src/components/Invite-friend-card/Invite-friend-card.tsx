@@ -118,7 +118,6 @@ function Invite() {
           <div className={styles.iviteCardLogo} />
         </div>
       </IonCard>
-
       <IonModal
         ref={modal}
         isOpen={isOpen}
