@@ -12,72 +12,82 @@ import {
   IonCol,
   IonSearchbar,
   IonFooter,
+  IonLabel,
   IonIcon,
 } from "@ionic/react";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
+  const footer = [
+    {
+      title: "facebook",
+      icon: logoFacebook,
+      url: "https://nl-nl.facebook.com",
+    },
+    {
+      title: "twitter",
+      icon: logoTwitter,
+      url: "https://twitter.com/?lang=nl",
+    },
+    {
+      title: "instagram",
+      icon: logoInstagram,
+      url: "https://www.instagram.com",
+    },
+    {
+      title: "pinterest",
+      icon: logoPinterest,
+      url: "https://nl.pinterest.com",
+    },
+    { title: "youtube", icon: logoYoutube, url: "https://www.youtube.com" },
+  ];
+
   return (
-    <div>
-      <p>Hello kanker</p>
-    </div>
+    <IonFooter>
+      <IonGrid>
+        <IonCol>
+          <h1>Zoek een consultent!</h1>
+        </IonCol>
+        <IonCol>
+          <IonSearchbar placeholder="Zoek een postcode of plaats"></IonSearchbar>
+        </IonCol>
+        <IonCol>
+          <IonRow>
+            <IonCol>Join us!</IonCol>
+            <IonCol>
+              <div className={styles.container}>
+                {footer?.map((element: any) => {
+                  return (
+                    <div
+                      key={element.title}
+                      className={styles.container}
+                      onClick={() => (window.location.href = `${element.url}`)}
+                    >
+                      <div className={styles.e}>
+                        <IonIcon
+                          id={styles.icon}
+                          icon={element.icon}
+                          size="large"
+                          color="navigation"
+                        />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </IonCol>
+          </IonRow>
+        </IonCol>
+        <IonRow>
+          <IonCol className="ion-margin">
+            <p>
+              De 1:1 Diet ondersteunt onderzoek aan het Erasmus MC. Patienten
+              met diabetes worden in dit onderzoek persoonlijk begeleid door
+              dietisten met behulp van een dieet app.
+            </p>
+          </IonCol>
+        </IonRow>
+      </IonGrid>
+    </IonFooter>
   );
 }
-
-// class Footer extends Component {
-//   render() {
-//     return (
-//       <IonFooter>
-//         <IonGrid>
-//           <IonCol>
-//             <h1>Zoek een consultent!</h1>
-//           </IonCol>
-//           <IonCol>
-//             <IonSearchbar placeholder="Zoek een postcode of plaats"></IonSearchbar>
-//           </IonCol>
-//           <IonCol>
-//             <IonRow>
-//               <IonCol>Join us!</IonCol>
-//               <IonCol>
-//                 <a>
-//                   <IonIcon icon={logoFacebook} />
-//                 </a>
-//               </IonCol>
-//               <IonCol>
-//                 <a>
-//                   <IonIcon icon={logoInstagram} />
-//                 </a>
-//               </IonCol>
-//               <IonCol>
-//                 <a>
-//                   <IonIcon icon={logoTwitter} />
-//                 </a>
-//               </IonCol>
-//               <IonCol>
-//                 <a>
-//                   <IonIcon icon={logoPinterest} />
-//                 </a>
-//               </IonCol>
-//               <IonCol>
-//                 <a>
-//                   <IonIcon icon={logoYoutube} />
-//                 </a>
-//               </IonCol>
-//             </IonRow>
-//           </IonCol>
-//           <IonRow>
-//             <IonCol className="ion-margin">
-//               <p>
-//                 De 1:1 Diet ondersteunt onderzoek aan het Erasmus MC. Patienten
-//                 met diabetes worden in dit onderzoek persoonlijk begeleid door
-//                 dietisten met behulp van een dieet app.
-//               </p>
-//             </IonCol>
-//           </IonRow>
-//         </IonGrid>
-//       </IonFooter>
-//     );
-//   }
-// }
-
-// export default Footer;
