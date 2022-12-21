@@ -43,17 +43,22 @@ export default function Footer() {
   ];
 
   return (
-    <IonFooter>
+    <IonFooter className={styles.footerBg}>
       <IonGrid>
         <IonCol>
-          <h1>Zoek een consultent!</h1>
+          <h1 className={styles.text}>Zoek een consultent!</h1>
         </IonCol>
         <IonCol>
-          <IonSearchbar placeholder="Zoek een postcode of plaats"></IonSearchbar>
+          <IonSearchbar
+            color="light"
+            placeholder="Zoek een postcode of plaats"
+          ></IonSearchbar>
         </IonCol>
         <IonCol>
           <IonRow>
-            <IonCol>Join us!</IonCol>
+            <IonCol>
+              <div className={styles.text}>Join us!</div>
+            </IonCol>
             <IonCol>
               <div className={styles.container}>
                 {footer?.map((element: any) => {
@@ -68,7 +73,7 @@ export default function Footer() {
                           id={styles.icon}
                           icon={element.icon}
                           size="large"
-                          color="navigation"
+                          color="secondary"
                         />
                       </div>
                     </div>
@@ -80,7 +85,7 @@ export default function Footer() {
         </IonCol>
         <IonRow>
           <IonCol className="ion-margin">
-            <p>
+            <p className={styles.text}>
               De 1:1 Diet ondersteunt onderzoek aan het Erasmus MC. Patienten
               met diabetes worden in dit onderzoek persoonlijk begeleid door
               dietisten met behulp van een dieet app.

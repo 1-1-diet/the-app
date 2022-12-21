@@ -7,6 +7,11 @@
     padding-left: 1em;
 }
 
-.icon {
-    color: blue;
+.text {
+    color: #ffff;
+}
+
+.footerBg {
+    background-color: #2b2e6b;
+    margin-top: 5vh;
 }
