@@ -18,6 +18,14 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-secondary-contrast-rgb: 255, 255, 255;
   --ion-color-secondary-shade: #36abe0;
   --ion-color-secondary-tint: #50c8ff;
+  
+  /** secondaryAccent **/
+  --ion-color-secondaryAccent: #dc609a27;
+  --ion-color-secondaryAccent-rgb: 15,255,255;
+  --ion-color-secondaryAccent-contrast: #dc6099;
+  --ion-color-secondaryAccent-contrast-rgb: 0,0,0;
+  --ion-color-secondaryAccent-shade: #0de0e0;
+  --ion-color-secondaryAccent-tint: #27ffff;
 
   /** tertiary **/
   --ion-color-tertiary: #edaacd;
@@ -78,7 +86,7 @@ http://ionicframework.com/docs/theming/ */
   /** navigation **/
 	--ion-color-navigation: #5c99d0;
 	--ion-color-navigation-rgb: 92,153,208;
-	--ion-color-navigation-contrast: #000000;
+	--ion-color-navigation-contrast: #ffffff;
 	--ion-color-navigation-contrast-rgb: 0,0,0;
 	--ion-color-navigation-shade: #5187b7;
 	--ion-color-navigation-tint: #6ca3d5;
@@ -90,6 +98,15 @@ http://ionicframework.com/docs/theming/ */
 	--ion-color-background-contrast-rgb: 0,0,0;
 	--ion-color-background-shade: #0de0e0;
 	--ion-color-background-tint: #27ffff;
+}
+
+.ion-color-secondaryAccent {
+	--ion-color-base: var(--ion-color-secondaryAccent);
+	--ion-color-base-rgb: var(--ion-color-secondaryAccent-rgb);
+	--ion-color-contrast: var(--ion-color-secondaryAccent-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-secondaryAccent-contrast-rgb);
+	--ion-color-shade: var(--ion-color-secondaryAccent-shade);
+	--ion-color-tint: var(--ion-color-secondaryAccent-tint);
 }
 
 .ion-color-navigation {

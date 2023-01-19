@@ -1,0 +1,153 @@
+.mainContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    width: 100vw;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(#4785ef00, #000000);
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 1em;
+}
+
+.navBtn {
+    background-color: rgba(128, 128, 128, 0.337);
+    padding: 0.3em;
+    border-radius: 0.5em;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    height: 75%;
+    justify-content: end;
+}
+
+.likesContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 55vw;
+}
+
+#bgImg {
+    position: absolute;
+    width: 100vw;
+    height: 40vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#title {
+    font-size: 3em;
+}
+
+#likes {
+    font-size: 1.5em;
+    font-weight: 100;
+    color: rgb(189, 189, 189);
+}
+
+.mainContent {
+    background-color: white;
+    width: 100vw;
+    height: 65vh;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    padding-top: 2em;
+}
+
+.statContainer {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 1em;
+}
+
+.stat {
+    background-color: rgba(128, 128, 128, 0.209);
+    padding: 1em;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.prijsContainer{
+    height: 11vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.amountContainer {
+    width: 30vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amountBtn{
+    height: 2.5em;
+}
+
+#prijs {
+    font-size: 2em;
+    font-weight: bold;
+    color: #e4754b;
+}
+
+#tag {
+    background-color: #dc609a17;
+    color: #dc609a;
+    padding: 1em;
+    border-radius: 1em;
+    width: 30vw;
+    text-align: center;
+}
+
+.desciptionContainer {
+    width: 100vw;
+    height: 23vh;
+    border-top: 0.1em solid rgba(128, 128, 128, 0.309);
+    padding: 1em;
+}
+
+.btnCotainer {
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.shoppingCardBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+#shoppingCard {
+    width: 55vw;
+    height: 8vh;
+}
+
+#buyNow{
+    width: 30vw;
+    height: 8vh;
+}
