@@ -25,7 +25,6 @@ const Tab1: React.FC = () => {
           <Invite />
           <Footer />
         </div>
-        <Footer />
       </IonContent>
     </IonPage>
   );
