@@ -1,5 +1,5 @@
 import { IonContent, IonPage } from "@ionic/react";
-import "./Tab1.css";
+import styles from "./Tab1.module.css";
 import Header from "../components/Header/HeaderUser";
 import Stats from "../components/Stats/Stats";
 import RecomendedBlogs from "../components/RecomendedBlogs/RecomendedBlogs";
