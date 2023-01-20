@@ -10,6 +10,8 @@ import {
   addOutline,
 } from "ionicons/icons";
 import soep from "../../Images/soep.svg";
+import { stats, card } from "./stats";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function ProductDetails() {
   return (
@@ -44,22 +46,18 @@ export default function ProductDetails() {
       </div>
       <div className={styles.mainContent}>
         <div className={styles.statContainer}>
-          <div className={styles.stat}>
-            <IonIcon icon={flameOutline} color="danger" />
-            <IonText>80 kCal</IonText>
-          </div>
-          <div className={styles.stat}>
-            <IonIcon icon={flameOutline} color="danger" />
-            <IonText>80 kCal</IonText>
-          </div>
-          <div className={styles.stat}>
-            <IonIcon icon={flameOutline} color="danger" />
-            <IonText>80 kCal</IonText>
-          </div>
-          <div className={styles.stat}>
-            <IonIcon icon={flameOutline} color="danger" />
-            <IonText>80 kCal</IonText>
-          </div>
+          <Swiper slidesPerView={"auto"} grabCursor={true} spaceBetween={10}>
+            {stats?.map((element: any) => {
+              return (
+                <SwiperSlide className={styles.swiperSlide} key={element.title}>
+                  <div className={styles.stat}>
+                    <IonIcon icon={element.icon} color={element.color} />
+                    <IonText>{element.title}</IonText>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
         <div className={styles.prijsContainer}>
           <div className={styles.amountContainer}>
@@ -104,7 +102,28 @@ export default function ProductDetails() {
           </IonButton>
         </div>
       </div>
-      <div className={styles.extra}></div>
+      <div className={styles.extra}>
+        <IonText id={styles.extraTitle}>Aanbevolen producten</IonText>
+        <Swiper slidesPerView={"auto"} grabCursor={true} spaceBetween={10}>
+          {card?.map((element: any) => {
+            return (
+              <SwiperSlide className={styles.swiperSlide} key={element.title}>
+                <div className={styles.cardContainer}>
+                  <img
+                    src={require(`../../Images/${element.img}.png`)}
+                    alt="Product"
+                    className={styles.cardImg}
+                  />
+                  <div className={styles.cardText}>
+                    <IonText id={styles.cardTitle}>{element.title}</IonText>
+                    <IonText id={styles.cardSub}>{element.subTitle}</IonText>
+                  </div>
+                </div>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
     </div>
   );
 }
