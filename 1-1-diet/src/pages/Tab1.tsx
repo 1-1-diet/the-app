@@ -16,13 +16,24 @@ const Tab1: React.FC = () => {
         <div className="mainContainer">
           <Header />
           <Stats />
-          <Divider />
-          <Water />
-          <TipsVoorVandaag />
-          <RecomendedBlogs />
-          <Divider />
-          <RecomendedBlogs />
-          <Invite />
+          <div className={styles.topmargin}>
+            <Divider />
+          </div>
+          <div className={styles.topmargin}>
+            <Water />
+          </div>
+          <div className={styles.topmargin}>
+            <TipsVoorVandaag />
+          </div>
+          <div className={styles.topmargin}>
+            <RecomendedBlogs />
+          </div>
+          <div className={styles.topmargin}>
+            <Divider />
+          </div>
+          <div className={styles.topmargin}>
+            <Invite />
+          </div>
           <Footer />
         </div>
       </IonContent>

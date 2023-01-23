@@ -10,6 +10,7 @@ import {
   IonModal,
   IonContent,
   IonLabel,
+  
 } from "@ionic/react";
 
 import styles from "./SearchPage.module.css";
@@ -17,7 +18,7 @@ import { optionsOutline, cartOutline } from "ionicons/icons";
 
 export default function SearchPage() {
   return (
-    <div>
+    <IonContent>
       <IonGrid>
         <IonRow>
           <IonCol size="10">
@@ -56,6 +57,26 @@ export default function SearchPage() {
           </IonCol>
         </IonRow>
       </IonGrid>
-    </div>
+      <IonGrid>
+            <IonRow>
+                <IonCol>
+                    <div className={styles.vleesnvis}>
+
+                    </div>
+                </IonCol>
+                <IonCol>
+                    2
+                </IonCol>
+            </IonRow>
+            <IonRow>
+                <IonCol>
+                    1
+                </IonCol>
+                <IonCol>
+                    2
+                </IonCol>
+            </IonRow>
+        </IonGrid>
+    </IonContent>    
   );
 }
