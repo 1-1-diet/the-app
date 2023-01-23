@@ -10,11 +10,12 @@ import {
   IonModal,
   IonContent,
   IonLabel,
-  
+  IonCard
 } from "@ionic/react";
 
 import styles from "./SearchPage.module.css";
 import { optionsOutline, cartOutline } from "ionicons/icons";
+import { Search } from "./Search"
 
 export default function SearchPage() {
   return (
@@ -58,24 +59,26 @@ export default function SearchPage() {
         </IonRow>
       </IonGrid>
       <IonGrid>
-            <IonRow>
-                <IonCol>
-                    <div className={styles.vleesnvis}>
-
-                    </div>
-                </IonCol>
-                <IonCol>
-                    2
-                </IonCol>
-            </IonRow>
-            <IonRow>
-                <IonCol>
-                    1
-                </IonCol>
-                <IonCol>
-                    2
-                </IonCol>
-            </IonRow>
+      <IonRow>
+          {Search?.map((element: any) => {
+            return (
+              <IonCol size="6">
+                <IonCard>
+                  <img
+                    alt={element.title}
+                    src={require(`../../Images/${element.img}`)}
+                    className={styles.images}
+                  />
+                  <div >
+                    <IonLabel >
+                      {element.title}{" "}
+                    </IonLabel>
+                  </div>
+                </IonCard>
+              </IonCol>
+            );
+          })}
+        </IonRow>
         </IonGrid>
     </IonContent>    
   );

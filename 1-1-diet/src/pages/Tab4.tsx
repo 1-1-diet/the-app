@@ -1,10 +1,10 @@
 import {
   IonContent,
-  IonHeader,
+  
   IonPage,
-  IonTitle,
-  IonToolbar,
-  IonSearchbar,
+  
+
+  
 } from "@ionic/react";
 import styles from "./tab4.module.css";
 import SearchPage from "../components/SearchPage/SearchPage";
