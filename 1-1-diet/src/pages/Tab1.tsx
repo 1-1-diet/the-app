@@ -5,7 +5,7 @@ import Stats from "../components/Stats/Stats";
 import RecomendedBlogs from "../components/RecomendedBlogs/RecomendedBlogs";
 import Water from "../components/WaterTracker/WaterTracker";
 import Divider from "../components/Divider/Divider";
-import TipsVoorVandaag from "../components/TipsVoorVandaag";
+import TipsVoorVandaag from "../components/TipvsVoorVandaag/TipsVoorVandaag";
 import Invite from "../components/Invite-friend-card/Invite-friend-card";
 import Footer from "../components/Footer/Footer";
 

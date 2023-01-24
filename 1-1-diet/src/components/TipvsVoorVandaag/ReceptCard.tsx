@@ -7,7 +7,7 @@ export const ReceptCard = (recept: any) => {
     <div className={styles.mainContent}>
       <img
         alt="Yoghert met aardbij"
-        src={require(`../Images/${recept.img}`)}
+        src={require(`../../Images/${recept.img}`)}
         className={styles.img}
       />
       <div className={styles.textContent}>
