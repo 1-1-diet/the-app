@@ -13,7 +13,7 @@ const Tab1: React.FC = () => {
   return (
     <IonPage>
       <IonContent>
-        <div className="mainContainer">
+        <div className="mainContent">
           <Header />
           <Stats />
           <Divider />
@@ -21,11 +21,9 @@ const Tab1: React.FC = () => {
           <TipsVoorVandaag />
           <RecomendedBlogs />
           <Divider />
-          <RecomendedBlogs />
           <Invite />
           <Footer />
         </div>
-        <Footer />
       </IonContent>
     </IonPage>
   );
