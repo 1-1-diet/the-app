@@ -1,28 +1,30 @@
+import {
+  flameOutline,
+  eggOutline,
+  fishOutline,
+  leafOutline,
+} from "ionicons/icons";
+
 export const stats = [
   {
-    icon: "flameOutline",
+    icon: flameOutline,
     color: "danger",
     title: "50 kCal",
   },
   {
-    icon: "flameOutline",
+    icon: eggOutline,
     color: "danger",
     title: "20kg vet",
   },
   {
-    icon: "flameOutline",
+    icon: fishOutline,
     color: "danger",
     title: "30g proteine",
   },
   {
-    icon: "flameOutline",
+    icon: leafOutline,
     color: "danger",
     title: "40g tarwe",
-  },
-  {
-    icon: "flameOutline",
-    color: "danger",
-    title: "70g tarwe",
   },
 ];
 

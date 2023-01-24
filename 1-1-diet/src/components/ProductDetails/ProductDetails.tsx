@@ -5,7 +5,6 @@ import {
   chevronBackOutline,
   bagHandleOutline,
   heart,
-  flameOutline,
   removeOutline,
   addOutline,
 } from "ionicons/icons";
