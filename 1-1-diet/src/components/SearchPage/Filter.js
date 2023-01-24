@@ -1,26 +1,26 @@
-export const Search = [
+export const Filter = [
   {
-    img: "pap.jpg",
+    color: "secondary",
     title: "Soep",
   },
   {
-    img: "bites.jpg",
+    color: "secondary",
     title: "Snacks",
   },
   {
-    img: "extratotaal.jpg",
+    color: "secondary",
     title: "Smoothie",
   },
   {
-    img: "shake.jpg",
+    color: "secondary",
     title: "Shake",
   },
   {
-    img: "warmemaaltijden.jpg",
+    color: "secondary",
     title: "Maaltijd",
   },
   {
-    img: "image 19.png",
+    color: "secondary",
     title: "chocolate",
   },
 ];

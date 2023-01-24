@@ -10,12 +10,15 @@ import {
   IonModal,
   IonContent,
   IonLabel,
-  IonCard
+  IonCard,
+  IonCheckbox,
+  IonItem,
 } from "@ionic/react";
 
 import styles from "./SearchPage.module.css";
 import { optionsOutline, cartOutline } from "ionicons/icons";
-import { Search } from "./Search"
+import { Search } from "./Search";
+import { Filter } from "./Filter";
 
 export default function SearchPage() {
   return (
@@ -49,9 +52,27 @@ export default function SearchPage() {
             >
               <IonContent className="ion-padding">
                 <div className="ion-margin-top">
-                  <IonLabel>
-                    Click the handle above to advance to the enxt breakpoint.
-                  </IonLabel>
+                  <IonGrid>
+                    <IonRow className={styles.filter}>
+                      <IonCol>Categorieen:</IonCol>
+                      <IonCol>Allergieen:</IonCol>
+                    </IonRow>
+                    <IonRow>
+                      {Filter?.map((element: any) => {
+                        return (
+                          <IonCol size="6">
+                            <IonItem>
+                              <IonCheckbox
+                                color={element.color}
+                                slot="start"
+                              ></IonCheckbox>
+                              <IonLabel>{element.title}</IonLabel>
+                            </IonItem>
+                          </IonCol>
+                        );
+                      })}
+                    </IonRow>
+                  </IonGrid>
                 </div>
               </IonContent>
             </IonModal>
@@ -59,27 +80,25 @@ export default function SearchPage() {
         </IonRow>
       </IonGrid>
       <IonGrid>
-      <IonRow>
+        <IonRow>
           {Search?.map((element: any) => {
             return (
               <IonCol size="6">
-                <IonCard>
+                <IonCard className={styles.container}>
                   <img
                     alt={element.title}
                     src={require(`../../Images/${element.img}`)}
                     className={styles.images}
                   />
-                  <div >
-                    <IonLabel >
-                      {element.title}{" "}
-                    </IonLabel>
+                  <div className={styles.searchText}>
+                    <IonLabel className="ion-margin">{element.title}</IonLabel>
                   </div>
                 </IonCard>
               </IonCol>
             );
           })}
         </IonRow>
-        </IonGrid>
-    </IonContent>    
+      </IonGrid>
+    </IonContent>
   );
 }
