@@ -6,16 +6,13 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import "./Tab4.css";
+import ProductSearch from "../components/ProductSearch/ProductSearch";
 
 const Tab4: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Work in progress</IonTitle>
-          </IonToolbar>
-        </IonHeader>
+        <ProductSearch />
       </IonContent>
     </IonPage>
   );
