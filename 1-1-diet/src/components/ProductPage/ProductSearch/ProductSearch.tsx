@@ -9,7 +9,7 @@ import {
   IonText,
 } from "@ionic/react";
 import styles from "./ProductSearch.module.css";
-import { Product } from "./Product";
+import { Product } from "../Product";
 
 const ProductSearch: React.FC = () => {
   return (
@@ -22,7 +22,7 @@ const ProductSearch: React.FC = () => {
                 <IonCard className={styles.Cardstyle} color="light">
                   <img
                     alt={element.title}
-                    src={require(`../../Images/${element.img}`)}
+                    src={require(`../../../Images/${element.img}`)}
                     className={styles.img}
                   />
                   <div className={styles.CardContent}>

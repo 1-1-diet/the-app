@@ -1,16 +1,16 @@
 import { IonContent, IonPage } from "@ionic/react";
 import "./Tab4.css";
-import ProductDetails from "../components/ProductDetails/ProductDetails";
-import SearchPage from "../components/SearchPage/SearchPage";
-import ProductSearch from "../components/ProductSearch/ProductSearch";
+import ProductDetails from "../components/ProductPage/ProductDetails/ProductDetails";
+import SearchPage from "../components/ProductPage/SearchPage/SearchPage";
+import ProductSearch from "../components/ProductPage/ProductSearch/ProductSearch";
 
 const Tab4: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
+        {/* <SearchPage /> */}
+        {/* <ProductSearch /> */}
         <ProductDetails />
-        <SearchPage />
-        <ProductSearch />
       </IonContent>
     </IonPage>
   );

@@ -17,8 +17,8 @@ import {
 
 import styles from "./SearchPage.module.css";
 import { optionsOutline, cartOutline } from "ionicons/icons";
-import { Search } from "./Search";
-import { Filter } from "./Filter";
+import { Filter } from "./Search";
+import { Cat } from "../Product";
 
 export default function SearchPage() {
   return (
@@ -81,13 +81,13 @@ export default function SearchPage() {
       </IonGrid>
       <IonGrid>
         <IonRow>
-          {Search?.map((element: any) => {
+          {Cat?.map((element: any) => {
             return (
               <IonCol size="6">
                 <IonCard className={styles.container}>
                   <img
                     alt={element.title}
-                    src={require(`../../Images/${element.img}`)}
+                    src={require(`../../../Images/${element.img}`)}
                     className={styles.images}
                   />
                   <div className={styles.searchText}>
