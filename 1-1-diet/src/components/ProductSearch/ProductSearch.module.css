@@ -1,0 +1,60 @@
+.mainContainer {
+  width: 100vw;
+  height: fit-content;
+}
+
+.Cardstyle {
+  box-shadow: none;
+  border-radius: 0.5em;
+  width: 45vw;
+  padding: 1em;
+  height: 30vh;
+}
+
+.CardContent {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  width: 100%;
+  height: 20%;
+}
+
+#Title {
+  font-weight: bold;
+  font-size: medium;
+}
+
+.cardDiscription {
+  width: 100%;
+  height: 70%;
+  display: flex;
+}
+
+.productInfo {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#Price {
+  font-size: 3em;
+  color: tomato;
+}
+
+.Button {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#ButtonText {
+  font-size: 2em;
+}
