@@ -3,12 +3,18 @@
   height: fit-content;
 }
 
+.col {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 .Cardstyle {
   box-shadow: none;
   border-radius: 0.5em;
   width: 45vw;
+  height: fit-content;
   padding: 1em;
-  height: 30vh;
 }
 
 .CardContent {
@@ -25,12 +31,12 @@
 
 #Title {
   font-weight: bold;
-  font-size: medium;
+  font-size: 4vw;
 }
 
 .cardDiscription {
   width: 100%;
-  height: 70%;
+  height: 7vh;
   display: flex;
 }
 
@@ -43,7 +49,7 @@
 }
 
 #Price {
-  font-size: 3em;
+  font-size: 6vw;
   color: tomato;
 }
 
@@ -57,4 +63,8 @@
 
 #ButtonText {
   font-size: 2em;
+}
+
+.link {
+  text-decoration: none;
 }

@@ -7,19 +7,25 @@ import {
   IonContent,
   IonButton,
   IonText,
+  IonRouterLink,
 } from "@ionic/react";
 import styles from "./ProductSearch.module.css";
 import { Product } from "../Product";
+import { Link } from "react-router-dom";
 
 const ProductSearch: React.FC = () => {
   return (
     <div className={styles.mainContainer}>
       <IonGrid>
         <IonRow>
-          {Product?.map((element: any) => {
+          {Product?.map((element) => {
             return (
-              <IonCol size="6">
-                <IonCard className={styles.Cardstyle} color="light">
+              <IonCol size="6" key={element.id} className={styles.col}>
+                <IonCard
+                  className={styles.Cardstyle}
+                  color="light"
+                  href={`/tab4/${element.id}`}
+                >
                   <img
                     alt={element.title}
                     src={require(`../../../Images/${element.img}`)}

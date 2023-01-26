@@ -1,9 +1,10 @@
 .mainContainer {
   width: 100vw;
-  height: fit-content;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: black;
 }
 
 .header {
@@ -64,7 +65,7 @@
 .mainContent {
   background-color: white;
   width: 100vw;
-  height: fit-content;
+  height: 65vh;
   border-top-left-radius: 2em;
   border-top-right-radius: 2em;
   padding-top: 2em;

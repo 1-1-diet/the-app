@@ -1,4 +1,3 @@
-import React from "react";
 import { IonButton, IonText, IonIcon } from "@ionic/react";
 import styles from "./ProductDetails.module.css";
 import {
@@ -9,7 +8,6 @@ import {
   addOutline,
 } from "ionicons/icons";
 import ProductStats from "./ProductStats";
-import soep from "../../../Images/soep.svg";
 import { card } from "./stats";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Product } from "../Product";
