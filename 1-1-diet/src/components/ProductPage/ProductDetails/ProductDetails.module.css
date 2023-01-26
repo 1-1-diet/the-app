@@ -74,14 +74,11 @@
 .statContainer {
   width: 100vw;
   height: 10vh;
-  display: flex;
-  align-items: center;
-  padding-left: 1em;
-  padding-right: 1em;
 }
 
-.swiperSlide {
-  width: fit-content;
+.swiper {
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .stat {

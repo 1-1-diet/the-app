@@ -331,3 +331,11 @@ export const Cat = [
     title: "chocolate",
   },
 ];
+
+export const nCat = [
+  { title: "Alle", set: "" },
+  { title: "Soep", set: "Soep" },
+  { title: "Snacks", set: "Snacks" },
+  { title: "Maaltijd", set: "Maaltijd" },
+  { title: "Chocolate", set: "Chocolate" },
+];

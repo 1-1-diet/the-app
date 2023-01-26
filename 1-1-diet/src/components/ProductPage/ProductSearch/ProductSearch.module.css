@@ -68,3 +68,19 @@
 .link {
   text-decoration: none;
 }
+
+.catContainer {
+  display: flex;
+  align-content: center;
+  width: 100vw;
+  border-bottom: 0.1em solid #5c9ad065;
+  padding-right: 1em;
+}
+
+.btnContainer {
+  padding: 1em;
+}
+
+#catTitle {
+  font-size: 4vw;
+}

@@ -8,10 +8,15 @@ export default function ProductStats() {
   return (
     <div>
       <div className={styles.statContainer}>
-        <Swiper slidesPerView={"auto"} grabCursor={true} spaceBetween={10}>
+        <Swiper
+          className={styles.swiper}
+          slidesPerView={"auto"}
+          grabCursor={true}
+          spaceBetween={10}
+        >
           {stats?.map((element) => {
             return (
-              <SwiperSlide className={styles.swiperSlide} key={element.title}>
+              <SwiperSlide key={element.title}>
                 <div className={styles.stat}>
                   <IonIcon icon={element.icon} color={element.color} />
                   <IonText>{element.title}</IonText>

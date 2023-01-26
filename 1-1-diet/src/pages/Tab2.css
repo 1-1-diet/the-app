@@ -48,5 +48,3 @@ ion-radio.radio-checked::part(mark) {
 
   transform: rotate(45deg);
 }
-
-
