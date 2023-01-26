@@ -5,6 +5,7 @@
   background-color: #ece9e9;
   border-radius: 24px;
   z-index: 12;
+  margin: 16px;
 }
 
 .swiperDots {
@@ -29,5 +30,4 @@
 .lineChart {
   height: 30vh;
   width: auto;
-  
 }

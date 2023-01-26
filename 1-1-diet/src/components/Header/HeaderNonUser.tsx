@@ -28,7 +28,7 @@ class HeaderNonUser extends Component {
               </IonCol>
               <IonCol>
                 <IonRow className="ion-justify-content-center">
-                  <IonButton className={styles.headerbutton}>
+                  <IonButton color="secondary" className={styles.headerbutton}>
                     Start jouw dieet
                   </IonButton>
                 </IonRow>
