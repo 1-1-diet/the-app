@@ -36,11 +36,14 @@ import "@ionic/react/css/display.css";
 /* Theme variables */
 import "./theme/variables.css";
 
+import SplashScreen from "./components/Splashscreen/SplashScreen";
+
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <IonReactRouter>
+    <SplashScreen />
+    {/* <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/tab1" component={Tab1} />
@@ -71,7 +74,7 @@ const App: React.FC = () => (
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
-    </IonReactRouter>
+    </IonReactRouter> */}
   </IonApp>
 );
 
