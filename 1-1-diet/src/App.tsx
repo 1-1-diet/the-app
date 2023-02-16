@@ -37,6 +37,9 @@ import "@ionic/react/css/display.css";
 import "./theme/variables.css";
 
 import Login from "./components/login/Login";
+import FillEmailIn from "./components/login/WachtwoordVergeten/FillEmailIn";
+import FillCodeIn from "./components/login/WachtwoordVergeten/FillCodeIn";
+import ChangeCode from "./components/login/WachtwoordVergeten/ChangeCode";
 
 setupIonicReact();
 
