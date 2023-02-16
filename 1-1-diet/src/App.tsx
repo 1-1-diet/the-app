@@ -37,12 +37,13 @@ import "@ionic/react/css/display.css";
 import "./theme/variables.css";
 
 import Login from "./components/login/Login";
+import Register from "./components/Register/Register";
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <Login />
+    <Register />
     {/* <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
