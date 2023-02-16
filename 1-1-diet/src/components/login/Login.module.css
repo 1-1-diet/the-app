@@ -11,8 +11,21 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+}
+
+.inputFieldContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
 }
 
 #klap {
@@ -20,18 +33,67 @@
 }
 
 #title {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
-.inputField {
-  height: fit-content;
+.inputFields {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
-.input {
+.inputContainer {
   width: 80vw;
-  border-radius: 1em;
-  border: 0.1em solid black;
   display: flex;
   align-items: center;
-  padding: 1em;
+  border: 0.1em solid #f4f4f4;
+  border-radius: 1em;
+  padding: 0.6em 0.6em 0.6em 0.6em;
+  box-shadow: 1em 1em 1em #5a6bea13;
+}
+
+#input {
+  width: 100%;
+}
+
+.extraContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  height: 5vh;
+  font-size: 0.85em;
+}
+
+.stayLogged {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.continueContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}
+
+#button {
+  width: 80vw;
+  height: 6vh;
+}
+
+#btnText {
+  font-weight: bold;
+}
+
+.registreer {
+  display: flex;
+  gap: 0.5em;
+  font-size: 0.85em;
+}
+
+#textPink {
+  color: #dc6099;
 }
