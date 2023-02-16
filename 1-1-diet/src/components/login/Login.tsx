@@ -9,6 +9,7 @@ import {
   IonItem,
 } from "@ionic/react";
 import styles from "./Login.module.css";
+import "../../pages/Tab4.css";
 import BgPtrn from "../Splashscreen/BgPtrn";
 import klap from "../../Images/1to1girls.svg";
 import {

@@ -12,6 +12,7 @@ import BgPtrn from "../../Splashscreen/BgPtrn";
 import klap from "../../../Images/1to1girls.svg";
 import { lockClosedOutline, eyeOutline, eyeOffOutline } from "ionicons/icons";
 import styles from "./ChangeCode.module.css";
+import "../../pages/Tab4.css";
 
 export default function ChangeCode() {
   return (
