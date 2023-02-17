@@ -22,6 +22,8 @@ import {
 export default function SplashScreen() {
   const [isTouched, setIsTouched] = useState(false);
   const [isValid, setIsValid] = useState<boolean>();
+  const [showPassword, setShowPassword] = useState(true);
+  const [passwordIcon, setPasswordIcon] = useState(eyeOutline);
 
   const validateEmail = (email: string) => {
     return email.match(
@@ -41,6 +43,16 @@ export default function SplashScreen() {
 
   const markTouched = () => {
     setIsTouched(true);
+  };
+
+  const password = () => {
+    if (showPassword === true) {
+      setShowPassword(false);
+      setPasswordIcon(eyeOffOutline);
+    } else {
+      setShowPassword(true);
+      setPasswordIcon(eyeOutline);
+    }
   };
 
   return (
@@ -78,8 +90,15 @@ export default function SplashScreen() {
                 color="secondary"
               />
               <IonItem id={styles.input} lines="none">
-                <IonInput placeholder="Wachtwoord" type="password" />
-                <IonIcon icon={eyeOutline} size="medium" />
+                <IonInput
+                  placeholder="Wachtwoord"
+                  type={showPassword === true ? "password" : "email"}
+                />
+                <IonIcon
+                  icon={passwordIcon}
+                  size="medium"
+                  onClick={() => password()}
+                />
               </IonItem>
             </div>
             <div className={styles.extraContent}>
