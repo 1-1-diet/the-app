@@ -34,10 +34,30 @@
     display: flex;
     align-items: center;
     padding: 1em;
+    
 }
 
 .stayLogged {
     display: flex;
+    gap: 1.5em;
+    font-size: small;
 }
+
+.inputContainer {
+    width: 80vw;
+    margin-top: 0.5em;
+    border: 0.1em solid #f4f4f4;
+    border-radius: 1em;
+    padding: 0.6em 0.6em 0.6em 0.6em;
+    box-shadow: 1em 1em 1em #5a6bea13;
+}
+
+.button {
+    position: fixed;
+    bottom: 9vh;
+}
+
+
+
 
   
