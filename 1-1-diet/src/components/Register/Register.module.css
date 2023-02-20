@@ -1,63 +1,106 @@
 .mainContainer {
-    width: 100vw;
-    height: 100vh;
-    background: white;
-    color: black;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  color: black;
 }
-  
+
 .mainContent {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-  
+
 #klap {
-    width: 50vw;
+  width: 50vw;
 }
-  
+
 #title {
-    font-size: 2em;
+  font-size: 2em;
 }
-  
+
 .inputField {
-    height: fit-content;
+  height: fit-content;
 }
-  
+
 .input {
-    width: 80vw;
-    border-radius: 1em;
-    border: 0.1em solid black;
-    display: flex;
-    align-items: center;
-    padding: 1em;
-    
+  width: 80vw;
+  border-radius: 1em;
+  border: 0.1em solid black;
+  display: flex;
+  align-items: center;
+  padding: 1em;
 }
 
 .stayLogged {
-    display: flex;
-    gap: 1.5em;
-    font-size: small;
+  display: flex;
+  gap: 1.5em;
+  font-size: small;
 }
 
 .inputContainer {
-    width: 80vw;
-    margin-top: 0.5em;
-    border: 0.1em solid #f4f4f4;
-    border-radius: 1em;
-    padding: 0.6em 0.6em 0.6em 0.6em;
-    box-shadow: 1em 1em 1em #5a6bea13;
+  width: 80vw;
+  margin-top: 0.5em;
+  border: 0.1em solid #f4f4f4;
+  border-radius: 1em;
+  padding: 0.6em 0.6em 0.6em 0.6em;
+  box-shadow: 1em 1em 1em #5a6bea13;
 }
 
 .button {
-    position: fixed;
-    bottom: 9vh;
+  position: fixed;
+  bottom: 9vh;
 }
 
+.profile {
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
+.title {
+  display: block;
+  text-align: center;
+  color: gray;
+  font-size: x-large;
+  margin-bottom: 2em;
+  margin-top: 3em;
+}
 
+.klap {
+  position: fixed;
+  top: 9vh;
+}
 
-  
+.editName {
+  color: gray;
+}
+
+.modalButton {
+  background: #f3f3f3;
+  border-radius: 1em;
+  width: 100%;
+}
+
+.uploadImage {
+  display: block;
+  text-align: center;
+}
+
+.uploadButton {
+  margin-top: -0.5em;
+}
+
+.uploadModalButton {
+  margin-right: 1em;
+}
+
+.uploadText {
+  text-align: left;
+}
