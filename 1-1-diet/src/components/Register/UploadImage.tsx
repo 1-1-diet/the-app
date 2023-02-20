@@ -10,15 +10,20 @@ import {
   IonModal,
   IonContent,
   IonLabel,
+  IonImg,
 } from "@ionic/react";
+
 import styles from "./Register.module.css";
 import BgPtrn from "../Splashscreen/BgPtrn";
 import klap from "../../Images/logo2.svg";
 import profileImg from "../../Images/profileImg.jpg";
 import camera from "../../Images/camera.png";
 import { createOutline, cameraOutline, imageOutline } from "ionicons/icons";
+import { usePhotoGallery } from "./usePhotoGallery";
 
 export default function UploadImage() {
+  const { photos, takePhoto } = usePhotoGallery();
+
   return (
     <div className={styles.mainContainer}>
       <BgPtrn />
@@ -30,7 +35,15 @@ export default function UploadImage() {
               <div className={styles.title}>
                 <IonText>Upload je eigen foto</IonText>
               </div>
-              <div>
+              <div className={styles.profileDisplay}>
+                {photos.map((photo, index) => (
+                  <IonCol key={index}>
+                    <IonImg
+                      className={styles.profile}
+                      src={photo.webviewPath}
+                    />
+                  </IonCol>
+                ))}
                 <img className={styles.profile} src={camera} alt="profileimg" />
               </div>
               <div>
@@ -59,6 +72,7 @@ export default function UploadImage() {
                               <IonRow>
                                 <IonCol>
                                   <IonButton
+                                    onClick={() => takePhoto()}
                                     className={styles.modalButton}
                                     fill="clear"
                                   >

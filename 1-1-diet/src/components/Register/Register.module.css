@@ -15,16 +15,8 @@
   align-items: center;
 }
 
-#klap {
-  width: 50vw;
-}
-
 #title {
   font-size: 2em;
-}
-
-.inputField {
-  height: fit-content;
 }
 
 .input {
@@ -61,7 +53,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 70%;
 }
 
 .title {
@@ -99,8 +91,4 @@
 
 .uploadModalButton {
   margin-right: 1em;
-}
-
-.uploadText {
-  text-align: left;
 }
