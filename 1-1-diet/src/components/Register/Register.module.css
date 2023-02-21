@@ -53,7 +53,8 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 15em;
+  height: 15em;
 }
 
 .title {
@@ -91,4 +92,12 @@
 
 .uploadModalButton {
   margin-right: 1em;
+}
+
+.profileDisplay {
+  border-radius: 50%;
+}
+
+.modal {
+  background: #f3f3f3;
 }

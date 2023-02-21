@@ -1,7 +1,5 @@
 import {
-  IonCheckbox,
   IonText,
-  IonInput,
   IonButton,
   IonCol,
   IonGrid,
@@ -9,14 +7,12 @@ import {
   IonIcon,
   IonModal,
   IonContent,
-  IonLabel,
   IonImg,
 } from "@ionic/react";
 
 import styles from "./Register.module.css";
 import BgPtrn from "../Splashscreen/BgPtrn";
-import klap from "../../Images/logo2.svg";
-import profileImg from "../../Images/profileImg.jpg";
+import logo from "../../Images/logo2.svg";
 import camera from "../../Images/camera.png";
 import { createOutline, cameraOutline, imageOutline } from "ionicons/icons";
 import { usePhotoGallery } from "./usePhotoGallery";
@@ -28,7 +24,7 @@ export default function UploadImage() {
     <div className={styles.mainContainer}>
       <BgPtrn />
       <div className={styles.mainContent}>
-        <img className={styles.klap} id={styles.klap} src={klap} alt="logo" />
+        <img className={styles.klap} id={styles.klap} src={logo} alt="logo" />
         <div>
           <IonGrid>
             <IonCol>
@@ -38,13 +34,17 @@ export default function UploadImage() {
               <div className={styles.profileDisplay}>
                 {photos.map((photo, index) => (
                   <IonCol key={index}>
-                    <IonImg
-                      className={styles.profile}
-                      src={photo.webviewPath}
-                    />
+                    {index !== null ? (
+                      <img
+                        className={styles.profile}
+                        src={photo.webviewPath}
+                        alt="profileimg"
+                      />
+                    ) : (
+                      <img className={styles.profile} src={camera} alt="poep" />
+                    )}
                   </IonCol>
                 ))}
-                <img className={styles.profile} src={camera} alt="profileimg" />
               </div>
               <div>
                 <IonGrid>
