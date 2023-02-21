@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   IonText,
   IonButton,
@@ -20,6 +21,10 @@ import { usePhotoGallery } from "./usePhotoGallery";
 export default function UploadImage() {
   const { photos, takePhoto } = usePhotoGallery();
 
+  const test = () => {
+    console.log(photos);
+  };
+
   return (
     <div className={styles.mainContainer}>
       <BgPtrn />
@@ -32,19 +37,28 @@ export default function UploadImage() {
                 <IonText>Upload je eigen foto</IonText>
               </div>
               <div className={styles.profileDisplay}>
-                {photos.map((photo, index) => (
+                {photo === null ? (
+                  <img
+                    className={styles.profile}
+                    src={camera}
+                    alt="profileimgExample"
+                  />
+                ) : (
+                  <img
+                    className={styles.profile}
+                    src={photo.webviewPath}
+                    alt="profileimgUploaded"
+                  />
+                )}
+                {/* {photos.map((photo, index) => (
                   <IonCol key={index}>
-                    {index !== null ? (
-                      <img
-                        className={styles.profile}
-                        src={photo.webviewPath}
-                        alt="profileimg"
-                      />
-                    ) : (
-                      <img className={styles.profile} src={camera} alt="poep" />
-                    )}
+                    <img
+                      className={styles.profile}
+                      src={test === null ? camera : photo.webviewPath}
+                      alt="profileimg"
+                    />
                   </IonCol>
-                ))}
+                ))} */}
               </div>
               <div>
                 <IonGrid>
@@ -114,7 +128,9 @@ export default function UploadImage() {
           </IonGrid>
         </div>
         <div className={styles.button}>
-          <IonButton color="secondary">Maak account</IonButton>
+          <IonButton color="secondary" onClick={() => test()}>
+            Maak account
+          </IonButton>
         </div>
       </div>
     </div>
