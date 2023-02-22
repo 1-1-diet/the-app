@@ -1,8 +1,8 @@
 import { IonContent, IonPage } from "@ionic/react";
 import "./Tab3.css";
-import Header from "../components/profiel/header";
-import QuickOptions from "../components/profiel/quichOptions";
-import Card from "../components/profiel/card";
+import Header from "../../components/profiel/header";
+import QuickOptions from "../../components/profiel/quichOptions";
+import Card from "../../components/profiel/card";
 
 const Tab3: React.FC = () => {
   return (

@@ -8,13 +8,13 @@ import {
   IonNote,
   IonItem,
 } from "@ionic/react";
-import styles from "./FillCodeIn.module.css";
-import "../../pages/Tab4.css";
-import BgPtrn from "../../Splashscreen/BgPtrn";
+import BgPtrn from "../../../components/Splashscreen/BgPtrn";
 import klap from "../../../Images/1to1girls.svg";
 import { lockClosedOutline, eyeOutline, eyeOffOutline } from "ionicons/icons";
+import styles from "./ChangeCode.module.css";
+import "../../Tab4/Tab4.css";
 
-export default function FillCodeIn() {
+export default function ChangeCode() {
   return (
     <div className={styles.mainContainer}>
       <BgPtrn />
@@ -22,7 +22,7 @@ export default function FillCodeIn() {
         <div className={styles.inputFieldContainer}>
           <div className={styles.top}>
             <img id={styles.klap} src={klap} alt="two girl giving a high 5" />
-            <IonText id={styles.title}>Voer de code in van jouw inbox</IonText>
+            <IonText id={styles.title}>Verrander jouw code</IonText>
           </div>
           <div className={styles.inputFields}>
             <div className={styles.inputContainer}>
@@ -32,15 +32,26 @@ export default function FillCodeIn() {
                 color="secondary"
               />
               <IonItem id={styles.input} lines="none">
-                <IonInput placeholder="Code" type="password" />
+                <IonInput placeholder="Wachtwoord" type="password" />
+                <IonIcon icon={eyeOutline} size="medium" />
+              </IonItem>
+            </div>
+            <div className={styles.inputContainer}>
+              <IonIcon
+                icon={lockClosedOutline}
+                size="large"
+                color="secondary"
+              />
+              <IonItem id={styles.input} lines="none">
+                <IonInput placeholder="Herhaal wachtwoord" type="password" />
                 <IonIcon icon={eyeOutline} size="medium" />
               </IonItem>
             </div>
           </div>
         </div>
         <div className={styles.continueContainer}>
-          <IonButton id={styles.button} color="secondary">
-            <IonText id={styles.btnText}>Volgende</IonText>
+          <IonButton id={styles.button} color="secondary" href={`/tab1`}>
+            <IonText id={styles.btnText}>Log in</IonText>
           </IonButton>
         </div>
       </div>

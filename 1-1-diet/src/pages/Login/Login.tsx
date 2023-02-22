@@ -7,10 +7,11 @@ import {
   IonIcon,
   IonNote,
   IonItem,
+  IonRouterLink,
 } from "@ionic/react";
 import styles from "./Login.module.css";
-import "../../pages/Tab4.css";
-import BgPtrn from "../Splashscreen/BgPtrn";
+import "../Tab4/Tab4.css";
+import BgPtrn from "../../components/Splashscreen/BgPtrn";
 import klap from "../../Images/1to1girls.svg";
 import {
   mailOutline,
@@ -111,12 +112,17 @@ export default function SplashScreen() {
           </div>
         </div>
         <div className={styles.continueContainer}>
-          <IonButton id={styles.button} color="secondary">
+          <IonButton id={styles.button} color="secondary" href={`/Tab1`}>
             <IonText id={styles.btnText}>Log in</IonText>
           </IonButton>
           <div className={styles.registreer}>
             <IonText>Nog geen client?</IonText>
-            <IonText id={styles.textPink}>Maak nu een account</IonText>
+            <IonRouterLink
+              id={styles.textPink}
+              href={`/login/wachtwoordVergeten/email`}
+            >
+              Maak nu een account
+            </IonRouterLink>
           </div>
         </div>
       </div>

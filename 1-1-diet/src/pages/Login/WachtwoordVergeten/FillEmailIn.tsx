@@ -9,8 +9,8 @@ import {
   IonItem,
 } from "@ionic/react";
 import styles from "./FillEmailIn.module.css";
-import "../../pages/Tab4.css";
-import BgPtrn from "../../Splashscreen/BgPtrn";
+import "../../Tab4/Tab4.css";
+import BgPtrn from "../../../components/Splashscreen/BgPtrn";
 import klap from "../../../Images/1to1girls.svg";
 import { mailOutline } from "ionicons/icons";
 
@@ -68,7 +68,11 @@ export default function FillEmailIn() {
             </div>
           </div>
         </div>
-        <IonButton id={styles.button} color="secondary">
+        <IonButton
+          id={styles.button}
+          color="secondary"
+          href={`/login/wachtwoordVergeten/emailCode`}
+        >
           <IonText id={styles.btnText}>Volgende</IonText>
         </IonButton>
       </div>

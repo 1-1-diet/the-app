@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { IonButton, IonText, IonIcon, IonRouterLink } from "@ionic/react";
-import styles from "../components/ProductPage/ProductDetails/ProductDetails.module.css";
+import styles from "../../components/ProductPage/ProductDetails/ProductDetails.module.css";
 import {
   chevronBackOutline,
   bagHandleOutline,
@@ -8,10 +8,10 @@ import {
   removeOutline,
   addOutline,
 } from "ionicons/icons";
-import ProductStats from "../components/ProductPage/ProductDetails/ProductStats";
-import { card } from "../components/ProductPage/ProductDetails/stats";
+import ProductStats from "../../components/ProductPage/ProductDetails/ProductStats";
+import { card } from "../../components/ProductPage/ProductDetails/stats";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Product } from "../components/ProductPage/Product";
+import { Product } from "../../components/ProductPage/Product";
 
 export const ProductDetails = () => {
   const { productId } = useParams<{ productId: string }>();
@@ -28,7 +28,7 @@ export const ProductDetails = () => {
         <div className={styles.header}>
           <img
             id={styles.bgImg}
-            src={require(`../Images/${product.img}`)}
+            src={require(`../../Images/${product.img}`)}
             alt="Product soep"
           />
           <div className={styles.icons}>
