@@ -107,20 +107,22 @@ export default function SplashScreen() {
                 <IonCheckbox color="secondary" />
                 <IonText>Ingelogd blijven</IonText>
               </div>
-              <IonText id={styles.textPink}>Wachtwoord vergeten?</IonText>
+              <IonRouterLink
+                id={styles.textPink}
+                href={`/login/wachtwoordVergeten/email`}
+              >
+                Wachtwoord vergeten?
+              </IonRouterLink>
             </div>
           </div>
         </div>
         <div className={styles.continueContainer}>
-          <IonButton id={styles.button} color="secondary" href={`/Tab1`}>
+          <IonButton id={styles.button} color="secondary" href={`/tabs/Tab1`}>
             <IonText id={styles.btnText}>Log in</IonText>
           </IonButton>
           <div className={styles.registreer}>
             <IonText>Nog geen client?</IonText>
-            <IonRouterLink
-              id={styles.textPink}
-              href={`/login/wachtwoordVergeten/email`}
-            >
+            <IonRouterLink id={styles.textPink} href={``}>
               Maak nu een account
             </IonRouterLink>
           </div>

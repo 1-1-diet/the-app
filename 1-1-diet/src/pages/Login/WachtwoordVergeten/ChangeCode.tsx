@@ -50,7 +50,7 @@ export default function ChangeCode() {
           </div>
         </div>
         <div className={styles.continueContainer}>
-          <IonButton id={styles.button} color="secondary" href={`/tab1`}>
+          <IonButton id={styles.button} color="secondary" href={`/tabs/tab1`}>
             <IonText id={styles.btnText}>Log in</IonText>
           </IonButton>
         </div>

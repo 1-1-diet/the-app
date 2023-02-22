@@ -54,62 +54,104 @@ import WorkInProgress from "./pages/WorkInProgress/WorkInProgress";
 setupIonicReact();
 
 const App: React.FC = () => {
-  const [showTabs, setShowTabs] = useState(true);
-  let tabBarStyle = showTabs === false ? undefined : { display: "none" };
+  const [showTabs, setShowTabs] = useState(false);
+  let tabBarStyle = showTabs === true ? undefined : { display: "none" };
 
   return (
     <IonApp>
       <IonReactRouter>
-        <IonTabs>
-          <IonRouterOutlet>
-            <Route exact path="/">
-              <Redirect to="/login" />
-            </Route>
+        <IonRouterOutlet>
+          <Route exact path="/">
+            <Redirect to="/login" />
+          </Route>
 
-            <Route exact path="/login" component={Login} />
-            <Route
-              exact
-              path="/login/wachtwoordVergeten/email"
-              component={FillEmailIn}
-            />
-            <Route
-              exact
-              path="/login/wachtwoordVergeten/emailCode"
-              component={FillCodeIn}
-            />
-            <Route
-              exact
-              path="/login/wachtwoordVergeten/verranderWachtwoord"
-              component={ChangeCode}
-            />
+          <Route exact path="/login" component={Login} />
+          <Route
+            exact
+            path="/login/wachtwoordVergeten/email"
+            component={FillEmailIn}
+          />
+          <Route
+            exact
+            path="/login/wachtwoordVergeten/emailCode"
+            component={FillCodeIn}
+          />
+          <Route
+            exact
+            path="/login/wachtwoordVergeten/verranderWachtwoord"
+            component={ChangeCode}
+          />
 
-            <Route exact path="/nonUser/Tab1" component={Tab1NonUser} />
+          <Route
+            path="nonUser"
+            render={() => (
+              <IonTabs>
+                <IonRouterOutlet>
+                  <Route exact path="/nonUser/Tab1" component={Tab1NonUser} />
+                  <Route exact path="/nonUser/Tab1" component={Tab1NonUser} />
+                  <Route exact path="/nonUser/Tab1" component={Tab1NonUser} />
+                  <Route exact path="/nonUser/Tab1" component={Tab1NonUser} />
+                </IonRouterOutlet>
 
-            <Route exact path="/tab1" component={Tab1} />
-            <Route exact path="/tab2" component={WorkInProgress} />
-            <Route exact path="/tab3" component={Tab3} />
-            <Route exact path="/tab4" component={Tab4} />
-            <Route path="/tab4/:productId" component={ProductDetails} />
-          </IonRouterOutlet>
-          <IonTabBar slot="bottom" style={tabBarStyle}>
-            <IonTabButton tab="tab1" href="/tab1">
-              <IonIcon icon={home} />
-              <IonLabel>Home</IonLabel>
-            </IonTabButton>
-            <IonTabButton tab="tab2" href="/tab2">
-              <IonIcon icon={location} />
-              <IonLabel>Consulent zoeken</IonLabel>
-            </IonTabButton>
-            <IonTabButton tab="tab3" href="/tab3">
-              <IonIcon icon={person} />
-              <IonLabel>Profiel</IonLabel>
-            </IonTabButton>
-            <IonTabButton tab="tab4" href="/tab4">
-              <IonIcon icon={cart} />
-              <IonLabel>Winkel</IonLabel>
-            </IonTabButton>
-          </IonTabBar>
-        </IonTabs>
+                <IonTabBar>
+                  <IonTabButton tab="tab1" href="/nonUser/tab1">
+                    <IonIcon icon={home} />
+                    <IonLabel>Home</IonLabel>
+                  </IonTabButton>
+                  <IonTabButton tab="tab2" href="/nonUser/tab2">
+                    <IonIcon icon={location} />
+                    <IonLabel>Consulent zoeken</IonLabel>
+                  </IonTabButton>
+                  <IonTabButton tab="tab3" href="/nonUser/tab3">
+                    <IonIcon icon={person} />
+                    <IonLabel>Profiel</IonLabel>
+                  </IonTabButton>
+                  <IonTabButton tab="tab4" href="/nonUser/tab4">
+                    <IonIcon icon={cart} />
+                    <IonLabel>Winkel</IonLabel>
+                  </IonTabButton>
+                </IonTabBar>
+              </IonTabs>
+            )}
+          />
+
+          <Route
+            path="/tabs"
+            render={() => (
+              <IonTabs>
+                <IonRouterOutlet>
+                  <Route exact path="/tabs/tab1" component={Tab1} />
+                  <Route exact path="/tabs/tab2" component={WorkInProgress} />
+                  <Route exact path="/tabs/tab3" component={Tab3} />
+                  <Route exact path="/tabs/tab4" component={Tab4} />
+                  <Route
+                    path="/tabs/tab4/:productId"
+                    component={ProductDetails}
+                  />
+                </IonRouterOutlet>
+
+                <IonTabBar slot="bottom">
+                  <IonTabButton tab="tab1" href="/tabs/tab1">
+                    <IonIcon icon={home} />
+                    <IonLabel>Home</IonLabel>
+                  </IonTabButton>
+                  <IonTabButton tab="tab2" href="/tabs/tab2">
+                    <IonIcon icon={location} />
+                    <IonLabel>Consulent zoeken</IonLabel>
+                  </IonTabButton>
+                  <IonTabButton tab="tab3" href="/tabs/tab3">
+                    <IonIcon icon={person} />
+                    <IonLabel>Profiel</IonLabel>
+                  </IonTabButton>
+                  <IonTabButton tab="tab4" href="/tabs/tab4">
+                    <IonIcon icon={cart} />
+                    <IonLabel>Winkel</IonLabel>
+                  </IonTabButton>
+                </IonTabBar>
+              </IonTabs>
+            )}
+          />
+        </IonRouterOutlet>
       </IonReactRouter>
     </IonApp>
   );
