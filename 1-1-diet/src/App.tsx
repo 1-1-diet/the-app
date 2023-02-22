@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Redirect, Route } from "react-router-dom";
 import { IonReactRouter } from "@ionic/react-router";
 import {
@@ -52,61 +53,66 @@ import WorkInProgress from "./pages/WorkInProgress/WorkInProgress";
 
 setupIonicReact();
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonTabs>
-        <IonRouterOutlet>
-          <Route exact path="/">
-            <Redirect to="/login" />
-          </Route>
+const App: React.FC = () => {
+  const [showTabs, setShowTabs] = useState(true);
+  let tabBarStyle = showTabs === false ? undefined : { display: "none" };
 
-          <Route exact path="/login" component={Login} />
-          <Route
-            exact
-            path="/login/wachtwoordVergeten/email"
-            component={FillEmailIn}
-          />
-          <Route
-            exact
-            path="/login/wachtwoordVergeten/emailCode"
-            component={FillCodeIn}
-          />
-          <Route
-            exact
-            path="/login/wachtwoordVergeten/verranderWachtwoord"
-            component={ChangeCode}
-          />
+  return (
+    <IonApp>
+      <IonReactRouter>
+        <IonTabs>
+          <IonRouterOutlet>
+            <Route exact path="/">
+              <Redirect to="/login" />
+            </Route>
 
-          <Route exact path="/nonUser/Tab1" component={Tab1NonUser} />
+            <Route exact path="/login" component={Login} />
+            <Route
+              exact
+              path="/login/wachtwoordVergeten/email"
+              component={FillEmailIn}
+            />
+            <Route
+              exact
+              path="/login/wachtwoordVergeten/emailCode"
+              component={FillCodeIn}
+            />
+            <Route
+              exact
+              path="/login/wachtwoordVergeten/verranderWachtwoord"
+              component={ChangeCode}
+            />
 
-          <Route exact path="/tab1" component={Tab1} />
-          <Route exact path="/tab2" component={WorkInProgress} />
-          <Route exact path="/tab3" component={Tab3} />
-          <Route exact path="/tab4" component={Tab4} />
-          <Route path="/tab4/:productId" component={ProductDetails} />
-        </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon icon={home} />
-            <IonLabel>Home</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={location} />
-            <IonLabel>Consulent zoeken</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={person} />
-            <IonLabel>Profiel</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab4" href="/tab4">
-            <IonIcon icon={cart} />
-            <IonLabel>Winkel</IonLabel>
-          </IonTabButton>
-        </IonTabBar>
-      </IonTabs>
-    </IonReactRouter>
-  </IonApp>
-);
+            <Route exact path="/nonUser/Tab1" component={Tab1NonUser} />
+
+            <Route exact path="/tab1" component={Tab1} />
+            <Route exact path="/tab2" component={WorkInProgress} />
+            <Route exact path="/tab3" component={Tab3} />
+            <Route exact path="/tab4" component={Tab4} />
+            <Route path="/tab4/:productId" component={ProductDetails} />
+          </IonRouterOutlet>
+          <IonTabBar slot="bottom" style={tabBarStyle}>
+            <IonTabButton tab="tab1" href="/tab1">
+              <IonIcon icon={home} />
+              <IonLabel>Home</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="tab2" href="/tab2">
+              <IonIcon icon={location} />
+              <IonLabel>Consulent zoeken</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="tab3" href="/tab3">
+              <IonIcon icon={person} />
+              <IonLabel>Profiel</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="tab4" href="/tab4">
+              <IonIcon icon={cart} />
+              <IonLabel>Winkel</IonLabel>
+            </IonTabButton>
+          </IonTabBar>
+        </IonTabs>
+      </IonReactRouter>
+    </IonApp>
+  );
+};
 
 export default App;
