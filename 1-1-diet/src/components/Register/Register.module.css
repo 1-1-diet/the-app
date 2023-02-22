@@ -94,10 +94,17 @@
   margin-right: 1em;
 }
 
-.profileDisplay {
-  border-radius: 50%;
-}
-
 .modal {
   background: #f3f3f3;
+}
+
+.titleCompleted {
+  text-align: center;
+  color: gray;
+  font-size: x-large;
+}
+
+.butt {
+  width: 20em;
+  height: 4em;
 }
