@@ -52,7 +52,7 @@ export default function Footer() {
           <IonSearchbar
             color="light"
             placeholder="Zoek een postcode of plaats"
-          ></IonSearchbar>
+          />
         </IonCol>
         <IonCol>
           <IonRow>
