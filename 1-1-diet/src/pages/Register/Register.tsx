@@ -8,6 +8,7 @@ import {
   IonLabel,
   IonCol,
   IonIcon,
+  IonRouterLink,
 } from "@ionic/react";
 import {
   personOutline,
@@ -16,7 +17,7 @@ import {
   lockClosedOutline,
 } from "ionicons/icons";
 import styles from "./Register.module.css";
-import BgPtrn from "../Splashscreen/BgPtrn";
+import BgPtrn from "../../components/Splashscreen/BgPtrn";
 import klap from "../../Images/logo2.svg";
 
 export default function Register() {
@@ -64,13 +65,15 @@ export default function Register() {
           <div className={styles.stayLogged}>
             <IonCheckbox />
             <IonText>Ingelogd blijven</IonText>
-            <IonText>
+            <IonRouterLink href={`/login`}>
               Heb je al een account?<IonText> Log in</IonText>
-            </IonText>
+            </IonRouterLink>
           </div>
         </div>
         <div className={styles.button}>
-          <IonButton color="secondary">Volgende</IonButton>
+          <IonButton color="secondary" href={`/register/profile`}>
+            Volgende
+          </IonButton>
         </div>
       </div>
     </div>

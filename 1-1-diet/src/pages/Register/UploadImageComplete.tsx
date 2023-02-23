@@ -1,7 +1,7 @@
 import { IonText, IonButton, IonCol, IonGrid } from "@ionic/react";
 
 import styles from "./Register.module.css";
-import BgPtrn from "../Splashscreen/BgPtrn";
+import BgPtrn from "../../components/Splashscreen/BgPtrn";
 import logo from "../../Images/logo2.svg";
 
 export default function UploadImage() {
@@ -20,7 +20,11 @@ export default function UploadImage() {
           </IonGrid>
         </div>
         <div className={styles.button}>
-          <IonButton className={styles.butt} color="secondary">
+          <IonButton
+            className={styles.butt}
+            color="secondary"
+            href={`/tabs/tab1`}
+          >
             Volgende
           </IonButton>
         </div>

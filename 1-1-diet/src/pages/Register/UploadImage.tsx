@@ -12,7 +12,7 @@ import {
 } from "@ionic/react";
 
 import styles from "./Register.module.css";
-import BgPtrn from "../Splashscreen/BgPtrn";
+import BgPtrn from "../../components/Splashscreen/BgPtrn";
 import logo from "../../Images/logo2.svg";
 import camera from "../../Images/camera.png";
 import { createOutline, cameraOutline, imageOutline } from "ionicons/icons";
@@ -112,6 +112,7 @@ export default function UploadImage() {
             className={styles.butt}
             color="secondary"
             onChange={() => takePhoto()}
+            href={`/register/complete`}
           >
             Maak account
           </IonButton>

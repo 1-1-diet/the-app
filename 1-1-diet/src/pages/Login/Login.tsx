@@ -122,7 +122,7 @@ export default function SplashScreen() {
           </IonButton>
           <div className={styles.registreer}>
             <IonText>Nog geen client?</IonText>
-            <IonRouterLink id={styles.textPink} href={``}>
+            <IonRouterLink id={styles.textPink} href={`/register`}>
               Maak nu een account
             </IonRouterLink>
           </div>

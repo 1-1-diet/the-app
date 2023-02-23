@@ -37,6 +37,11 @@ import FillEmailIn from "./pages/Login/WachtwoordVergeten/FillEmailIn";
 import FillCodeIn from "./pages/Login/WachtwoordVergeten/FillCodeIn";
 import ChangeCode from "./pages/Login/WachtwoordVergeten/ChangeCode";
 
+/* Register */
+import Register from "./pages/Register/Register";
+import UploadImage from "./pages/Register/UploadImage";
+import UploadImageComplete from "./pages/Register/UploadImageComplete";
+
 /* Dashboard User */
 import { location, home, person, cart } from "ionicons/icons";
 import Tab1 from "./pages/Tab1/Tab1";
@@ -80,6 +85,14 @@ const App: React.FC = () => {
             exact
             path="/login/wachtwoordVergeten/verranderWachtwoord"
             component={ChangeCode}
+          />
+
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/register/profile" component={UploadImage} />
+          <Route
+            exact
+            path="/register/complete"
+            component={UploadImageComplete}
           />
 
           <Route
