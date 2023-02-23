@@ -104,7 +104,58 @@
   font-size: x-large;
 }
 
-.butt {
-  width: 20em;
-  height: 4em;
+.inputFields {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.inputContainer {
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  border: 0.1em solid #f4f4f4;
+  border-radius: 1em;
+  padding: 0.6em 0.6em 0.6em 0.6em;
+  box-shadow: 1em 1em 1em #5a6bea13;
+}
+.inputContainerMail {
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  border: 0.1em solid #f4f4f4;
+  border-radius: 1em;
+  padding: 0.6em 0.6em 0.6em 0.6em;
+  box-shadow: 1em 1em 1em #5a6bea13;
+}
+
+.extraContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  height: 5vh;
+  font-size: 0.85em;
+}
+
+.stayLogged {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+#textPink {
+  color: #dc6099;
+}
+
+#button {
+  width: 80vw;
+  height: 6vh;
+}
+
+.completeContent {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 4em;
 }

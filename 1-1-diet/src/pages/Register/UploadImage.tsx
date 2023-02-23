@@ -109,10 +109,10 @@ export default function UploadImage() {
         </div>
         <div className={styles.button}>
           <IonButton
-            className={styles.butt}
             color="secondary"
             onChange={() => takePhoto()}
             href={`/register/complete`}
+            id={styles.button}
           >
             Maak account
           </IonButton>
