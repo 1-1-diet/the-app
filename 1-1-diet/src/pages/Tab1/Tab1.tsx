@@ -1,5 +1,5 @@
 import { IonContent, IonPage } from "@ionic/react";
-import styles from "./Tab1.module.css";
+import "./Tab1.css";
 import Header from "../../components/Header/HeaderUser";
 import Stats from "../../components/Stats/Stats";
 import RecomendedBlogs from "../../components/RecomendedBlogs/RecomendedBlogs";
@@ -13,17 +13,15 @@ const Tab1: React.FC = () => {
   return (
     <IonPage>
       <IonContent>
-        <div className="mainContent">
-          <Header />
-          <Stats />
-          <Divider />
-          <Water />
-          <TipsVoorVandaag />
-          <RecomendedBlogs />
-          <Divider />
-          <Invite />
-          <Footer />
-        </div>
+        <Header />
+        <Stats />
+        <Divider />
+        <Water />
+        <TipsVoorVandaag />
+        <RecomendedBlogs />
+        <Divider />
+        <Invite />
+        <Footer />
       </IonContent>
     </IonPage>
   );

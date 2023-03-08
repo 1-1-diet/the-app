@@ -4,6 +4,6 @@ import styles from "./Divider.module.css";
 import devider from "../../Images/DividerLogo.png";
 
 function Divider() {
-  return <img src={devider} alt="devider" />;
+  return <img id={styles.img} src={devider} alt="devider" />;
 }
 export default Divider;
