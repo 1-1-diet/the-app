@@ -54,7 +54,7 @@ export default function TipsVoorVandaag() {
         <Swiper slidesPerView={1.5} grabCursor={true} className={styles.swiper}>
           {filteredRecipes.map((element) => {
             return (
-              <SwiperSlide key={element.title}>
+              <SwiperSlide key={element.title} className={styles.swiperSlide}>
                 <ReceptCard
                   title={element.title}
                   bakeTime={element.bakeTime}

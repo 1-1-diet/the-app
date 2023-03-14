@@ -1,13 +1,13 @@
+.mainContainer {
+  margin-top: 3em;
+}
+
 .BlogImg {
   display: flex;
   justify-content: bottom;
   height: 25vh;
   width: 80vw;
   border-radius: 1em;
-}
-
-.swiper {
-  margin-top: none;
 }
 
 .img {

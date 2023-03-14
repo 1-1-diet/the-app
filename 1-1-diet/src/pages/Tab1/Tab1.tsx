@@ -16,7 +16,7 @@ const Tab1: React.FC = () => {
         <Header />
         <Stats />
         <Divider />
-        <Water />
+        {/* <Water /> */}
         <TipsVoorVandaag />
         <RecomendedBlogs />
         <Divider />
