@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { IonButton, IonLabel } from "@ionic/react";
+import { IonButton, IonLabel, IonText } from "@ionic/react";
 import "swiper/css";
 import styles from "./TipsVoorVandaag.module.css";
 import ReceptCard from "./ReceptCard";
@@ -7,8 +7,8 @@ import { Recept } from "./recept";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function TipsVoorVandaag() {
-  const [page, setPage] = useState(1);
   const [filteredOption, setFilteredOption] = useState("ontbijt");
+  const [cat, setCat] = useState("ontbijt");
 
   const filteredRecipes = useMemo(() => {
     return Recept.filter((recipe) => {
@@ -16,11 +16,11 @@ export default function TipsVoorVandaag() {
     });
   }, [filteredOption]);
 
-  const buttons = [
-    { title: "Ontbijt", value: "ontbijt", page: 1 },
-    { title: "Lunch", value: "lunch", page: 2 },
-    { title: "Diner", value: "diner", page: 3 },
-    { title: "Snack", value: "snack", page: 4 },
+  const nCat = [
+    { title: "Ontbijt", set: "ontbijt" },
+    { title: "Lunch", set: "lunch" },
+    { title: "Diner", set: "diner" },
+    { title: "Snack", set: "snack" },
   ];
 
   return (
@@ -31,23 +31,32 @@ export default function TipsVoorVandaag() {
             <IonLabel id={styles.title}>Tips van de week</IonLabel>
             <IonLabel id={styles.toonAlle}>Toon alle</IonLabel>
           </div>
-          <div className={styles.btnContent}>
-            {buttons.map((button) => {
+          <Swiper
+            className={styles.catContainer}
+            slidesPerView={"auto"}
+            grabCursor={true}
+            spaceBetween={10}
+          >
+            {nCat?.map((element) => {
               return (
-                <IonButton
-                  key={button.title}
-                  className={styles.btn}
-                  color={page === button.page ? "navigation" : "background"}
+                <SwiperSlide
+                  key={element.title}
+                  className={styles.btnContainer}
                   onClick={() => {
-                    setPage(button.page);
-                    setFilteredOption(button.value);
+                    setCat(element.title);
+                    setFilteredOption(element.set);
                   }}
+                  style={
+                    cat === element.title
+                      ? { borderBottom: "0.1em solid #5c9ad0" }
+                      : { borderBottom: "0.1em solid #5c9ad000" }
+                  }
                 >
-                  {button.title}
-                </IonButton>
+                  <IonText id={styles.catTitle}>{element.title}</IonText>
+                </SwiperSlide>
               );
             })}
-          </div>
+          </Swiper>
         </div>
       </div>
       <div className={styles.carrouselContent}>
