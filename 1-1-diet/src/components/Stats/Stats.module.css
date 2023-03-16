@@ -1,5 +1,7 @@
 .swiperDots {
   height: fit-content;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
 }
 
 .slideStats {
