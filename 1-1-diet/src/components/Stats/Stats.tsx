@@ -126,7 +126,7 @@ export default function Stats() {
                 </IonText>
               </IonCol>
               <IonCol>
-                <div>
+                <div className={styles.donut}>
                   <Doughnut data={data} />
                 </div>
                 <div className="ion-text-center">

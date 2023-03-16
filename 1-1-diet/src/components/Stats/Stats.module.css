@@ -1,9 +1,10 @@
 .swiperDots {
-  height: 50vh;
+  height: fit-content;
 }
 
 .slideStats {
-  height: 40vh;
+  min-height: 30vh;
+  height: fit-content;
   width: 90vw;
   margin-left: 5vw;
   margin-right: 5vw;
@@ -29,5 +30,10 @@
 
 .lineChart {
   height: 30vh;
+  width: auto;
+}
+
+.donut {
+  height: 20vh;
   width: auto;
 }
