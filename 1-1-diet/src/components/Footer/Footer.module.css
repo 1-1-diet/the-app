@@ -1,17 +1,27 @@
+.mainContainer {
+  display: block;
+  background-color: #2b2e6b;
+  margin-top: 3em;
+  padding: 0.5em;
+  padding-top: 1.5em;
+  color: white;
+}
+
+#title {
+  font-size: 2em;
+  text-align: center;
+}
+
+#subtitle {
+  font-size: 1.5em;
+}
+
+#desription {
+  text-align: center;
+}
+
 .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.2em;
-    padding-right: 1em;
-    padding-left: 1em;
-}
-
-.text {
-    color: #ffff;
-}
-
-.footerBg {
-    background-color: #2b2e6b;
-    margin-top: 5vh;
+  width: 100vw;
+  display: flex;
+  padding-top: 0.5em;
 }

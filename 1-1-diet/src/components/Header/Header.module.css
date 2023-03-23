@@ -1,16 +1,16 @@
 .headerbackground {
   background-color: #2b2e6b;
   background-size: cover;
-  height: auto;
+  height: 28vh;
   position: relative;
   width: 100vw;
   border-radius: 0% 0% 50% 50% / 20%;
 }
 
-.headerptrn {
+#headerptrn {
   position: absolute;
   width: 100vw;
-  height: 25vh;
+  height: 28vh;
   object-fit: cover;
   z-index: 10;
 }
@@ -25,8 +25,14 @@
   object-fit: cover;
 }
 
-.headerlogo {
+#headerlogo {
   position: absolute;
+  top: 0.5em;
+  left: 0;
+}
+
+.titleMargin {
+  margin-top: 2em;
 }
 
 .headertitle {

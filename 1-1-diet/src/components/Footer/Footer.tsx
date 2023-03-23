@@ -14,6 +14,7 @@ import {
   IonFooter,
   IonLabel,
   IonIcon,
+  IonText,
 } from "@ionic/react";
 import styles from "./Footer.module.css";
 
@@ -43,10 +44,10 @@ export default function Footer() {
   ];
 
   return (
-    <IonFooter className={styles.footerBg}>
+    <IonFooter className={styles.mainContainer}>
       <IonGrid>
         <IonCol>
-          <h1 className={styles.text}>Zoek een consultent!</h1>
+          <IonText id={styles.title}>Zoek een consultent!</IonText>
         </IonCol>
         <IonCol>
           <IonSearchbar
@@ -57,39 +58,43 @@ export default function Footer() {
         <IonCol>
           <IonRow>
             <IonCol>
-              <div className={styles.text}>Join us!</div>
-            </IonCol>
-            <IonCol>
-              <div className={styles.container}>
-                {footer?.map((element: any) => {
-                  return (
-                    <div
-                      key={element.title}
-                      className={styles.container}
-                      onClick={() => (window.location.href = `${element.url}`)}
-                    >
-                      <div className={styles.e}>
-                        <IonIcon
-                          id={styles.icon}
-                          icon={element.icon}
-                          size="large"
-                          color="secondary"
-                        />
+              <IonCol>
+                <IonText id={styles.subtitle}>Join us!</IonText>
+              </IonCol>
+              <IonCol class="ion-align-items-center">
+                <div className={styles.container}>
+                  {footer?.map((element: any) => {
+                    return (
+                      <div
+                        key={element.title}
+                        className={styles.container}
+                        onClick={() =>
+                          (window.location.href = `${element.url}`)
+                        }
+                      >
+                        <div className={styles.e}>
+                          <IonIcon
+                            id={styles.icon}
+                            icon={element.icon}
+                            size="large"
+                            color="secondary"
+                          />
+                        </div>
                       </div>
-                    </div>
-                  );
-                })}
-              </div>
+                    );
+                  })}
+                </div>
+              </IonCol>
             </IonCol>
           </IonRow>
         </IonCol>
         <IonRow>
-          <IonCol className="ion-margin">
-            <p className={styles.text}>
+          <IonCol>
+            <IonText id={styles.desription}>
               De 1:1 Diet ondersteunt onderzoek aan het Erasmus MC. Patienten
               met diabetes worden in dit onderzoek persoonlijk begeleid door
               dietisten met behulp van een dieet app.
-            </p>
+            </IonText>
           </IonCol>
         </IonRow>
       </IonGrid>

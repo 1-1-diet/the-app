@@ -20,15 +20,11 @@ const Header: React.FC = () => {
 
   return (
     <div className={styles.headerbackground}>
-      <img src={ptrn} alt="food ptrn" className={styles.headerptrn} />
-      <img
-        src={logo}
-        alt="Pech hij doet t niet"
-        className={styles.headerlogo}
-      />
+      <img src={ptrn} alt="food ptrn" id={styles.headerptrn} />
+      <img src={logo} alt="logo 1 op 1" id={styles.headerlogo} />
       <div className={styles.content}>
         <IonGrid>
-          <IonGrid className="ion-margin">
+          <IonGrid className={styles.titleMargin}>
             <IonCol className={styles.headertitle}>
               <h1>Goeie {timeOfDay}!</h1>
               <h1>{name}</h1>

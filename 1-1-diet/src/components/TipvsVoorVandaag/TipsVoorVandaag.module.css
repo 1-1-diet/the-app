@@ -66,3 +66,22 @@
 .swiper {
   padding-left: 1em;
 }
+
+.swiperSlide {
+  margin-right: 1em;
+}
+
+.catContainer {
+  display: flex;
+  align-content: center;
+  width: fit-content;
+  border-bottom: 0.1em solid #5c9ad065;
+}
+
+.btnContainer {
+  padding: 1em;
+}
+
+#catTitle {
+  font-size: 4vw;
+}
