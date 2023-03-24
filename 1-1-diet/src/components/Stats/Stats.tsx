@@ -120,9 +120,9 @@ export default function Stats() {
               <IonCol>
                 <IonText>
                   <p>Wat je bent verloren:</p>
-                  <h1 className={styles.statsText}>{randomNumber}kg</h1>
+                  <p className={styles.statsText}>{randomNumber} kg</p>
                   <p>Jij bent bij stap:</p>
-                  <h1 className={styles.statsText}>2</h1>
+                  <p className={styles.statsText}>2</p>
                 </IonText>
               </IonCol>
               <IonCol>
