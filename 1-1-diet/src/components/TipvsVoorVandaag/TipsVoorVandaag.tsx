@@ -28,7 +28,7 @@ export default function TipsVoorVandaag() {
       <div className={styles.centerHeader}>
         <div className={styles.headerContent}>
           <div className={styles.titleContent}>
-            <IonLabel id={styles.title}>Tips van de week</IonLabel>
+            <h1 id={styles.title}>Tips van de week</h1>
             <IonLabel id={styles.toonAlle}>Toon alle</IonLabel>
           </div>
           <Swiper

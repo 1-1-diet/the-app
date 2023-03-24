@@ -113,7 +113,7 @@ export default function Stats() {
           <IonGrid className={styles.slideStats}>
             <IonRow>
               <IonCol className="ion-text-center">
-                <p className={styles.statsTitle}>Resultaten van deze week</p>
+                <h1 className={styles.statsTitle}>Resultaten van deze week</h1>
               </IonCol>
             </IonRow>
             <IonRow>

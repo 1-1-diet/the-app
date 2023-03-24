@@ -11,7 +11,7 @@ const RecomendedBlogs: React.FC = () => {
     <div className={styles.mainContainer}>
       <div className={styles.centerHeader}>
         <div className={styles.titleContent}>
-          <IonLabel id={styles.title}>Aanbevolen blogs</IonLabel>
+          <h1 id={styles.title}>Aanbevolen blogs</h1>
           <IonLabel id={styles.toonAlle}>Toon Alle</IonLabel>
         </div>
       </div>

@@ -1,6 +1,26 @@
 /* Ionic Variables and Theming. For more info, please see:
 http://ionicframework.com/docs/theming/ */
 
+@font-face {
+  font-family: Londrina;
+  src: url(../fonts/LondrinaSolid-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/RobotoSlab-Bold.ttf);
+}
+
+h1 {
+  font-family: Londrina;
+  font-size: 2em;
+}
+
+.subText {
+  font-family: Roboto;
+  font-size: 1.1rem;
+}
+
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
