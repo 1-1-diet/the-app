@@ -1,0 +1,46 @@
+.container {
+  height: 40%;
+  margin-top: 2.5%;
+}
+#CardOne {
+  height: 50mm;
+  width: 90mm;
+  background-color: #ff6200;
+  border-radius: 5mm;
+}
+#CardTwo {
+  height: 50mm;
+  width: 90mm;
+  background-color: #009286;
+  border-radius: 5mm;
+}
+#swiper {
+  width: 100mm;
+  height: 100%;
+  padding: 1mm;
+}
+
+#Logo {
+  float: right;
+  margin-right: 10%;
+  margin-top: 30mm;
+  height: 10mm;
+}
+#CardInfo {
+  text-align: start;
+  margin-left: 5%;
+  margin-top: 10%;
+}
+h5 {
+  color: white;
+  font-weight: bold;
+}
+p {
+  font-weight: bold;
+  color: white;
+}
+#title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-left: 5%;
+}
