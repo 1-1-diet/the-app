@@ -16,7 +16,7 @@ export default function Instellingen() {
   return (
     <div>
       <IonGrid>
-        <IonCol>
+        <IonCol className={styles.center}>
           {Settings?.map((element: any) => {
             return (
               <div className={styles.row} key={element.title}>
