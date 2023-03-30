@@ -1,13 +1,13 @@
 export const Recept = [
   {
-    title: "Yogurt",
+    title: "Yoghurt",
     bakeTime: "5 min",
     yummies: "150 yummies",
     img: "aardbij.png",
     time: "ontbijt",
   },
   {
-    title: "Aardbij",
+    title: "Aardbei",
     bakeTime: "85 min",
     yummies: "33 yummies",
     img: "advocado.png",
@@ -36,7 +36,7 @@ export const Recept = [
     time: "lunch",
   },
   {
-    title: "Conrflaks",
+    title: "Cornflakes",
     bakeTime: "4 min",
     yummies: "2 yummies",
     img: "aardbij.png",
