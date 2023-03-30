@@ -30,7 +30,7 @@ const Tab3: React.FC = () => {
 
   return (
     <IonPage>
-      <IonContent>
+      <IonContent className={styles.mainContainer}>
         <Header />
         <div className={styles.catContainer}>
           {nCat?.map((element) => {
