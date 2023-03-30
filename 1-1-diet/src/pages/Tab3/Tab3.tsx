@@ -9,11 +9,7 @@ const Tab3: React.FC = () => {
   return (
     <IonPage>
       <IonContent>
-        {/* <Header name="Hendrik Jansen" />
-        <div className="mainContent">
-          <QuickOptions />
-          <Card />
-        </div> */}
+        <Header name="Hendrik Jansen" />
         <Activiteiten />
       </IonContent>
     </IonPage>
