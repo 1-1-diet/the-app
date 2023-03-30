@@ -1,66 +1,23 @@
 import React from "react";
 import {
-  IonList,
-  IonItem,
-  IonLabel,
   IonGrid,
   IonText,
   IonCol,
   IonRow,
   IonIcon,
+  IonCard,
 } from "@ionic/react";
 import styles from "./Gegevens.module.css";
 import betaal from "./Betaalmethode.module.css";
-import { chevronForward } from "ionicons/icons";
-import {
-  chevronForwardOutline,
-  transgenderOutline,
-  calendarOutline,
-  homeOutline,
-  mailOutline,
-  callOutline,
-} from "ionicons/icons";
-import { Data, CreditCard } from "./Data";
+import { Settings, CreditCard } from "./Data";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Instellingen() {
-  const settings = [
-    {
-      icon: transgenderOutline,
-      title: "Geslacht",
-      icon2: chevronForwardOutline,
-      gegevens: "man",
-    },
-    {
-      icon: calendarOutline,
-      title: "Geboortedatum",
-      icon2: chevronForwardOutline,
-      gegevens: "20-4-1969",
-    },
-    {
-      icon: homeOutline,
-      title: "Adress",
-      icon2: chevronForwardOutline,
-      gegevens: "Spreeuwstraat,59",
-    },
-    {
-      icon: mailOutline,
-      title: "Email",
-      icon2: chevronForwardOutline,
-      gegevens: "sybren12@yahoo.com",
-    },
-    {
-      icon: callOutline,
-      title: "Telefoonnummer",
-      icon2: chevronForwardOutline,
-      gegevens: "(307) 555-0133",
-    },
-  ];
-
   return (
     <div>
       <IonGrid>
         <IonCol>
-          {settings?.map((element: any) => {
+          {Settings?.map((element: any) => {
             return (
               <div className={styles.row} key={element.title}>
                 <IonRow>
@@ -81,7 +38,7 @@ export default function Instellingen() {
         <Swiper slidesPerView={1}>
           {CreditCard?.map((element: any) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={element.cardnumber}>
                 <IonCard
                   className={betaal.Card}
                   style={{ backgroundColor: `${element.color}` }}
