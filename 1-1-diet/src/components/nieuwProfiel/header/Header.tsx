@@ -15,7 +15,7 @@ export default function Header() {
         <div className={styles.absolute}>
           <img id={styles.img} src={profile} alt="profile image" />
           <div className={styles.profileInfo}>
-            <IonText id={styles.name}>Sybren Huisman</IonText>
+            <h1 id={styles.name}>Sybren Huisman</h1>
             <div className={styles.userSinds}>
               <IonText id={styles.userSinds}>gebruiker sinds 3 maanden</IonText>
               <img src={change} alt="change icon" />
