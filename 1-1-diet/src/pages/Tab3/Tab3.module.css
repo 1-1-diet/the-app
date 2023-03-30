@@ -1,0 +1,15 @@
+.catContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  border-bottom: 0.1em solid #5c9ad065;
+  margin: 1em 0 1em 0;
+}
+
+.btnContainer {
+  padding: 1em;
+}
+
+#catTitle {
+  font-size: 4vw;
+}

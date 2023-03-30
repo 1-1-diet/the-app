@@ -60,7 +60,7 @@ export default function Activiteiten() {
                 style={{ backgroundColor: `${element.color}` }}
                 id={styles.topCardIcon}
                 alt="icon"
-                src={require(`./icons/${element.icon}`)}
+                src={require(`../icons/${element.icon}`)}
               />
               <h1 id={styles.topTitle}>{element.title}</h1>
             </div>
@@ -74,7 +74,7 @@ export default function Activiteiten() {
             return (
               <div key={element.name} className={styles.consulentCardContainer}>
                 <img
-                  src={require(`../../Images/${element.img}`)}
+                  src={require(`../../../Images/${element.img}`)}
                   alt="profile picture"
                   id={styles.consulentCardProfile}
                 />

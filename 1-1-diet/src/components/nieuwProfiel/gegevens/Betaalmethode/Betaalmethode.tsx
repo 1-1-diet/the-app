@@ -13,7 +13,7 @@ const Betaalmethode: React.FC = () => {
           <IonCard id={styles.CardOne}>
             <img
               id={styles.Logo}
-              src={require(`../../Images/Mastercard-logo.svg.png`)}
+              src={require(`../../../../Images/Mastercard-logo.svg.png`)}
             />
             {CreditCard?.map((element: any) => {
               return (
@@ -30,7 +30,7 @@ const Betaalmethode: React.FC = () => {
           <IonCard id={styles.CardTwo}>
             <img
               id={styles.Logo}
-              src={require(`../../Images/Mastercard-logo.svg.png`)}
+              src={require(`../../../../Images/Mastercard-logo.svg.png`)}
               className={styles.img}
             />
             {CreditCard?.map((element: any) => {
