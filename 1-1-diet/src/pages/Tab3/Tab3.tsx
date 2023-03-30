@@ -16,7 +16,7 @@ const Tab3: React.FC = () => {
       setProfile(<Activiteiten />);
     }
     if (cat === "Gegevens") {
-      setProfile(<Betaling />);
+      setProfile(<Gegevens />);
     }
     if (cat === "Instellingen") {
       setProfile(<Instellingen />);

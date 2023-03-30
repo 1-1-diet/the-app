@@ -8,3 +8,24 @@
   float: right;
   color: #dc6099;
 }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  padding: 1em;
+  border-radius: 1em;
+  box-shadow: 20px 20px 10px rgb(243, 240, 240);
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5em;
+}
+
+.data {
+  display: flex;
+  align-items: center;
+  color: #9098b1;
+}
