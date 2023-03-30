@@ -16,10 +16,10 @@ const Tab3: React.FC = () => {
       setProfile(<Activiteiten />);
     }
     if (cat === "Gegevens") {
-      setProfile(<Gegevens />);
+      setProfile(<Betaling />);
     }
     if (cat === "Instellingen") {
-      setProfile(<Betaling />);
+      setProfile(<Instellingen />);
     }
   }, [catOption]);
 
@@ -31,7 +31,7 @@ const Tab3: React.FC = () => {
 
   return (
     <IonPage>
-      <IonContent>
+      <IonContent className={styles.mainContainer}>
         <Header />
         <div className={styles.catContainer}>
           {nCat?.map((element) => {
@@ -54,7 +54,7 @@ const Tab3: React.FC = () => {
             );
           })}
         </div>
-        {profile} */}
+        {profile}
       </IonContent>
     </IonPage>
   );

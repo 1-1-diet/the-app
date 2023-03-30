@@ -25,7 +25,6 @@ const Gegevens: React.FC = () => {
             </IonItem>
             <IonItem>
               <IonIcon id={styles.AvatarIcon} icon={calendar} slot="start" />
-
               <IonLabel>
                 Geboortedatum
                 <p id={styles.data}>{element.geboortedatum}</p>

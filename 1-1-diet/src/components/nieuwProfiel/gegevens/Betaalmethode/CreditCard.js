@@ -2,9 +2,11 @@ export const CreditCard = [
   {
     name: "Saybren Huisman",
     cardnumber: "NL34INGB54******",
+    color: "#009286",
   },
   {
-    name2: "Bim Huisman",
-    cardnumber2: "NL89ABNA22******",
+    name: "Bim Huisman",
+    cardnumber: "NL89ABNA22******",
+    color: "#ff6200",
   },
 ];
