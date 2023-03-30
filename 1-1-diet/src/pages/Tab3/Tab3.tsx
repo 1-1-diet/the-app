@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { IonContent, IonPage, IonText } from "@ionic/react";
 import styles from "./Tab3.module.css";
-import Header from "../../components/profiel/header";
+import Header from "../../components/nieuwProfiel/header/Header";
 import Gegevens from "../../components/nieuwProfiel/gegevens/Gegevens/Gegevens";
 import Betaling from "../../components/nieuwProfiel/gegevens/Betaalmethode/Betaalmethode";
 import Activiteiten from "../../components/nieuwProfiel/activiteiten/Activiteiten";
@@ -32,8 +32,7 @@ const Tab3: React.FC = () => {
   return (
     <IonPage>
       <IonContent>
-        <Instellingen />
-        {/* <Header name="Hendrik Jansen" />
+        <Header />
         <div className={styles.catContainer}>
           {nCat?.map((element) => {
             return (

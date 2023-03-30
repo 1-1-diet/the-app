@@ -47,7 +47,7 @@ export default function Footer() {
     <IonFooter className={styles.mainContainer}>
       <IonGrid>
         <IonCol>
-          <IonText id={styles.title}>Zoek een consultent!</IonText>
+          <h1 id={styles.title}>Zoek een consultent!</h1>
         </IonCol>
         <IonCol>
           <IonSearchbar
@@ -59,7 +59,7 @@ export default function Footer() {
           <IonRow>
             <IonCol>
               <IonCol>
-                <IonText id={styles.subtitle}>Join us!</IonText>
+                <h1 id={styles.subtitle}>Join us!</h1>
               </IonCol>
               <IonCol class="ion-align-items-center">
                 <div className={styles.container}>

@@ -11,7 +11,7 @@ export const ReceptCard = (recept: any) => {
         className={styles.img}
       />
       <div className={styles.textContent}>
-        <IonLabel className={styles.title}>{recept.title}</IonLabel>
+        <h1 className={styles.title}>{recept.title}</h1>
         <div>
           <IonLabel className={styles.subTitle}>{recept.bakeTime}</IonLabel>
           <IonIcon></IonIcon>

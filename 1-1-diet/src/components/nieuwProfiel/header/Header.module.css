@@ -1,0 +1,62 @@
+.mainContainer {
+  height: 40vh;
+  width: 100vw;
+}
+
+.headerbackground {
+  background-color: #2b2e6b;
+  background-size: cover;
+  height: 22vh;
+  position: relative;
+  width: 100vw;
+  border-radius: 0% 0% 50% 50% / 20%;
+}
+
+#headerptrn {
+  position: absolute;
+  width: 100vw;
+  height: 28vh;
+  object-fit: cover;
+  z-index: 10;
+}
+
+#headerlogo {
+  position: absolute;
+  top: 0.5em;
+  left: 0;
+}
+
+.absolute {
+  position: absolute;
+  left: 25vw;
+  top: 11vh;
+  z-index: 11;
+}
+
+#img {
+  border-radius: 50%;
+  width: 50vw;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5em;
+}
+
+#name {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 0;
+}
+
+.userSinds {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+#userSinds {
+  font-weight: lighter;
+}
