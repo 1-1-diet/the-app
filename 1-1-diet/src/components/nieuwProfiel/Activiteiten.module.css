@@ -1,0 +1,123 @@
+.mainContainer {
+  width: 100vw;
+  height: fit-content;
+  color: black;
+}
+
+.swiperCards {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.topCard {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5em;
+}
+
+#topCardIcon {
+  width: 23vw;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+#topTitle {
+  font-weight: bold;
+  font-size: 1em;
+  margin: 0 0;
+}
+
+.consulentenContainer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+#consulentTitle {
+  padding-left: 1em;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.consulentCardContainer {
+  width: 90vw;
+  display: flex;
+  background-color: #edf1fa;
+  gap: 1em;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+#consulentCardProfile {
+  height: 7vh;
+  border-radius: 1em;
+}
+
+.consulentDescriptionContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#consulentName {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.afsprakenContainer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.afsprakenCenter {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+.afsprakenCardContainer {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.afsprakenCardIcon {
+  width: 23vw;
+  height: 7vh;
+  border-radius: 1em;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#afsprakenDateNum {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#afsprakenDateMonth {
+  font-size: 1.2em;
+}
+
+.afsprakenDescriptionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#afsparkenDay {
+  font-weight: bold;
+}
