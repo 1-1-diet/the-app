@@ -5,6 +5,7 @@ import Header from "../../components/profiel/header";
 import Gegevens from "../../components/nieuwProfiel/gegevens/Gegevens/Gegevens";
 import Betaling from "../../components/nieuwProfiel/gegevens/Betaalmethode/Betaalmethode";
 import Activiteiten from "../../components/nieuwProfiel/activiteiten/Activiteiten";
+import Instellingen from "../../components/nieuwProfiel/Instellingen/Instellingen";
 const Tab3: React.FC = () => {
   const [catOption, setCatOption] = useState("");
   const [cat, setCat] = useState("Activiteiten");
@@ -31,7 +32,8 @@ const Tab3: React.FC = () => {
   return (
     <IonPage>
       <IonContent>
-        <Header name="Hendrik Jansen" />
+        <Instellingen />
+        {/* <Header name="Hendrik Jansen" />
         <div className={styles.catContainer}>
           {nCat?.map((element) => {
             return (
@@ -53,7 +55,7 @@ const Tab3: React.FC = () => {
             );
           })}
         </div>
-        {profile}
+        {profile} */}
       </IonContent>
     </IonPage>
   );
