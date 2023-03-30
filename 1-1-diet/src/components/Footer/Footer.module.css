@@ -1,14 +1,17 @@
 .mainContainer {
-  display: block;
   background-color: #2b2e6b;
   margin-top: 3em;
   padding: 0.5em;
-  padding-top: 1.5em;
   color: white;
 }
 
 #title {
   text-align: center;
+  margin: 0 0;
+}
+
+#subtitle {
+  margin: 0 0;
 }
 
 #desription {

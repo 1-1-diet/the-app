@@ -22,7 +22,7 @@
 
 .statsText {
   font-weight: bolder;
-  color: #dc6099;
+  color: #dc6099 !important;
   font-size: x-large;
 }
 
@@ -38,4 +38,8 @@
 .donut {
   height: 20vh;
   width: auto;
+}
+
+p {
+  color: black !important;
 }

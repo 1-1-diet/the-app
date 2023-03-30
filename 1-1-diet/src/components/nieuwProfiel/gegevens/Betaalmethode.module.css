@@ -25,17 +25,21 @@
 }
 
 .CardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
   text-align: start;
   margin-left: 5%;
   margin-top: 10%;
 }
 
-h5 {
+#name {
   font-weight: bold;
   color: white;
+  font-size: 1.5em;
 }
 
-p {
+#cardNmb {
   font-weight: bold;
   color: white;
 }

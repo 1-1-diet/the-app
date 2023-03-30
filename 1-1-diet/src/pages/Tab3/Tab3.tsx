@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { IonContent, IonPage, IonText } from "@ionic/react";
 import styles from "./Tab3.module.css";
 import Header from "../../components/nieuwProfiel/header/Header";
-import Gegevens from "../../components/nieuwProfiel/gegevens/Gegevens/Gegevens";
-import Betaling from "../../components/nieuwProfiel/gegevens/Betaalmethode/Betaalmethode";
+import Gegevens from "../../components/nieuwProfiel/gegevens/Gegevens";
 import Activiteiten from "../../components/nieuwProfiel/activiteiten/Activiteiten";
 import Instellingen from "../../components/nieuwProfiel/Instellingen/Instellingen";
 const Tab3: React.FC = () => {
@@ -16,7 +15,7 @@ const Tab3: React.FC = () => {
       setProfile(<Activiteiten />);
     }
     if (cat === "Gegevens") {
-      setProfile(<Betaling />);
+      setProfile(<Gegevens />);
     }
     if (cat === "Instellingen") {
       setProfile(<Instellingen />);
