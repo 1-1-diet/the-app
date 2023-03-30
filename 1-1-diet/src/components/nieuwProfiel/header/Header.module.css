@@ -28,9 +28,14 @@
 
 .absolute {
   position: absolute;
-  left: 25vw;
-  top: 11vh;
+  left: 22vw;
+  top: 6vh;
   z-index: 11;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5;
 }
 
 #img {

@@ -93,10 +93,10 @@
 }
 
 .afsprakenCardIcon {
-  width: 23vw;
-  height: 7vh;
+  width: fit-content;
+  height: fit-content;
   border-radius: 1em;
-  padding: 0.5em;
+  padding: 1em;
   display: flex;
   flex-direction: column;
   text-align: center;

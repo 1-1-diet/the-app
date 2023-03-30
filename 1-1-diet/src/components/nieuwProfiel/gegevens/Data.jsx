@@ -34,7 +34,7 @@ export const Settings = [
   },
   {
     icon: callOutline,
-    title: "Telefoonnummer",
+    title: "T - nummer",
     icon2: chevronForwardOutline,
     gegevens: "(307) 555-0133",
   },

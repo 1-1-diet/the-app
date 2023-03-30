@@ -35,7 +35,7 @@ export default function Activiteiten() {
       dateMonth: "Jan",
       day: "Maandag",
       time: "11:00 uur tot 12:00 uur",
-      btn: "Samenvatting",
+      btn: "Sammenvatting",
       color: "#EDF1FA",
       color2: "#D8E3FF",
     },
@@ -44,7 +44,7 @@ export default function Activiteiten() {
       dateMonth: "Jan",
       day: "Dinsdag",
       time: "10:00 uur tot 11:30 uur",
-      btn: "Samenvatting",
+      btn: "Sammenvatting",
       color: "#F9E4EE",
       color2: "#F4CEE0",
     },
@@ -112,7 +112,6 @@ export default function Activiteiten() {
                   <IonText id={styles.afsparkenDay}>{element.day}</IonText>
                   <IonText>{element.time}</IonText>
                 </div>
-                <IonButton className={styles.btn}>{element.btn}</IonButton>
               </div>
             );
           })}

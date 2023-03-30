@@ -10,7 +10,8 @@
 }
 
 .Card {
-  height: 20vh;
+  height: fit-content;
+  padding: 1em;
   width: 86vw;
   margin-left: 7vw;
   margin-right: 7vw;
