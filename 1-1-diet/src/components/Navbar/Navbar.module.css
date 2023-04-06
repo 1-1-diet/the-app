@@ -1,0 +1,36 @@
+.mainContainer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  gap: 0.5em;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: white;
+
+  outline: red solid 0.1em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+.tabContainer {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 0.3em;
+}
+
+#active {
+  padding: 1em;
+  background-color: #e5f2ff;
+  border-radius: 1em;
+}
+
+#icon {
+  color: #5c99d0;
+}
