@@ -25,7 +25,7 @@
   gap: 0.3em;
 }
 
-#active {
+.tabContainer:has(h1) {
   padding: 1em;
   background-color: #e5f2ff;
   border-radius: 1em;
