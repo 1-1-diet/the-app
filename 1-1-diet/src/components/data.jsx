@@ -1,6 +1,6 @@
 // import fotos
 import userPorifle from "../Images/profileImg.jpg";
-import consulentProfile from "../Images/1to1girls.svg";
+import consulentProfile from "../Images/consulentProfile.svg";
 import masterCard from "../Images/Mastercard-logo.png";
 
 // import icons
@@ -10,17 +10,17 @@ import masterCard from "../Images/Mastercard-logo.png";
 export const UserProfile = [
   {
     profileImg: userPorifle,
-    name: "Sybren Huisman",
+    name: "Angela Huisman",
     useTime: "3 maanden",
 
-    gender: "Man",
+    gender: "Vrouw",
     birthdate: "09/04/1994",
     adress: "spreeuwstraat 59",
-    email: "sybrenhuisman@gmail.com",
+    email: "angelahuisman@gmail.com",
     number: "+31 6 83443077",
     payment: [
       {
-        name: "Sybren Huisman",
+        name: "Angela Huisman",
         date: "21/09",
         number: "5784",
         icon: masterCard,
@@ -29,7 +29,7 @@ export const UserProfile = [
       {
         name: "Sybren Huisman",
         date: "21/09",
-        number: "5784",
+        number: "5284",
         icon: masterCard,
         color: "#ff6200",
       },

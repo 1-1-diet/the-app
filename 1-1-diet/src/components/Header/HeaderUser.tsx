@@ -4,11 +4,12 @@ import styles from "./Header.module.css";
 import ptrn from "../../Images/ptrn.svg";
 import logo from "../../Images/logo.svg";
 
+import { UserProfile } from "../data";
+
 const Header: React.FC = () => {
   let timeOfDay;
   const date = new Date();
   const hours = date.getHours();
-  const name = ["Hendrick", " Fredd", " Jan"];
 
   if (hours < 12) {
     timeOfDay = "morgen";
@@ -27,7 +28,7 @@ const Header: React.FC = () => {
           <IonGrid className={styles.titleMargin}>
             <IonCol className={styles.headertitle}>
               <h1>Goeie {timeOfDay}!</h1>
-              <h1>{name}</h1>
+              <h1>{UserProfile[0].name}</h1>
             </IonCol>
           </IonGrid>
         </IonGrid>
