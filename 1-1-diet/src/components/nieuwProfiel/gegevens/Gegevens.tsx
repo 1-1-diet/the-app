@@ -9,8 +9,10 @@ import {
 } from "@ionic/react";
 import styles from "./Gegevens.module.css";
 import betaal from "./Betaalmethode.module.css";
-import { Settings, CreditCard } from "./Data";
+import { Settings } from "./UserSettings";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import { UserProfile } from "../../data";
 
 export default function Instellingen() {
   return (
@@ -36,20 +38,19 @@ export default function Instellingen() {
       <div className={betaal.container}>
         <h1 id={betaal.title}>Betaal methoden</h1>
         <Swiper slidesPerView={1}>
-          {CreditCard?.map((element: any) => {
+          {UserProfile[0].payment?.map((element) => {
             return (
-              <SwiperSlide key={element.cardnumber}>
+              <SwiperSlide key={element.number}>
                 <IonCard
                   className={betaal.Card}
                   style={{ backgroundColor: `${element.color}` }}
                 >
-                  <img
-                    id={betaal.Logo}
-                    src={require(`../../../Images/Mastercard-logo.svg.png`)}
-                  />
+                  <img id={betaal.Logo} src={element.icon} />
                   <div className={betaal.CardInfo}>
                     <IonText id={betaal.name}>{element.name}</IonText>
-                    <IonText id={betaal.cardNmb}>{element.cardnumber}</IonText>
+                    <IonText id={betaal.cardNmb}>
+                      **** **** **** **** {element.number}
+                    </IonText>
                   </div>
                 </IonCard>
               </SwiperSlide>
