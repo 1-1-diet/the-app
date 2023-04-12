@@ -7,48 +7,37 @@ import {
   callOutline,
 } from "ionicons/icons";
 
+import { UserProfile } from "../../data";
+
 export const Settings = [
   {
     icon: transgenderOutline,
     title: "Geslacht",
     icon2: chevronForwardOutline,
-    gegevens: "man",
+    gegevens: UserProfile[0].gender,
   },
   {
     icon: calendarOutline,
     title: "Geboortedatum",
     icon2: chevronForwardOutline,
-    gegevens: "20-4-1969",
+    gegevens: UserProfile[0].birthdate,
   },
   {
     icon: homeOutline,
     title: "Adress",
     icon2: chevronForwardOutline,
-    gegevens: "Spreeuwstraat,59",
+    gegevens: UserProfile[0].adress,
   },
   {
     icon: mailOutline,
     title: "Email",
     icon2: chevronForwardOutline,
-    gegevens: "sybren12@yahoo.com",
+    gegevens: UserProfile[0].email,
   },
   {
     icon: callOutline,
     title: "T - nummer",
     icon2: chevronForwardOutline,
-    gegevens: "(307) 555-0133",
-  },
-];
-
-export const CreditCard = [
-  {
-    name: "Sybren Huisman",
-    cardnumber: "NL34INGB54******",
-    color: "#009286",
-  },
-  {
-    name: "Bim Huisman",
-    cardnumber: "NL89ABNA22******",
-    color: "#ff6200",
+    gegevens: UserProfile[0].number,
   },
 ];
