@@ -9,6 +9,8 @@ import TipsVoorVandaag from "../../components/TipvsVoorVandaag/TipsVoorVandaag";
 import Invite from "../../components/Invite-friend-card/Invite-friend-card";
 import Footer from "../../components/Footer/Footer";
 
+import "../../index.css";
+
 const Tab1: React.FC = () => {
   return (
     <IonPage>
