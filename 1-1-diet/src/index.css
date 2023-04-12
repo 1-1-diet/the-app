@@ -3,10 +3,14 @@
 ion-tab-bar {
   width: 90vw;
   padding: 1em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
   border-radius: 1em;
   background-color: white;
   margin-bottom: 1em;
   align-self: center;
+  box-shadow: 0 0 10px 10px #aaaaaa1c;
+  --border: none;
 }
 
 ion-tab-button {
@@ -22,8 +26,8 @@ ion-tab-button::before {
   padding-top: 2em;
   padding-bottom: 2em;
   width: 10em;
-  height: 2.2em;
-  top: 1em;
+  height: 2.8em;
+  top: 1.5em;
   position: absolute;
   border-radius: 1em;
 }
@@ -32,11 +36,16 @@ ion-tab-button.tab-selected::before {
   background-color: #e5f2ff;
 }
 
-ion-label {
+ion-tab-button ion-label {
   display: none;
   font-size: 1.5em;
 }
 
 ion-tab-button.tab-selected ion-label {
   display: block;
+}
+
+ion-router-outlet {
+  height: 100vh;
+  width: 100vw;
 }
