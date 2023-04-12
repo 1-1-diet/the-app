@@ -9,13 +9,10 @@ import TipsVoorVandaag from "../../components/TipvsVoorVandaag/TipsVoorVandaag";
 import Invite from "../../components/Invite-friend-card/Invite-friend-card";
 import Footer from "../../components/Footer/Footer";
 
-import Navbar from "../../components/Navbar/Navbar";
-
 const Tab1: React.FC = () => {
   return (
     <IonPage>
       <IonContent>
-        <Navbar />
         <Header />
         <Stats />
         <Divider />

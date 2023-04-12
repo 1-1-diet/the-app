@@ -1,1 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap");
+
+ion-tab-bar {
+  width: 90vw;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: white;
+  margin-bottom: 1em;
+  align-self: center;
+}
+
+ion-tab-button {
+  --color: #5c99d0;
+  --color-selected: #5c99d0;
+  --background: white;
+}
+
+ion-tab-button::before {
+  background-color: transparent;
+  display: flex;
+  content: "";
+  padding-top: 2em;
+  padding-bottom: 2em;
+  width: 10em;
+  height: 2.2em;
+  top: 1em;
+  position: absolute;
+  border-radius: 1em;
+}
+
+ion-tab-button.tab-selected::before {
+  background-color: #e5f2ff;
+}
+
+ion-label {
+  display: none;
+  font-size: 1.5em;
+}
+
+ion-tab-button.tab-selected ion-label {
+  display: block;
+}

@@ -31,6 +31,9 @@ import "@ionic/react/css/display.css";
 /* Theme variables */
 import "./theme/variables.css";
 
+/* CSS */
+import "./index.css";
+
 /* Login */
 import Login from "./pages/Login/Login";
 import FillEmailIn from "./pages/Login/WachtwoordVergeten/FillEmailIn";
@@ -113,7 +116,7 @@ const App: React.FC = () => {
                   </IonTabButton>
                   <IonTabButton tab="tab2" href="/nonUser/tab2">
                     <IonIcon icon={location} />
-                    <IonLabel>Consulent zoeken</IonLabel>
+                    <IonLabel>Consulent</IonLabel>
                   </IonTabButton>
                   <IonTabButton tab="tab3" href="/nonUser/tab3">
                     <IonIcon icon={person} />
@@ -150,7 +153,7 @@ const App: React.FC = () => {
                   </IonTabButton>
                   <IonTabButton tab="tab2" href="/tabs/tab2">
                     <IonIcon icon={location} />
-                    <IonLabel>Consulent zoeken</IonLabel>
+                    <IonLabel>Consulent</IonLabel>
                   </IonTabButton>
                   <IonTabButton tab="tab3" href="/tabs/tab3">
                     <IonIcon icon={person} />
