@@ -15,18 +15,20 @@ export default function Header() {
         <img src={ptrn} alt="food ptrn" id={styles.headerptrn} />
         <img src={logo} alt="logo 1 op 1" id={styles.headerlogo} />
         <div className={styles.absolute}>
-          <img
-            id={styles.img}
-            src={UserProfile[0].profileImg}
-            alt="profile image"
-          />
+          <div className={styles.imgContainer}>
+            <img
+              id={styles.img}
+              src={UserProfile[0].profileImg}
+              alt="profile image"
+            />
+            <img src={change} alt="change icon" style={{ width: "1.8em" }} />
+          </div>
           <div className={styles.profileInfo}>
             <h1 id={styles.name}>{UserProfile[0].name}</h1>
             <div className={styles.userSinds}>
               <IonText id={styles.userSinds}>
                 gebruiker sinds {UserProfile[0].useTime}
               </IonText>
-              <img src={change} alt="change icon" />
             </div>
           </div>
         </div>
