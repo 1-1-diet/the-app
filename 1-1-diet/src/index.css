@@ -14,21 +14,22 @@ ion-tab-bar {
 }
 
 ion-tab-button {
+  position: relative;
   --color: #5c99d0;
   --color-selected: #5c99d0;
   --background: white;
+  --ripple-color: transparent;
 }
 
 ion-tab-button::before {
   background-color: transparent;
   display: flex;
   content: "";
-  padding-top: 2em;
-  padding-bottom: 2em;
-  width: 10em;
+  padding-bottom: 4em;
   height: 2.8em;
-  top: 1.5em;
+  width: 100%;
   position: absolute;
+  top: -1em;
   border-radius: 1em;
 }
 
