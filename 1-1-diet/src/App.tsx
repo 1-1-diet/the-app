@@ -137,7 +137,7 @@ const App: React.FC = () => {
               <IonTabs>
                 <IonRouterOutlet>
                   <Route exact path="/tabs/tab1" component={Tab1} />
-                  <Route exact path="/tabs/tab2" component={WorkInProgress} />
+                  <Route exact path="/tabs/tab2" component={Tab2} />
                   <Route exact path="/tabs/tab3" component={Tab3} />
                   <Route exact path="/tabs/tab4" component={Tab4} />
                   <Route

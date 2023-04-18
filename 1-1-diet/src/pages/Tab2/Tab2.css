@@ -1,19 +1,22 @@
-/* * {
-  padding: 0 0;
-} */
-
-ion-popover {
-  --width: fit-content;
+/* google map */
+capacitor-google-map {
+  display: inline-block;
+  width: 100vw;
+  height: 100vh;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
+/* search bar */
 .css-2b097c-container {
   width: 100%;
 }
 
-capacitor-google-map {
-  display: inline-block;
-  width: 100%;
-  height: 94.5vh;
+/* filter popup */
+ion-popover {
+  --width: fit-content;
 }
 
 ion-radio {
@@ -41,7 +44,6 @@ ion-radio.radio-checked::part(container) {
 ion-radio.radio-checked::part(mark) {
   width: 6px;
   height: 10px;
-
   border-width: 0px 2px 2px 0px;
   border-style: solid;
   border-color: #fff;

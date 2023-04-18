@@ -1,7 +1,6 @@
 import {
   IonContent,
   IonPage,
-  IonCol,
   IonRow,
   useIonViewWillEnter,
   useIonModal,
@@ -13,7 +12,7 @@ import {
   IonLabel,
 } from "@ionic/react";
 import { optionsOutline } from "ionicons/icons";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import "./Tab2.css";
 import styles from "./Tab2.module.css";
 import { GoogleMap } from "@capacitor/google-maps";
@@ -109,11 +108,45 @@ const Tab2: React.FC = () => {
 
   useIonViewWillEnter(() => createMap());
 
+  const filter = [
+    {
+      geslacht: [
+        {
+          title: "Man",
+          value: "man",
+        },
+        {
+          title: "Vrouw",
+          value: "vrouw",
+        },
+        {
+          title: "Allebij",
+          value: "man-vrouw",
+        },
+      ],
+      specialisatie: [
+        {
+          title: "Onwards coach",
+          value: "onwardsCoach",
+        },
+        {
+          title: "Online coach",
+          value: "onlineCoach",
+        },
+        {
+          title: "Allebij",
+          value: "onwardsCoach-onlineCoach",
+        },
+      ],
+    },
+  ];
+
   return (
     <IonPage>
       <IonContent fullscreen>
-        <div className="center">
-          <IonRow className="searchBar">
+        <capacitor-google-map ref={mapRef} />
+        <div className={styles.center}>
+          <div className={styles.searchBar}>
             <GooglePlacesAutocomplete
               apiKey={key}
               apiOptions={{ language: "nl", region: "nl" }}
@@ -125,15 +158,15 @@ const Tab2: React.FC = () => {
                 onChange: setValue,
               }}
             />
-          </IonRow>
+          </div>
         </div>
         <IonButton
           color="secondary"
           shape="round"
-          className="filterBtn"
+          className={styles.filterBtn}
           id="click-trigger"
         >
-          <IonIcon className="icon" icon={optionsOutline} />
+          <IonIcon className={styles.icon} icon={optionsOutline} />
         </IonButton>
         <IonPopover
           trigger="click-trigger"
@@ -141,44 +174,38 @@ const Tab2: React.FC = () => {
           alignment="center"
           triggerAction="click"
         >
-          <div className="popup">
-            <IonRadioGroup className="content2" value="custom-checked">
+          <div className={styles.filterContainer}>
+            <IonRadioGroup className={styles.filterContent} value="man-vrouw">
               <IonLabel>Geslacht</IonLabel>
-              <IonRow>
-                <IonRadio value="custom"></IonRadio>
-                <IonLabel className="textCenter2">Man</IonLabel>
-              </IonRow>
-              <IonRow>
-                <IonRadio value="custom-"></IonRadio>
-                <IonLabel className="textCenter2">Vrouw</IonLabel>
-              </IonRow>
-              <IonRow>
-                <IonRadio value="custom--"></IonRadio>
-                <IonLabel className="textCenter2">Allebij</IonLabel>
-              </IonRow>
+              {filter[0].geslacht?.map((element) => {
+                return (
+                  <div>
+                    <div className={styles.textContainer}>
+                      <IonRadio value={element.value}></IonRadio>
+                      <IonLabel>{element.title}</IonLabel>
+                    </div>
+                  </div>
+                );
+              })}
             </IonRadioGroup>
-            <IonRadioGroup className="content2" value="custom-checked">
-              <IonLabel className="textCenter2">Specialisatie</IonLabel>
-              <IonRow>
-                <IonRadio value="custom"></IonRadio>
-                <IonLabel className="textCenter2">Onwards coach</IonLabel>
-              </IonRow>
-              <IonRow>
-                <IonRadio value="custom-"></IonRadio>
-                <IonLabel className="textCenter2">Online coach</IonLabel>
-              </IonRow>
-              <IonRow>
-                <IonRadio value="custom--"></IonRadio>
-                <IonLabel className="textCenter2">Allebij</IonLabel>
-              </IonRow>
+            <IonRadioGroup
+              className={styles.filterContent}
+              value="onwardsCoach-onlineCoach"
+            >
+              <IonLabel>Specialisatie</IonLabel>
+              {filter[0].specialisatie?.map((element) => {
+                return (
+                  <div>
+                    <div className={styles.textContainer}>
+                      <IonRadio value={element.value}></IonRadio>
+                      <IonLabel>{element.title}</IonLabel>
+                    </div>
+                  </div>
+                );
+              })}
             </IonRadioGroup>
           </div>
         </IonPopover>
-        <IonRow>
-          <IonCol>
-            <capacitor-google-map ref={mapRef} id="map" />
-          </IonCol>
-        </IonRow>
       </IonContent>
     </IonPage>
   );
