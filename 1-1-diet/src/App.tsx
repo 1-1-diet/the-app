@@ -46,11 +46,12 @@ import UploadImage from "./pages/Register/UploadImage";
 import UploadImageComplete from "./pages/Register/UploadImageComplete";
 
 /* Dashboard User */
-import { location, home, person, cart } from "ionicons/icons";
+import { location, home, person, cart, chatbubble } from "ionicons/icons";
 import Tab1 from "./pages/Tab1/Tab1";
 import Tab2 from "./pages/Tab2/Tab2";
 import Tab3 from "./pages/Tab3/Tab3";
 import Tab4 from "./pages/Tab4/Tab4";
+import Tab5 from "./pages/Tab5/Tab5";
 import { ProductDetails } from "./pages/Tab4/ProductDetails";
 
 /* Dashboard non user */
@@ -126,6 +127,10 @@ const App: React.FC = () => {
                     <IonIcon icon={cart} />
                     <IonLabel>Winkel</IonLabel>
                   </IonTabButton>
+                  <IonTabButton tab="tab5" href="/nonUser/tab5">
+                    <IonIcon icon={chatbubble} />
+                    <IonLabel>Chat</IonLabel>
+                  </IonTabButton>
                 </IonTabBar>
               </IonTabs>
             )}
@@ -140,6 +145,7 @@ const App: React.FC = () => {
                   <Route exact path="/tabs/tab2" component={WorkInProgress} />
                   <Route exact path="/tabs/tab3" component={Tab3} />
                   <Route exact path="/tabs/tab4" component={Tab4} />
+                  <Route exact path="/tabs/tab5" component={Tab5} />
                   <Route
                     path="/tabs/tab4/:productId"
                     component={ProductDetails}
@@ -162,6 +168,10 @@ const App: React.FC = () => {
                   <IonTabButton tab="tab4" href="/tabs/tab4">
                     <IonIcon icon={cart} />
                     <IonLabel>Winkel</IonLabel>
+                  </IonTabButton>
+                  <IonTabButton tab="tab5" href="/tabs/tab5">
+                    <IonIcon icon={chatbubble} />
+                    <IonLabel>Chat</IonLabel>
                   </IonTabButton>
                 </IonTabBar>
               </IonTabs>
