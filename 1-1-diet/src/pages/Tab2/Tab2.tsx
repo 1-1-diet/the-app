@@ -89,8 +89,8 @@ const Tab2: React.FC = () => {
   };
 
   const modalOptions = {
-    initialBreakpoint: 0.3,
-    breakpoints: [0, 0, 0.3],
+    initialBreakpoint: 0.4,
+    breakpoints: [0, 0.4, 0.8],
     backdropBreakpoint: 0,
     onDidDismiss: () => dismiss(),
   };

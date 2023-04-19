@@ -1,52 +1,86 @@
-.popupCard {
+.mainContainer {
+  width: 100vw;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
+  gap: 0.5em;
   align-items: center;
+  background-color: #edf1f3;
+}
+
+#title {
+  width: 90%;
+  color: black;
+}
+
+.consulentContainer {
+  width: 90%;
+  height: fit-content;
+  color: black;
+  display: flex;
+  gap: 1em;
+  background-color: #fff;
+  padding: 0.8em;
+  border-radius: 1em;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+#img {
+  width: 30%;
+  height: auto;
+  border-radius: 1em;
+  object-fit: cover;
+}
+
+.consulentInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   gap: 0.5em;
 }
 
-.profileIonBtn {
-  width: 95vw;
-  height: 13vh;
+#distance {
+  font-size: 0.8em;
+  font-weight: normal;
 }
 
-.profileBtn {
-  display: flex;
-  width: 100vw;
-  gap: 1em;
-}
-
-.profilePic {
-  width: 50px;
-  height: 50px;
-  border-color: black;
-  border-width: 2px;
-  border-style: solid;
-  text-align: center;
-}
-
-.profileInfo {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  justify-content: center;
-  gap: 0.3em;
-}
-
-.contactContainer {
+.bottomContainer {
+  width: 90%;
+  height: 50%;
+  height: fit-content;
   display: flex;
   justify-content: space-between;
-  width: 95vw;
 }
 
-.callBtn {
-  width: 64vw;
+#afspraak {
+  width: 79%;
+  height: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.msgBtn {
-  width: 29vw;
+#moreInfo {
+  width: 19%;
+  height: 4em;
 }
 
-#markerTitle {
-  margin-left: 5vw;
+.aboutMe {
+  width: 90%;
+  color: black;
+  background-color: #fff;
+  padding: 0.8em;
+  border-radius: 1em;
+}
+
+.openTime {
+  width: 90%;
+  color: black;
+  padding: 0.8em;
+}
+
+#secondTitle {
+  font-size: 1.7em;
+  margin-top: 0;
 }
