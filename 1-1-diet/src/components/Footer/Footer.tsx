@@ -12,7 +12,6 @@ import {
   IonCol,
   IonSearchbar,
   IonFooter,
-  IonLabel,
   IonIcon,
   IonText,
 } from "@ionic/react";

@@ -41,3 +41,7 @@
 .icon {
   color: white;
 }
+
+.button {
+  border-radius: 50%;
+}
