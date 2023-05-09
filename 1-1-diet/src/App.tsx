@@ -48,7 +48,10 @@ import UploadImageComplete from "./pages/Register/UploadImageComplete";
 /* Dashboard User */
 import { location, home, person, cart } from "ionicons/icons";
 import Tab1 from "./pages/Tab1/Tab1";
-import Tab2 from "./pages/Tab2/Tab2";
+
+// import Tab2 from "./pages/Tab2/Tab2";
+import Tab2 from "./components/NieuwConsulentZoeken/ConsulentZoeken";
+
 import Tab3 from "./pages/Tab3/Tab3";
 import Tab4 from "./pages/Tab4/Tab4";
 import { ProductDetails } from "./pages/Tab4/ProductDetails";
