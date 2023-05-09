@@ -10,10 +10,16 @@ import {
   IonRadio,
   IonLabel,
   IonModal,
-  IonContent,
+  IonText,
 } from "@ionic/react";
 import map from "./map.svg";
-import { optionsOutline, location } from "ionicons/icons";
+import {
+  optionsOutline,
+  location,
+  chatboxEllipsesOutline,
+} from "ionicons/icons";
+import profile1 from "../../Images/consulentProfile.svg";
+import profile2 from "../../Images/profileImg2.svg";
 
 export default function ConsulentZoeken() {
   const filter = [
@@ -49,6 +55,35 @@ export default function ConsulentZoeken() {
     },
   ];
 
+  const markers = [
+    {
+      top: "10em",
+      left: "10em",
+      trigger: "test1",
+      title: "Zoek consulent",
+      image: profile1,
+      name: "Karin Egberink",
+      time: "9:00 tot 17:00",
+      address: "122 Ballymacash Rd, Lisburn BT28 3EZ",
+      distance: "25 km",
+      phone: "028 92 662853",
+      mail: "consulent@mail.com",
+    },
+    {
+      top: "20em",
+      left: "20em",
+      trigger: "test2",
+      title: "Zoek consulent",
+      image: profile2,
+      name: "Reinate Roelofsen",
+      time: "9:00 tot 17:00",
+      address: "122 Ballymacash Rd, Lisburn BT28 3EZ",
+      distance: "25 km",
+      phone: "028 92 662853",
+      mail: "consulent@mail.com",
+    },
+  ];
+
   return (
     <div className={styles.mainContainer}>
       <img alt="map" src={map} id={styles.imgMap} />
@@ -75,7 +110,7 @@ export default function ConsulentZoeken() {
             <IonLabel>Geslacht</IonLabel>
             {filter[0].geslacht?.map((element) => {
               return (
-                <div>
+                <div key={element.title}>
                   <div className={styles.textContainer}>
                     <IonRadio value={element.value}></IonRadio>
                     <IonLabel>{element.title}</IonLabel>
@@ -91,7 +126,7 @@ export default function ConsulentZoeken() {
             <IonLabel>Specialisatie</IonLabel>
             {filter[0].specialisatie?.map((element) => {
               return (
-                <div>
+                <div key={element.title}>
                   <div className={styles.textContainer}>
                     <IonRadio value={element.value}></IonRadio>
                     <IonLabel>{element.title}</IonLabel>
@@ -102,29 +137,64 @@ export default function ConsulentZoeken() {
           </IonRadioGroup>
         </div>
       </IonPopover>
-
-      <IonButton
-        id="open-modal"
-        expand="block"
-        className={styles.markerContainer}
-        style={{ top: "10em", left: "10em" }}
-      >
-        <IonIcon icon={location} size="large" />
-      </IonButton>
-      <IonModal
-        trigger="open-modal"
-        initialBreakpoint={0.25}
-        breakpoints={[0, 0.25, 0.5, 0.75]}
-        handleBehavior="cycle"
-      >
-        <IonContent className="ion-padding">
-          <div className="ion-margin-top">
-            <IonLabel>
-              Click the handle above to advance to the next breakpoint.
-            </IonLabel>
+      {markers?.map((element) => {
+        return (
+          <div key={element.top} className={styles.mainContent}>
+            <IonButton
+              id={element.trigger}
+              expand="block"
+              className={styles.markerContainer}
+              style={{ top: `${element.top}`, left: `${element.left}` }}
+            >
+              <IonIcon icon={location} size="large" />
+            </IonButton>
+            <IonModal
+              trigger={element.trigger}
+              initialBreakpoint={0.35}
+              breakpoints={[0, 0.35, 0.7]}
+              handleBehavior="cycle"
+            >
+              <div className={styles.mainPopupContainer}>
+                <h1 id={styles.title}>{element.name}</h1>
+                <div className={styles.consulentContainer}>
+                  <img
+                    src={element.image}
+                    alt="consulent profiel foto"
+                    id={styles.profileImg}
+                  />
+                  <div className={styles.consulentInfo}>
+                    <IonText>{element.name}</IonText>
+                    <IonText id={styles.distance}>
+                      {element.distance} van je locatie
+                    </IonText>
+                  </div>
+                </div>
+                <div className={styles.bottomContainer}>
+                  <IonButton color={"white"} id={styles.afspraak}>
+                    Afspraak maken
+                  </IonButton>
+                  <IonButton color={"secondary"} id={styles.moreInfo}>
+                    <IonIcon icon={chatboxEllipsesOutline} size="large" />
+                  </IonButton>
+                </div>
+                <div className={styles.aboutMe}>
+                  <h1 id={styles.secondTitle}>Over mij:</h1>
+                  <IonText>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Cupiditate earum nemo impedit iusto aliquid ipsam hic
+                    repudiandae incidunt facilis necessitatibus quidem, enim
+                    vitae, distinctio nulla nesciunt. Totam ratione itaque ad!
+                  </IonText>
+                </div>
+                <div className={styles.openTime}>
+                  <h1 id={styles.secondTitle}>Openingstijden:</h1>
+                  <IonText>Maandag tot Vrijdag: {element.time}</IonText>
+                </div>
+              </div>
+            </IonModal>
           </div>
-        </IonContent>
-      </IonModal>
+        );
+      })}
     </div>
   );
 }

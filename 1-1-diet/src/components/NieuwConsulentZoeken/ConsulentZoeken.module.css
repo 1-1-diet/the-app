@@ -82,3 +82,90 @@
   --background: transparent;
   --background-activated: transparent;
 }
+
+.mainPopupContainer {
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
+  background-color: #edf1f3;
+}
+
+#title {
+  width: 90%;
+  color: black;
+}
+
+.consulentContainer {
+  width: 90%;
+  height: fit-content;
+  color: black;
+  display: flex;
+  gap: 1em;
+  background-color: #fff;
+  padding: 0.8em;
+  border-radius: 1em;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+#profileImg {
+  width: 30%;
+  height: auto;
+  border-radius: 1em;
+  object-fit: cover;
+}
+
+.consulentInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+#distance {
+  font-size: 0.8em;
+  font-weight: normal;
+}
+
+.bottomContainer {
+  width: 90%;
+  height: 50%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+}
+
+#afspraak {
+  width: 79%;
+  height: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#moreInfo {
+  width: 19%;
+  height: 4em;
+}
+
+.aboutMe {
+  width: 90%;
+  color: black;
+  background-color: #fff;
+  padding: 0.8em;
+  border-radius: 1em;
+}
+
+.openTime {
+  width: 90%;
+  color: black;
+  padding: 0.8em;
+}
+
+#secondTitle {
+  font-size: 1.7em;
+  margin-top: 0;
+}
