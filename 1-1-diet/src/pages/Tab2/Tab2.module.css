@@ -15,11 +15,16 @@
 
 .filterBtn {
   position: absolute;
-  top: 5.5em;
+  top: 6em;
   right: 1.8em;
   width: 4em;
   height: 4em;
-  padding: 0 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #dc6099;
+  color: white;
 }
 
 /* Om de icon te fixen moet --padding-start 0 --padding-end 0 */

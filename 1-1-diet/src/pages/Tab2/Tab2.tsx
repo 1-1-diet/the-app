@@ -89,8 +89,8 @@ const Tab2: React.FC = () => {
   };
 
   const modalOptions = {
-    initialBreakpoint: 0.3,
-    breakpoints: [0, 0, 0.3],
+    initialBreakpoint: 0.4,
+    breakpoints: [0, 0.4, 0.8],
     backdropBreakpoint: 0,
     onDidDismiss: () => dismiss(),
   };
@@ -160,14 +160,9 @@ const Tab2: React.FC = () => {
             />
           </div>
         </div>
-        <IonButton
-          color="secondary"
-          shape="round"
-          className={styles.filterBtn}
-          id="click-trigger"
-        >
+        <div color="secondary" className={styles.filterBtn} id="click-trigger">
           <IonIcon className={styles.icon} icon={optionsOutline} />
-        </IonButton>
+        </div>
         <IonPopover
           trigger="click-trigger"
           side="bottom"
