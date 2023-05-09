@@ -71,7 +71,7 @@ export default function ConsulentZoeken() {
     },
     {
       top: "20em",
-      left: "20em",
+      left: "15em",
       trigger: "test2",
       title: "Zoek consulent",
       image: profile2,
