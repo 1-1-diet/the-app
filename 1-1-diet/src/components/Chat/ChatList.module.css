@@ -15,7 +15,13 @@
 }
 
 .chat {
-  margin-top: 11em;
+  margin-top: 3em;
+}
+
+.contacts {
+  margin: 1em;
+  border-radius: 1em;
+  box-shadow: 20px 20px 10px rgb(243, 240, 240);
 }
 
 .time {
