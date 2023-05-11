@@ -103,7 +103,7 @@
 }
 
 #afsprakenDateNum {
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: bold;
 }
 
@@ -119,4 +119,16 @@
 
 #afsparkenDay {
   font-weight: bold;
+  font-size: 1.2em;
+}
+
+#afsparkenlocatie {
+}
+.locationIcon {
+  width: 1.5em;
+  color: #ef5da8;
+}
+.locationBox {
+  width: 10vh;
+  margin-top: 10%;
 }

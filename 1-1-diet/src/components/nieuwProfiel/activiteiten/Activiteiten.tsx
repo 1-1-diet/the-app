@@ -1,8 +1,9 @@
-import { IonButton, IonText } from "@ionic/react";
+import { IonButton, IonText, IonIcon } from "@ionic/react";
 import React from "react";
 import styles from "./Activiteiten.module.css";
 
 import { UserProfile } from "../../data";
+import { type } from "os";
 
 export default function Activiteiten() {
   const swiperCards = [
@@ -53,8 +54,20 @@ export default function Activiteiten() {
                 />
                 <div className={styles.consulentDescriptionContainer}>
                   <IonText id={styles.consulentName}>{element.name}</IonText>
-                  <IonText>{element.location}</IonText>
+                  <div className={styles.locationBox}>
+                    <IonIcon
+                      icon={element.loctionIcon}
+                      className={styles.locationIcon}
+                    />
+                    <IonText>{element.location}</IonText>
+                  </div>
                 </div>
+                <IonButton color={"tertiary"}>
+                  <IonIcon icon={element.callIcon} />
+                </IonButton>
+                <IonButton>
+                  <IonIcon icon={element.mailIcon} />
+                </IonButton>
               </div>
             );
           })}
@@ -79,8 +92,19 @@ export default function Activiteiten() {
                 </div>
                 <div className={styles.afsprakenDescriptionContainer}>
                   <IonText id={styles.afsparkenDay}>{element.date}</IonText>
-                  <IonText>{element.place}</IonText>
+                  <div className={styles.locationBox}>
+                    <IonIcon
+                      icon={element.loctionIcon}
+                      className={styles.locationIcon}
+                    />
+                    <IonText id={styles.afsparkenlocatie}>
+                      {element.place}
+                    </IonText>
+                  </div>
                 </div>
+                <IonButton color={"light"} id={styles.button}>
+                  Add to kalender
+                </IonButton>
               </div>
             );
           })}
