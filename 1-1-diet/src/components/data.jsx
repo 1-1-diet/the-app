@@ -1,7 +1,7 @@
 // import fotos
 import userPorifle from "../Images/profileImg.jpg";
 import consulentProfile from "../Images/consulentProfile.svg";
-import { location, callOutline, mailOpen, add } from "ionicons/icons";
+import { location, callOutline, mailOpen } from "ionicons/icons";
 import masterCard from "../Images/Mastercard-logo.png";
 import sim from "../Images/sim.png";
 import wifi from "../Images/wifi.png";
@@ -54,7 +54,6 @@ export const UserProfile = [
         loctionIcon: location,
         callIcon: callOutline,
         mailIcon: mailOpen,
-        addIcon: add,
       },
     ],
     meetings: [
