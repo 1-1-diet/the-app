@@ -1,5 +1,6 @@
 .container {
   height: 40%;
+  margin-top: 5%;
 }
 
 #title {
@@ -31,16 +32,35 @@
   gap: 1em;
   text-align: start;
   margin-left: 5%;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 #name {
   font-weight: bold;
   color: white;
   font-size: 1.5em;
+  letter-spacing: 0.2em;
+  font-family: " Cad", sans-serif;
 }
 
 #cardNmb {
   font-weight: bold;
   color: white;
+  letter-spacing: 0.2em;
+  font-family: "Credit Card", sans-serif;
+}
+#cardIcons {
+  height: 75px;
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+#wifi {
+  height: 5vh;
+  width: 10vh;
+  margin-top: 25%;
+}
+#sim {
+  margin-top: 20px;
 }

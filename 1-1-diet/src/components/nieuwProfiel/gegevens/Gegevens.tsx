@@ -45,6 +45,11 @@ export default function Instellingen() {
                   className={betaal.Card}
                   style={{ backgroundColor: `${element.color}` }}
                 >
+                  <div id={betaal.cardIcons}>
+                    <img id={betaal.sim} src={element.sim} />
+                    <img id={betaal.wifi} src={element.simlogo} />
+                  </div>
+
                   <img id={betaal.Logo} src={element.icon} />
                   <div className={betaal.CardInfo}>
                     <IonText id={betaal.name}>{element.name}</IonText>

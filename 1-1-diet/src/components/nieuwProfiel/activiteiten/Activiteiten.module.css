@@ -60,6 +60,7 @@
 
 .consulentDescriptionContainer {
   height: 100%;
+  width: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -103,7 +104,7 @@
 }
 
 #afsprakenDateNum {
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: bold;
 }
 
@@ -119,4 +120,30 @@
 
 #afsparkenDay {
   font-weight: bold;
+  font-size: 1.2em;
+}
+
+#afsparkenlocatie {
+}
+.locationIcon {
+  color: #ef5da8;
+  margin-right: 3%;
+}
+.locationBox {
+  width: 17vh;
+}
+.dataBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.info {
+  display: flex;
+  width: max-content;
+  gap: 1em;
+}
+.buttonBox {
+  align-items: center;
+  display: flex;
 }

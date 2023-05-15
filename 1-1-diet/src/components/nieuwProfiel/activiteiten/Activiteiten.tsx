@@ -1,8 +1,10 @@
-import { IonButton, IonText } from "@ionic/react";
+import { IonButton, IonText, IonIcon } from "@ionic/react";
 import React from "react";
 import styles from "./Activiteiten.module.css";
+import { calendar } from "ionicons/icons";
 
 import { UserProfile } from "../../data";
+import { type } from "os";
 
 export default function Activiteiten() {
   const swiperCards = [
@@ -46,14 +48,35 @@ export default function Activiteiten() {
           {UserProfile[0].consulenten?.map((element) => {
             return (
               <div key={element.name} className={styles.consulentCardContainer}>
-                <img
-                  src={element.profileImg}
-                  alt="profile picture"
-                  id={styles.consulentCardProfile}
-                />
-                <div className={styles.consulentDescriptionContainer}>
-                  <IonText id={styles.consulentName}>{element.name}</IonText>
-                  <IonText>{element.location}</IonText>
+                <div className={styles.dataBox}>
+                  <div className={styles.info}>
+                    <img
+                      src={element.profileImg}
+                      alt="profile picture"
+                      id={styles.consulentCardProfile}
+                    />
+                    <div className={styles.consulentDescriptionContainer}>
+                      <IonText id={styles.consulentName}>
+                        {element.name}
+                      </IonText>
+                      <div className={styles.locationBox}>
+                        <IonIcon
+                          icon={element.loctionIcon}
+                          className={styles.locationIcon}
+                        />
+                        <IonText>{element.location}</IonText>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className={styles.buttonBox}>
+                    <IonButton color={"tertiary"}>
+                      <IonIcon icon={element.callIcon} />
+                    </IonButton>
+                    <IonButton>
+                      <IonIcon icon={element.mailIcon} />
+                    </IonButton>
+                  </div>
                 </div>
               </div>
             );
@@ -70,16 +93,38 @@ export default function Activiteiten() {
                 className={styles.afsprakenCardContainer}
                 style={{ backgroundColor: `${element.color}` }}
               >
-                <div
-                  className={styles.afsprakenCardIcon}
-                  style={{ backgroundColor: `${element.color2}` }}
-                >
-                  <IonText id={styles.afsprakenDateNum}>{element.time}</IonText>
-                  <IonText id={styles.afsprakenDateMonth}>uur</IonText>
+                <div className={styles.dataBox}>
+                  <div className={styles.info}>
+                    <div
+                      className={styles.afsprakenCardIcon}
+                      style={{ backgroundColor: `${element.color2}` }}
+                    >
+                      <IonText id={styles.afsprakenDateNum}>
+                        {element.time}
+                      </IonText>
+                      <IonText id={styles.afsprakenDateMonth}>uur</IonText>
+                    </div>
+
+                    <div className={styles.afsprakenDescriptionContainer}>
+                      <IonText id={styles.afsparkenDay}>{element.date}</IonText>
+                      <div className={styles.locationBox}>
+                        <IonIcon
+                          icon={element.loctionIcon}
+                          className={styles.locationIcon}
+                        />
+
+                        <IonText id={styles.afsparkenlocatie}>
+                          {element.place}
+                        </IonText>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className={styles.afsprakenDescriptionContainer}>
-                  <IonText id={styles.afsparkenDay}>{element.date}</IonText>
-                  <IonText>{element.place}</IonText>
+
+                <div className={styles.buttonBox}>
+                  <IonButton>
+                    <IonIcon icon={calendar}>Add</IonIcon>
+                  </IonButton>
                 </div>
               </div>
             );
