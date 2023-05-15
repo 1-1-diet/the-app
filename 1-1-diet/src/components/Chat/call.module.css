@@ -1,0 +1,60 @@
+.gradient {
+  height: fit-content;
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
+  position: absolute;
+  background-size: cover;
+}
+
+.profile {
+  top: 15dvh;
+}
+
+.profileImage {
+  border: 8px solid white;
+  border-radius: 50%;
+}
+
+.info {
+  top: 10dvh;
+  text-align: center;
+}
+
+.bottomText {
+  color: #9d9a9a !important;
+  margin: 0em 7em;
+}
+
+.button1 {
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
+  background-color: rgb(214, 214, 214);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0em 1em;
+}
+
+.button2 {
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0em 1em;
+}
+
+.buttons {
+  top: 25dvh;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1em;
+}

@@ -1,0 +1,90 @@
+.headerbackground {
+  background-size: cover;
+  height: 28vh;
+  position: relative;
+  width: 100vw;
+  border-radius: 0% 0% 50% 50% / 20%;
+}
+
+#headerptrn {
+  position: absolute;
+  width: 100vw;
+  height: 28vh;
+  object-fit: cover;
+  z-index: 10;
+  opacity: 10%;
+}
+
+.header {
+  margin-top: 10em;
+  box-shadow: 20px 20px 10px rgb(243, 240, 240);
+  border-radius: 5%;
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffc4e2;
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
+  margin-top: 1.5em;
+}
+
+.icon {
+  opacity: 100%;
+}
+
+.content {
+  padding: 0.5em;
+  padding-bottom: 0;
+}
+
+.team {
+  padding-bottom: 6em;
+}
+
+.chatContainer {
+  width: 100vw;
+  height: 100vh;
+}
+
+.fred {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.stefan {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.fredchat {
+  background-color: #ef5da8;
+  padding: 1em;
+  width: fit-content;
+  max-width: 70vw;
+  border-radius: 1em;
+  margin: 1em;
+}
+
+.stefanchat {
+  background-color: #f6f6f6;
+  padding: 1em;
+  width: fit-content;
+  max-width: 70vw;
+  border-radius: 1em;
+  margin: 1em;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+}
+
+#timeSend {
+  font-size: 0.9em;
+  color: rgba(0, 0, 0, 0.541);
+  margin-top: 0.1em;
+}
