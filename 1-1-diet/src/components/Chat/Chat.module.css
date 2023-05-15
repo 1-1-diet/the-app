@@ -15,7 +15,7 @@
   opacity: 10%;
 }
 
-.chat {
+.header {
   margin-top: 10em;
   box-shadow: 20px 20px 10px rgb(243, 240, 240);
   border-radius: 5%;
@@ -38,10 +38,16 @@
 
 .content {
   padding: 0.5em;
+  padding-bottom: 0;
 }
 
 .team {
   padding-bottom: 6em;
+}
+
+.chatContainer {
+  width: 100vw;
+  height: 100vh;
 }
 
 .fred {
@@ -54,9 +60,31 @@
   justify-content: flex-start;
 }
 
-.chats {
-  background: #f6f6f6;
+.fredchat {
+  background-color: #ef5da8;
   padding: 1em;
+  width: fit-content;
+  max-width: 70vw;
   border-radius: 1em;
   margin: 1em;
+}
+
+.stefanchat {
+  background-color: #f6f6f6;
+  padding: 1em;
+  width: fit-content;
+  max-width: 70vw;
+  border-radius: 1em;
+  margin: 1em;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+}
+
+#timeSend {
+  font-size: 0.9em;
+  color: rgba(0, 0, 0, 0.541);
+  margin-top: 0.1em;
 }

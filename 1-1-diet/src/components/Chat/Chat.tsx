@@ -1,5 +1,5 @@
 import React from "react";
-import { IonGrid, IonCol, IonRow, IonIcon } from "@ionic/react";
+import { IonGrid, IonCol, IonRow, IonIcon, IonText } from "@ionic/react";
 import { call } from "ionicons/icons";
 import styles from "./Chat.module.css";
 import ptrn from "../../Images/BACKGROUND 2.svg";
@@ -33,11 +33,11 @@ export default function ChatList() {
       <img src={ptrn} alt="food ptrn" id={styles.headerptrn} />
       <div className={styles.content}>
         <IonGrid>
-          <div className={styles.chat}>
+          <div className={styles.header}>
             <div>
               {contactDetails?.map((element: any) => {
                 return (
-                  <IonGrid>
+                  <IonGrid key={element.name}>
                     <IonRow className="ion-justify-content-between">
                       <IonRow>
                         <img src={element.img} alt="profile not found" />
@@ -62,13 +62,15 @@ export default function ChatList() {
           </div>
         </IonGrid>
       </div>
-      <div className={styles.mainContainer}>
+      <div className={styles.chatContainer}>
         {chats?.map((element) => {
           return (
-            <div className={styles[element.user]}>
-              <div className={styles.chats}>
-                {element.text}
-                {element.timeSend}
+            <div key={element.text} className={styles[element.user]}>
+              <div className={styles[element.user + "chat"]}>
+                <div className={styles.chat}>
+                  <IonText>{element.text}</IonText>
+                  <IonText id={styles.timeSend}>{element.timeSend}</IonText>
+                </div>
               </div>
             </div>
           );

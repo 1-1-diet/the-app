@@ -7,8 +7,7 @@ const Tab4: React.FC = () => {
   return (
     <IonPage className={styles.mainContainer}>
       <IonContent fullscreen>
-        <Chat />
-        {/* <Call /> */}
+        <ChatList />
       </IonContent>
     </IonPage>
   );
