@@ -1,11 +1,12 @@
 import React from "react";
-import { IonGrid, IonCol, IonRow } from "@ionic/react";
+import { IonGrid, IonCol, IonRow, IonItem, IonRouterLink } from "@ionic/react";
 import styles from "./ChatList.module.css";
 import ptrn from "../../Images/BACKGROUND 2.svg";
 import profile1 from "./images/Photo Profile.svg";
 import profile2 from "./images/Photo Profile 2.svg";
 import profile3 from "./images/Photo Profile 3.svg";
 import team from "./images/Team.svg";
+import { Route } from "workbox-routing";
 
 export default function ChatList() {
   const chat = [
@@ -42,20 +43,26 @@ export default function ChatList() {
             <div>
               {chat?.map((element: any) => {
                 return (
-                  <IonGrid className={styles.contacts}>
-                    <IonRow className="ion-justify-content-between">
-                      <IonRow>
-                        <img src={element.img} alt="profile not found" />
-                        <IonCol className="ion-margin-horizontal">
-                          <p>{element.name}</p>
-                          <p>{element.status}</p>
-                        </IonCol>
+                  <IonRouterLink
+                    key={element.name}
+                    href="/tabs/chat"
+                    style={{ zIndex: "100" }}
+                  >
+                    <IonGrid className={styles.contacts}>
+                      <IonRow className="ion-justify-content-between">
+                        <IonRow>
+                          <img src={element.img} alt="profile not found" />
+                          <IonCol className="ion-margin-horizontal">
+                            <p>{element.name}</p>
+                            <p>{element.status}</p>
+                          </IonCol>
+                        </IonRow>
+                        <div className={styles.time}>
+                          <p>{element.time}</p>
+                        </div>
                       </IonRow>
-                      <div className={styles.time}>
-                        <p>{element.time}</p>
-                      </div>
-                    </IonRow>
-                  </IonGrid>
+                    </IonGrid>
+                  </IonRouterLink>
                 );
               })}
             </div>

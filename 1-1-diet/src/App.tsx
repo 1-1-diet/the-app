@@ -54,8 +54,11 @@ import Tab2 from "./components/NieuwConsulentZoeken/ConsulentZoeken";
 
 import Tab3 from "./pages/Tab3/Tab3";
 import Tab4 from "./pages/Tab4/Tab4";
-import Tab5 from "./pages/Tab5/Tab5";
 import { ProductDetails } from "./pages/Tab4/ProductDetails";
+
+import Tab5 from "./pages/Tab5/Tab5";
+import chat from "./components/Chat/Chat";
+import call from "./components/Chat/Call";
 
 /* Dashboard non user */
 import Tab1NonUser from "./pages/Tab1/Tab1NonUser";
@@ -66,9 +69,6 @@ import WorkInProgress from "./pages/WorkInProgress/WorkInProgress";
 setupIonicReact();
 
 const App: React.FC = () => {
-  const [showTabs, setShowTabs] = useState(false);
-  let tabBarStyle = showTabs === true ? undefined : { display: "none" };
-
   return (
     <IonApp>
       <IonReactRouter>
@@ -101,7 +101,6 @@ const App: React.FC = () => {
             path="/register/complete"
             component={UploadImageComplete}
           />
-
           <Route
             path="nonUser"
             render={() => (
@@ -111,6 +110,8 @@ const App: React.FC = () => {
                   <Route exact path="/nonUser/Tab1" component={Tab1NonUser} />
                   <Route exact path="/nonUser/Tab1" component={Tab1NonUser} />
                   <Route exact path="/nonUser/Tab1" component={Tab1NonUser} />
+                  <Route exact path="chat" component={chat} />
+                  <Route exact path="call" component={call} />
                 </IonRouterOutlet>
 
                 <IonTabBar>
@@ -153,6 +154,8 @@ const App: React.FC = () => {
                     path="/tabs/tab4/:productId"
                     component={ProductDetails}
                   />
+                  <Route exact path="/tabs/chat" component={chat} />
+                  <Route exact path="/tabs/call" component={call} />
                 </IonRouterOutlet>
 
                 <IonTabBar slot="bottom">
