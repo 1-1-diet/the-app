@@ -17,12 +17,14 @@ export default function ChatList() {
 
   const chats = [
     {
-      user: "fred",
-      text: "User 1 heleboel",
+      timeSend: " 09:53",
+      user: "stefan",
+      text: "Hallo hoe kan ik u helpen?",
     },
     {
-      user: "stefan",
-      text: "User 2 heel weinig",
+      timeSend: " 09:56",
+      user: "fred",
+      text: "Ik wil graag een afspraak maken",
     },
   ];
 
@@ -64,7 +66,10 @@ export default function ChatList() {
         {chats?.map((element) => {
           return (
             <div className={styles[element.user]}>
-              <div className={styles.chat}>{element.text}</div>
+              <div className={styles.chats}>
+                {element.text}
+                {element.timeSend}
+              </div>
             </div>
           );
         })}
