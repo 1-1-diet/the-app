@@ -15,6 +15,17 @@ export default function ChatList() {
     },
   ];
 
+  const chats = [
+    {
+      user: "fred",
+      text: "User 1 heleboel",
+    },
+    {
+      user: "stefan",
+      text: "User 2 heel weinig",
+    },
+  ];
+
   return (
     <div className={styles.headerbackground}>
       <img src={ptrn} alt="food ptrn" id={styles.headerptrn} />
@@ -34,7 +45,12 @@ export default function ChatList() {
                         </IonCol>
                       </IonRow>
                       <div className={styles.time}>
-                        <IonIcon icon={element.icon} />
+                        <IonIcon
+                          className={styles.icon}
+                          icon={element.icon}
+                          size="large"
+                          color="secondary"
+                        />
                       </div>
                     </IonRow>
                   </IonGrid>
@@ -43,6 +59,15 @@ export default function ChatList() {
             </div>
           </div>
         </IonGrid>
+      </div>
+      <div className={styles.mainContainer}>
+        {chats?.map((element) => {
+          return (
+            <div className={styles[element.user]}>
+              <div className={styles.chat}>{element.text}</div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

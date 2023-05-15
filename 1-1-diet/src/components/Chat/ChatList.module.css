@@ -12,6 +12,7 @@
   height: 28vh;
   object-fit: cover;
   z-index: 10;
+  opacity: 10%;
 }
 
 .chat {
