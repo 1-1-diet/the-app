@@ -170,7 +170,11 @@ export default function ConsulentZoeken() {
                   </div>
                 </div>
                 <div className={styles.bottomContainer}>
-                  <IonButton color={"white"} id={styles.afspraak}>
+                  <IonButton
+                    color={"white"}
+                    id={styles.afspraak}
+                    href="/tabs/afspraakMaken"
+                  >
                     Afspraak maken
                   </IonButton>
                   <IonButton color={"secondary"} id={styles.moreInfo}>

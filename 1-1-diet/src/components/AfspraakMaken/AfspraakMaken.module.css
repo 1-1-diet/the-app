@@ -1,0 +1,64 @@
+.mainContainer {
+  margin-bottom: 8em;
+}
+
+.headerContainer {
+  background-image: url(headerBG.svg);
+  background-size: cover;
+  width: 100vw;
+  height: 30dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerContainer ion-text {
+  font-size: 3em;
+  color: white;
+}
+
+.datePickContainer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.datePickContainer ion-datetime {
+  --background: white;
+  --ion-color-base: #dc6099 !important;
+  width: 100vw;
+  max-width: none !important;
+}
+
+.commentContainer {
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+  height: 23dvh;
+}
+
+.commentContainer div {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  height: 15dvh;
+}
+
+.commentContainer ion-textarea {
+  border: 0.1em solid black;
+  border-radius: 1em;
+  padding: 0.5em;
+  width: 80vw;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+}
+
+.btnContainer ion-button {
+  width: 35vw;
+  height: 8dvh;
+}
