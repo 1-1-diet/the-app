@@ -1,0 +1,40 @@
+#headerptrn {
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  height: 28vh;
+  object-fit: cover;
+  z-index: 10;
+  opacity: 10%;
+}
+
+.content {
+  margin-top: 5em;
+}
+
+.products {
+  margin-top: 2em;
+  border-radius: 25%;
+}
+
+.image {
+  padding-right: 0;
+}
+
+.button {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.count {
+  margin: 0 1em;
+}
+
+.product {
+  font-size: x-large;
+}
+
+.price {
+  color: orange;
+}

@@ -55,6 +55,7 @@ import Tab2 from "./components/NieuwConsulentZoeken/ConsulentZoeken";
 import Tab3 from "./pages/Tab3/Tab3";
 import Tab4 from "./pages/Tab4/Tab4";
 import { ProductDetails } from "./pages/Tab4/ProductDetails";
+import OrderList from "./components/OrderList/OrderList";
 
 import Tab5 from "./pages/Tab5/Tab5";
 import chat from "./components/Chat/Chat";
@@ -156,6 +157,7 @@ const App: React.FC = () => {
                   />
                   <Route exact path="/tabs/chat" component={chat} />
                   <Route exact path="/tabs/call" component={call} />
+                  <Route exact path="/tabs/OrderList" component={OrderList} />
                 </IonRouterOutlet>
 
                 <IonTabBar slot="bottom">
