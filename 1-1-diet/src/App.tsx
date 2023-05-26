@@ -52,6 +52,7 @@ import Tab1 from "./pages/Tab1/Tab1";
 // import Tab2 from "./pages/Tab2/Tab2";
 import Tab2 from "./components/NieuwConsulentZoeken/ConsulentZoeken";
 import AfsraakMaken from "./components/AfspraakMaken/AfspraakMaken";
+import done from "./components/AfspraakMaken/Done";
 
 import Tab3 from "./pages/Tab3/Tab3";
 import Tab4 from "./pages/Tab4/Tab4";
@@ -163,6 +164,7 @@ const App: React.FC = () => {
                     path="/tabs/afspraakMaken"
                     component={AfsraakMaken}
                   />
+                  <Route exact path="/tabs/succes" component={done} />
                 </IonRouterOutlet>
 
                 <IonTabBar slot="bottom">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./AfspraakMaken.module.css";
 import {
   IonButton,
@@ -31,7 +31,76 @@ export default function ConsulentZoeken() {
               locale="nl-NL"
               presentation="date"
             />
-            <IonDatetime locale="nl-NL" presentation="time" />
+            <div className={styles.timeContainer}>
+              <div className={styles.morningContainer}>
+                <h1>Ochtend</h1>
+                <div className={styles.timeContent}>
+                  <div className={styles.inputContainer}>
+                    <input
+                      type="checkbox"
+                      id="check_1"
+                      name="check_1"
+                      value="check_1"
+                    />
+                    <label htmlFor="check_1">9:30</label>
+                  </div>
+                  <div className={styles.inputContainer}>
+                    <input
+                      type="checkbox"
+                      id="check_2"
+                      name="check_1"
+                      value="check_2"
+                    />
+                    <label className="first" htmlFor="check_2">
+                      11:00
+                    </label>
+                  </div>
+                  <div className={styles.inputContainer}>
+                    <input
+                      type="checkbox"
+                      id="check_3"
+                      name="check_1"
+                      value="check_3"
+                    />
+                    <label htmlFor="check_3">12:00</label>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.morningContainer}>
+                <h1>Middag</h1>
+                <div className={styles.timeContent}>
+                  <div className={styles.inputContainer}>
+                    <input
+                      type="checkbox"
+                      id="check_4"
+                      name="check_4"
+                      value="check_4"
+                    />
+                    <label htmlFor="check_4">15:00</label>
+                  </div>
+                  <div className={styles.inputContainer}>
+                    <input
+                      type="checkbox"
+                      id="check_5"
+                      name="check_4"
+                      value="check_5"
+                    />
+                    <label className="first" htmlFor="check_5">
+                      16:00
+                    </label>
+                  </div>
+                  <div className={styles.inputContainer}>
+                    <input
+                      type="checkbox"
+                      id="check_6"
+                      name="check_4"
+                      value="check_4"
+                    />
+                    <label htmlFor="check_6">17:30</label>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div className={styles.commentContainer}>
             <div>
@@ -40,8 +109,12 @@ export default function ConsulentZoeken() {
             </div>
           </div>
           <div className={styles.btnContainer}>
-            <IonButton color="light">Terug</IonButton>
-            <IonButton color="secondary">Bevestigen</IonButton>
+            <IonButton href="/tabs/tab2" color="light">
+              Terug
+            </IonButton>
+            <IonButton href="/tabs/succes" color="secondary">
+              Bevestigen
+            </IonButton>
           </div>
         </div>
       </IonContent>
