@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   IonGrid,
   IonCol,
@@ -10,13 +10,13 @@ import {
   IonPage,
   IonContent,
   IonIcon,
-  IonButton,
 } from "@ionic/react";
-import { trashBin, addOutline, removeOutline } from "ionicons/icons";
+import { trashBin } from "ionicons/icons";
 import styles from "./OrderList.module.css";
 import ptrn from "../../Images/BACKGROUND 2.svg";
 import soep from "./images/soep.png";
 import pannenkoek from "./images/pannenkoek.png";
+import Counter from "./Counter";
 
 export default function OrderList() {
   const orders = [
@@ -31,24 +31,6 @@ export default function OrderList() {
       price: "5,95 €",
     },
   ];
-
-  const [count, setCount] = useState(0);
-
-  function increment() {
-    setCount(function (prevCount) {
-      return (prevCount += 1);
-    });
-  }
-
-  function decrement() {
-    setCount(function (prevCount) {
-      if (prevCount > 0) {
-        return (prevCount -= 1);
-      } else {
-        return (prevCount = 0);
-      }
-    });
-  }
 
   return (
     <IonPage>
@@ -84,24 +66,7 @@ export default function OrderList() {
                           </IonCol>
                           <IonCol size="7">
                             <IonRow className="ion-justify-content-evenly">
-                              <div className={styles.button}>
-                                <IonButton
-                                  color="secondary"
-                                  onClick={decrement}
-                                >
-                                  <IonIcon
-                                    slot="icon-only"
-                                    icon={removeOutline}
-                                  />
-                                </IonButton>
-                                <p className={styles.count}>{count}</p>
-                                <IonButton
-                                  color="secondary"
-                                  onClick={increment}
-                                >
-                                  <IonIcon slot="icon-only" icon={addOutline} />
-                                </IonButton>
-                              </div>
+                              <Counter />
                             </IonRow>
                           </IonCol>
                         </IonItem>
