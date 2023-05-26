@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import styles from "./AfspraakMaken.module.css";
 import {
   IonButton,
@@ -11,11 +12,27 @@ import {
 
 import highFive from "../../Images/1to1girls.svg";
 
-export default function ConsulentZoeken() {
+export default function ConsulentZoeken(props: any) {
+  const history = useHistory();
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
+
+  const push = (path: any) => {
+    history.push(path);
+  };
+
   const isWeekday = (dateString: string) => {
     const date = new Date(dateString);
     const utcDay = date.getUTCDay();
     return utcDay !== 0 && utcDay !== 6;
+  };
+
+  const required = () => {
+    if (date !== "" && time !== "") {
+      push("/tabs/succes");
+    } else {
+      console.log("mag nie");
+    }
   };
   return (
     <IonPage>
@@ -30,6 +47,7 @@ export default function ConsulentZoeken() {
               isDateEnabled={isWeekday}
               locale="nl-NL"
               presentation="date"
+              onIonChange={() => setDate("")}
             />
             <div className={styles.timeContainer}>
               <div className={styles.morningContainer}>
@@ -112,7 +130,11 @@ export default function ConsulentZoeken() {
             <IonButton href="/tabs/tab2" color="light">
               Terug
             </IonButton>
-            <IonButton href="/tabs/succes" color="secondary">
+            <IonButton
+              onClick={() => required()}
+              color="secondary"
+              type="submit"
+            >
               Bevestigen
             </IonButton>
           </div>
