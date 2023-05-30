@@ -143,6 +143,7 @@ export default function ConsulentZoeken(props: any) {
           message="Er is geen datum of tijd ingevuld."
           duration={5000}
           onDidDismiss={() => setIsOpen(false)}
+          position="top"
         ></IonToast>
         ;
       </IonContent>
