@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import styles from "./AfspraakMaken.module.css";
 import {
@@ -8,14 +8,16 @@ import {
   IonPage,
   IonText,
   IonTextarea,
+  IonToast,
 } from "@ionic/react";
 
 import highFive from "../../Images/1to1girls.svg";
 
 export default function ConsulentZoeken(props: any) {
   const history = useHistory();
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState<string | string[]>("");
   const [time, setTime] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
 
   const push = (path: any) => {
     history.push(path);
@@ -31,9 +33,10 @@ export default function ConsulentZoeken(props: any) {
     if (date !== "" && time !== "") {
       push("/tabs/succes");
     } else {
-      console.log("mag nie");
+      setIsOpen(true);
     }
   };
+
   return (
     <IonPage>
       <IonContent fullscreen>
@@ -47,75 +50,71 @@ export default function ConsulentZoeken(props: any) {
               isDateEnabled={isWeekday}
               locale="nl-NL"
               presentation="date"
-              onIonChange={() => setDate("")}
+              value={date}
+              onIonChange={(e) => {
+                if (!e.detail?.value) {
+                  return;
+                }
+                setDate(e.detail.value);
+              }}
             />
             <div className={styles.timeContainer}>
               <div className={styles.morningContainer}>
                 <h1>Ochtend</h1>
                 <div className={styles.timeContent}>
-                  <div className={styles.inputContainer}>
-                    <input
-                      type="checkbox"
-                      id="check_1"
-                      name="check_1"
-                      value="check_1"
-                    />
-                    <label htmlFor="check_1">9:30</label>
-                  </div>
-                  <div className={styles.inputContainer}>
-                    <input
-                      type="checkbox"
-                      id="check_2"
-                      name="check_1"
-                      value="check_2"
-                    />
-                    <label className="first" htmlFor="check_2">
-                      11:00
-                    </label>
-                  </div>
-                  <div className={styles.inputContainer}>
-                    <input
-                      type="checkbox"
-                      id="check_3"
-                      name="check_1"
-                      value="check_3"
-                    />
-                    <label htmlFor="check_3">12:00</label>
-                  </div>
+                  <IonText
+                    onClick={() => setTime("9:30")}
+                    className={
+                      time === "9:30" ? `${styles.after}` : `${styles.before}`
+                    }
+                  >
+                    9:30
+                  </IonText>
+                  <IonText
+                    onClick={() => setTime("11:00")}
+                    className={
+                      time === "11:00" ? `${styles.after}` : `${styles.before}`
+                    }
+                  >
+                    11:00
+                  </IonText>
+                  <IonText
+                    onClick={() => setTime("12:00")}
+                    className={
+                      time === "12:00" ? `${styles.after}` : `${styles.before}`
+                    }
+                  >
+                    12:00
+                  </IonText>
                 </div>
               </div>
               <div className={styles.morningContainer}>
                 <h1>Middag</h1>
                 <div className={styles.timeContent}>
-                  <div className={styles.inputContainer}>
-                    <input
-                      type="checkbox"
-                      id="check_4"
-                      name="check_4"
-                      value="check_4"
-                    />
-                    <label htmlFor="check_4">15:00</label>
-                  </div>
-                  <div className={styles.inputContainer}>
-                    <input
-                      type="checkbox"
-                      id="check_5"
-                      name="check_4"
-                      value="check_5"
-                    />
-                    <label className="first" htmlFor="check_5">
-                      16:00
-                    </label>
-                  </div>
-                  <div className={styles.inputContainer}>
-                    <input
-                      type="checkbox"
-                      id="check_6"
-                      name="check_4"
-                      value="check_4"
-                    />
-                    <label htmlFor="check_6">17:30</label>
-                  </div>
+                  <IonText
+                    onClick={() => setTime("15:00")}
+                    className={
+                      time === "15:00" ? `${styles.after}` : `${styles.before}`
+                    }
+                  >
+                    15:00
+                  </IonText>
+                  <IonText
+                    onClick={() => setTime("16:00")}
+                    className={
+                      time === "16:00" ? `${styles.after}` : `${styles.before}`
+                    }
+                  >
+                    16:00
+                  </IonText>
+                  <IonText
+                    onClick={() => setTime("17:30")}
+                    className={
+                      time === "17:30" ? `${styles.after}` : `${styles.before}`
+                    }
+                  >
+                    17:30
+                  </IonText>
                 </div>
               </div>
             </div>
@@ -139,6 +138,13 @@ export default function ConsulentZoeken(props: any) {
             </IonButton>
           </div>
         </div>
+        <IonToast
+          isOpen={isOpen}
+          message="Er is geen datum of tijd ingevuld."
+          duration={5000}
+          onDidDismiss={() => setIsOpen(false)}
+        ></IonToast>
+        ;
       </IonContent>
     </IonPage>
   );

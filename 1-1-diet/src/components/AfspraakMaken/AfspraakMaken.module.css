@@ -80,31 +80,42 @@
 .timeContent {
   display: flex;
   justify-content: center;
+  gap: 1em;
+  width: 100%;
 }
 
-.inputContainer {
-  display: flex;
-  justify-content: center;
-  width: 80vw;
-}
-
-input[type="checkbox"]:not(:checked),
-input[type="checkbox"]:checked {
-  position: absolute;
-  left: -9999%;
-}
-
-input[type="checkbox"] + label {
+.before {
   padding: 1em;
-  width: 28vw;
-  text-align: center;
   background-color: #f8f2ee;
+  flex: 1;
+  text-align: center;
 }
 
-input[type="checkbox"]:checked + label {
+.before:first-child {
+  border-radius: 1em 0 0 1em;
+}
+
+.before:last-child {
+  border-radius: 0em 1em 1em 0em;
+}
+
+.after {
+  padding: 1em;
   background-color: #dc6099;
+  flex: 1;
+  text-align: center;
 }
 
-input[type="checkbox"] + label:has(.first) {
-  border-radius: 1em;
+.after:first-child {
+  border-radius: 1em 0 0 1em;
+}
+
+.after:last-child {
+  border-radius: 0em 1em 1em 0em;
+}
+
+ion-toast {
+  --background: #dc6099;
+  --color: white;
+  font-size: 1.3em;
 }
