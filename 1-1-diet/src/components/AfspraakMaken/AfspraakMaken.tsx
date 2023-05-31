@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import styles from "./AfspraakMaken.module.css";
 import {
@@ -37,6 +37,33 @@ export default function ConsulentZoeken(props: any) {
     }
   };
 
+  const timeStamps = [
+    {
+      morning: [
+        {
+          time: "9:30",
+        },
+        {
+          time: "11:00",
+        },
+        {
+          time: "12:00",
+        },
+      ],
+      afternoon: [
+        {
+          time: "15:00",
+        },
+        {
+          time: "16:00",
+        },
+        {
+          time: "17:30",
+        },
+      ],
+    },
+  ];
+
   return (
     <IonPage>
       <IonContent fullscreen>
@@ -62,59 +89,39 @@ export default function ConsulentZoeken(props: any) {
               <div className={styles.morningContainer}>
                 <h1>Ochtend</h1>
                 <div className={styles.timeContent}>
-                  <IonText
-                    onClick={() => setTime("9:30")}
-                    className={
-                      time === "9:30" ? `${styles.after}` : `${styles.before}`
-                    }
-                  >
-                    9:30
-                  </IonText>
-                  <IonText
-                    onClick={() => setTime("11:00")}
-                    className={
-                      time === "11:00" ? `${styles.after}` : `${styles.before}`
-                    }
-                  >
-                    11:00
-                  </IonText>
-                  <IonText
-                    onClick={() => setTime("12:00")}
-                    className={
-                      time === "12:00" ? `${styles.after}` : `${styles.before}`
-                    }
-                  >
-                    12:00
-                  </IonText>
+                  {timeStamps[0].morning?.map((element) => {
+                    return (
+                      <IonText
+                        onClick={() => setTime(`${element.time}`)}
+                        className={
+                          time === `${element.time}`
+                            ? `${styles.after}`
+                            : `${styles.before}`
+                        }
+                      >
+                        {element.time}
+                      </IonText>
+                    );
+                  })}
                 </div>
               </div>
               <div className={styles.morningContainer}>
                 <h1>Middag</h1>
                 <div className={styles.timeContent}>
-                  <IonText
-                    onClick={() => setTime("15:00")}
-                    className={
-                      time === "15:00" ? `${styles.after}` : `${styles.before}`
-                    }
-                  >
-                    15:00
-                  </IonText>
-                  <IonText
-                    onClick={() => setTime("16:00")}
-                    className={
-                      time === "16:00" ? `${styles.after}` : `${styles.before}`
-                    }
-                  >
-                    16:00
-                  </IonText>
-                  <IonText
-                    onClick={() => setTime("17:30")}
-                    className={
-                      time === "17:30" ? `${styles.after}` : `${styles.before}`
-                    }
-                  >
-                    17:30
-                  </IonText>
+                  {timeStamps[0].afternoon?.map((element) => {
+                    return (
+                      <IonText
+                        onClick={() => setTime(`${element.time}`)}
+                        className={
+                          time === `${element.time}`
+                            ? `${styles.after}`
+                            : `${styles.before}`
+                        }
+                      >
+                        {element.time}
+                      </IonText>
+                    );
+                  })}
                 </div>
               </div>
             </div>
