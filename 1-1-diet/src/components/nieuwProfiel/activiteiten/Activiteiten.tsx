@@ -74,7 +74,7 @@ export default function Activiteiten() {
                       <IonIcon icon={element.callIcon} />
                     </IonButton>
                     <IonButton>
-                      <IonIcon icon={element.mailIcon} />
+                      <IonIcon icon={element.chatIcon} />
                     </IonButton>
                   </div>
                 </div>
