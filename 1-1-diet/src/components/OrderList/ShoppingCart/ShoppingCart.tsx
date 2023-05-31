@@ -19,7 +19,15 @@ import ptrn2 from "../images/orderBackground.svg";
 import soep from "../images/soep.png";
 import pannenkoek from "../images/pannenkoek.png";
 
-const products = [
+type Product = {
+  img: string;
+  name: string;
+  price: number;
+  weight: string;
+};
+
+type Cart = Product[];
+const products: Cart = [
   {
     img: soep,
     name: "soep",
@@ -34,20 +42,7 @@ const products = [
   },
 ];
 
-const korting = -10;
-
-const verzendkosten = 5.95;
-
-function getTotal(cart: any) {
-  return (
-    Math.round(
-      cart.reduce((totalCost: any, item: any) => totalCost + item.price, 0) *
-        100
-    ) / 100
-  );
-}
-
-function shoppingCartReducer(state: any, action: any) {
+function shoppingCartReducer(state: Product[], action: any) {
   switch (action.type) {
     case "add":
       return [...state, action.product];
@@ -73,6 +68,14 @@ function getTotalSelectedAmountPerProduct(cart: any, productName: any) {
 export default function Product() {
   const [cart, setCart] = useReducer(shoppingCartReducer, []);
 
+  function getTotal(cart: Cart) {
+    return (
+      Math.round(
+        cart.reduce((totalCost, item) => totalCost + item.price, 0) * 100
+      ) / 100
+    );
+  }
+
   function add(product: any) {
     const action = { product, type: "add" };
     setCart(action);
@@ -82,6 +85,9 @@ export default function Product() {
     const action = { product, type: "remove" };
     setCart(action);
   }
+
+  const korting = -10;
+  const verzendkosten = 5.95;
 
   return (
     <IonPage className={styles.page}>
@@ -168,7 +174,12 @@ export default function Product() {
                     <p>{cart.length}</p>
                     <p>{verzendkosten} €</p>
                     <p>{korting} €</p>
-                    <p>{getTotal(cart)} €</p>
+                    <p>
+                      {Math.round(
+                        (getTotal(cart) + korting + verzendkosten) * 100
+                      ) / 100}{" "}
+                      €
+                    </p>
                   </IonCol>
                 </IonRow>
                 <IonCol>
