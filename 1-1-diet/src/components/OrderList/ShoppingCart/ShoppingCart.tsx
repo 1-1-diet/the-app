@@ -15,6 +15,7 @@ import {
 } from "@ionic/react";
 import { trashBin, addOutline, removeOutline } from "ionicons/icons";
 import ptrn from "../../../Images/BACKGROUND 2.svg";
+import ptrn2 from "../images/orderBackground.svg";
 import soep from "../images/soep.png";
 import pannenkoek from "../images/pannenkoek.png";
 
@@ -32,6 +33,10 @@ const products = [
     weight: "300g",
   },
 ];
+
+const korting = -10;
+
+const verzendkosten = 5.95;
 
 function getTotal(cart: any) {
   return (
@@ -91,8 +96,8 @@ export default function Product() {
               <div className={styles.chat}>
                 {products.map((product) => (
                   <div key={product.name} className={styles.products}>
-                    <IonItemSliding>
-                      <IonItem>
+                    <IonItemSliding className={styles.itemSlider}>
+                      <IonItem className={styles.slider}>
                         <IonCol size="3">
                           <img
                             className={styles.image}
@@ -106,14 +111,14 @@ export default function Product() {
                             <p>{product.weight}</p>
                           </IonRow>
                           <IonRow className={styles.price}>
-                            {product.price}€
+                            {product.price} €
                           </IonRow>
                         </IonCol>
                         <IonCol size="7">
                           <IonRow className="ion-justify-content-evenly">
                             <div className={styles.button}>
                               <IonButton
-                                color="secondary"
+                                color="tertiary"
                                 onClick={() => remove(product)}
                               >
                                 <IonIcon
@@ -138,7 +143,7 @@ export default function Product() {
                         </IonCol>
                       </IonItem>
                       <IonItemOptions>
-                        <IonItemOption color="primary">
+                        <IonItemOption className={styles.trash} color="primary">
                           <IonIcon slot="icon-only" icon={trashBin}></IonIcon>
                         </IonItemOption>
                       </IonItemOptions>
@@ -149,27 +154,30 @@ export default function Product() {
             </IonGrid>
           </div>
           <IonGrid>
-            <IonCol>
-              <IonRow>
-                <IonCol>Totaal</IonCol>
-                <IonCol>{cart.length}</IonCol>
-              </IonRow>
-              <IonRow>
-                <IonCol>Verzendkosten</IonCol>
-                <IonCol>10</IonCol>
-              </IonRow>
-              <IonRow>
-                <IonCol>Korting</IonCol>
-                <IonCol>10</IonCol>
-              </IonRow>
-              <IonRow>
-                <IonCol>Totale bedrag</IonCol>
-                <IonCol>{getTotal(cart)}</IonCol>
-              </IonRow>
+            <div className={styles.orders}>
+              <img src={ptrn2} alt="food ptrn" id={styles.headerptrn2} />
               <IonCol>
-                <IonButton>Bestelling afronden</IonButton>
+                <IonRow className="ion-justify-content-evenly">
+                  <IonCol>
+                    <p>Totaal</p>
+                    <p>Verzendkosten</p>
+                    <p>Korting</p>
+                    <p>Totale bedrag</p>
+                  </IonCol>
+                  <IonCol className="ion-text-end">
+                    <p>{cart.length}</p>
+                    <p>{verzendkosten} €</p>
+                    <p>{korting} €</p>
+                    <p>{getTotal(cart)} €</p>
+                  </IonCol>
+                </IonRow>
+                <IonCol>
+                  <IonButton className={styles.orderConfirm} color="white-blue">
+                    <p>Bestelling afronden</p>
+                  </IonButton>
+                </IonCol>
               </IonCol>
-            </IonCol>
+            </div>
           </IonGrid>
         </div>
       </IonContent>
