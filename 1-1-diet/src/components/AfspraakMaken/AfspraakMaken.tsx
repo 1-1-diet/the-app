@@ -92,6 +92,7 @@ export default function ConsulentZoeken(props: any) {
                   {timeStamps[0].morning?.map((element) => {
                     return (
                       <IonText
+                        key={element.time}
                         onClick={() => setTime(`${element.time}`)}
                         className={
                           time === `${element.time}`
@@ -111,6 +112,7 @@ export default function ConsulentZoeken(props: any) {
                   {timeStamps[0].afternoon?.map((element) => {
                     return (
                       <IonText
+                        key={element.time}
                         onClick={() => setTime(`${element.time}`)}
                         className={
                           time === `${element.time}`
