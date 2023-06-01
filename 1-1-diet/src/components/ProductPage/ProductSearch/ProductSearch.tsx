@@ -13,6 +13,7 @@ import {
   IonIcon,
   IonItem,
   IonCheckbox,
+  IonRouterLink,
 } from "@ionic/react";
 import styles from "./ProductSearch.module.css";
 import { Product } from "../Product";
@@ -41,7 +42,13 @@ const ProductSearch: React.FC = () => {
             </IonText>
           </IonCol>
           <IonCol className={styles.cart}>
-            <IonIcon icon={cartOutline} size="large" color="primary"></IonIcon>
+            <IonRouterLink href="/tabs/OrderList">
+              <IonIcon
+                icon={cartOutline}
+                size="large"
+                color="primary"
+              ></IonIcon>
+            </IonRouterLink>
           </IonCol>
         </IonRow>
       </IonGrid>
