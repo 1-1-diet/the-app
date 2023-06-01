@@ -132,7 +132,7 @@ const ProductSearch: React.FC = () => {
                 <IonCard
                   className={styles.Cardstyle}
                   color="light"
-                  href={`/tab4/${element.id}`}
+                  href={`/tabs/tab4/${element.id}`}
                 >
                   <img
                     alt={element.title}
