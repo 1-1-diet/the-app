@@ -38,3 +38,46 @@
   align-items: center;
   gap: 1.5em;
 }
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding: 1em;
+  border-radius: 1em;
+  box-shadow: 20px 20px 10px rgb(243, 240, 240);
+  width: 90vw;
+  height: 8vh;
+}
+
+.titleContainer {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.backgroundBlur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100vw;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#hide {
+  display: none;
+}
+
+.backgroundBlur ion-item {
+  width: 80vw;
+}
+
+.backgroundBlur ion-item ion-button {
+  z-index: 10000;
+}
