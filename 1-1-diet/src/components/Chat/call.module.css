@@ -18,6 +18,7 @@
 .profileImage {
   border: 8px solid white;
   border-radius: 50%;
+  width: 50vw;
 }
 
 .info {

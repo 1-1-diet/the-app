@@ -11,8 +11,8 @@ import { Route } from "workbox-routing";
 export default function ChatList() {
   const chat = [
     {
-      name: "Stefan de Jong",
-      img: profile1,
+      name: "Stella Kane",
+      img: profile3,
       time: "20:00",
       status: "online",
     },
@@ -23,8 +23,8 @@ export default function ChatList() {
       status: "Bezig",
     },
     {
-      name: "Lissane Westerveld",
-      img: profile3,
+      name: "Stefan de Jong",
+      img: profile1,
       time: "09:11",
       status: "Offline",
     },

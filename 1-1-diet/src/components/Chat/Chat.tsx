@@ -12,12 +12,12 @@ import {
 import { call } from "ionicons/icons";
 import styles from "./Chat.module.css";
 import ptrn from "../../Images/BACKGROUND 2.svg";
-import profile1 from "./images/Photo Profile.svg";
+import profile1 from "./images/Photo Profile 3.svg";
 
 export default function ChatList() {
   const contactDetails = [
     {
-      name: "Stefan de Jong",
+      name: "Stella Kane",
       img: profile1,
       icon: call,
       status: "online",

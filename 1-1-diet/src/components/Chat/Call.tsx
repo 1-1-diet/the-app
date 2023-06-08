@@ -11,7 +11,7 @@ import {
 } from "@ionic/react";
 import { volumeMediumOutline, close } from "ionicons/icons";
 import patern from "../../Images/Pattern.png";
-import profile from "./images/Photo Profile call.svg";
+import profile from "./images/Photo Profile 3.svg";
 import styles from "./call.module.css";
 
 export default function Call() {
@@ -34,7 +34,7 @@ export default function Call() {
             </IonCol>
             <IonCol className={styles.info}>
               <IonCol className="ion-text-center">
-                <h1>Stefan de Jong</h1>
+                <h1>Stella Kane</h1>
               </IonCol>
               <IonCol className="ion-text-center">
                 <p className={styles.bottomText}>

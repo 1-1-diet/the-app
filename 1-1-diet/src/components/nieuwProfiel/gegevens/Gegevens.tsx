@@ -38,7 +38,7 @@ export default function Instellingen() {
     setShowDate(!showDate);
   };
 
-  const [date, setDate] = useState<string | string[]>("2013-03-10T02:00:00Z");
+  const [date, setDate] = useState<string | string[]>("2004-05-02T02:00:00Z");
   const datetime = useRef<null | HTMLIonDatetimeElement>(null);
   const reset = () => {
     datetime.current?.reset();

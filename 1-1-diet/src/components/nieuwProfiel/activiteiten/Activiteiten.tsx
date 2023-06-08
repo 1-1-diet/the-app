@@ -1,5 +1,5 @@
-import { IonButton, IonText, IonIcon } from "@ionic/react";
-import React from "react";
+import { IonButton, IonText, IonIcon, IonToast } from "@ionic/react";
+import React, { useState } from "react";
 import styles from "./Activiteiten.module.css";
 import { calendar } from "ionicons/icons";
 
@@ -7,21 +7,29 @@ import { UserProfile } from "../../data";
 import { type } from "os";
 
 export default function Activiteiten() {
+  const [agenda, setAgenda] = useState(false);
+  const [weegMoment, setWeegMoment] = useState(false);
+  const [bestelling, setBestelling] = useState(false);
+  const [favo, setFavo] = useState(false);
+
   const swiperCards = [
     {
       title: "Weeg moment",
       icon: "scale.svg",
       color: "#E4754B",
+      click: () => setWeegMoment(true),
     },
     {
       title: "Bestellingen",
       icon: "card.svg",
       color: "#5C99D0",
+      click: () => setBestelling(true),
     },
     {
       title: "Favorieten",
       icon: "fav.svg",
       color: "#D7373E",
+      click: () => setFavo(true),
     },
   ];
 
@@ -30,7 +38,11 @@ export default function Activiteiten() {
       <div className={styles.swiperCards}>
         {swiperCards?.map((element) => {
           return (
-            <div key={element.title} className={styles.topCard}>
+            <div
+              key={element.title}
+              className={styles.topCard}
+              onClick={element.click}
+            >
               <img
                 style={{ backgroundColor: `${element.color}` }}
                 id={styles.topCardIcon}
@@ -70,10 +82,10 @@ export default function Activiteiten() {
                   </div>
 
                   <div className={styles.buttonBox}>
-                    <IonButton color={"tertiary"}>
+                    <IonButton href="/tabs/call" color={"tertiary"}>
                       <IonIcon icon={element.callIcon} />
                     </IonButton>
-                    <IonButton>
+                    <IonButton href="/tabs/chat">
                       <IonIcon icon={element.chatIcon} />
                     </IonButton>
                   </div>
@@ -122,7 +134,7 @@ export default function Activiteiten() {
                 </div>
 
                 <div className={styles.buttonBox}>
-                  <IonButton>
+                  <IonButton onClick={() => setAgenda(true)}>
                     <IonIcon icon={calendar}>Add</IonIcon>
                   </IonButton>
                 </div>
@@ -131,6 +143,34 @@ export default function Activiteiten() {
           })}
         </div>
       </div>
+      <IonToast
+        isOpen={agenda}
+        message="Koppelen aan agenda staat niet aan"
+        duration={5000}
+        onDidDismiss={() => setAgenda(false)}
+        position="top"
+      />
+      <IonToast
+        isOpen={weegMoment}
+        message="Er zijn nog geen weeg momenten"
+        duration={5000}
+        onDidDismiss={() => setWeegMoment(false)}
+        position="top"
+      />
+      <IonToast
+        isOpen={bestelling}
+        message="Er zijn nog geen bestellingen"
+        duration={5000}
+        onDidDismiss={() => setBestelling(false)}
+        position="top"
+      />
+      <IonToast
+        isOpen={favo}
+        message="Er zijn nog geen favorieten"
+        duration={5000}
+        onDidDismiss={() => setFavo(false)}
+        position="top"
+      />
     </div>
   );
 }
