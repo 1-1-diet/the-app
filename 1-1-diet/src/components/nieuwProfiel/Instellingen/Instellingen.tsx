@@ -13,6 +13,7 @@ import {
   IonCardSubtitle,
   IonCardContent,
   IonButton,
+  IonToast,
 } from "@ionic/react";
 import {
   lockClosedOutline,
@@ -35,11 +36,19 @@ export default function Instellingen() {
     setShowDel(!showDel);
   };
 
+  const toggleToast = () => {
+    setWachtwoord(true);
+  };
+
+  const [notification, setNotification] = useState(false);
+  const [wachtwoord, setWachtwoord] = useState(false);
+
   const settings = [
     {
       icon: lockClosedOutline,
       title: "Wachtwoord wijzigen",
       icon2: chevronForwardOutline,
+      click: toggleToast,
     },
     {
       icon: notificationsOutline,
@@ -74,7 +83,7 @@ export default function Instellingen() {
               {element.title !== "Push Notificaties" ? (
                 <IonIcon icon={element.icon2} size="large" />
               ) : (
-                <IonToggle />
+                <IonToggle onIonChange={() => setNotification(true)} />
               )}
             </div>
           );
@@ -116,6 +125,20 @@ export default function Instellingen() {
           </IonCard>
         </div>
       </IonCol>
+      <IonToast
+        isOpen={notification}
+        message="Notificaties kunnen niet aangepast worden"
+        duration={5000}
+        onDidDismiss={() => setNotification(false)}
+        position="top"
+      />
+      <IonToast
+        isOpen={wachtwoord}
+        message="Wachtwoord kan niet aangepast worden"
+        duration={5000}
+        onDidDismiss={() => setWachtwoord(false)}
+        position="top"
+      />
     </IonGrid>
   );
 }
