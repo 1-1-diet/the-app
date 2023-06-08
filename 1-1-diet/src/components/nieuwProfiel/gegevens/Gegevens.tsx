@@ -13,6 +13,9 @@ import {
   IonButton,
   IonItem,
   IonInput,
+  IonCardHeader,
+  IonCardTitle,
+  IonCardSubtitle,
 } from "@ionic/react";
 import styles from "./Gegevens.module.css";
 import betaal from "./Betaalmethode.module.css";
@@ -152,18 +155,38 @@ export default function Instellingen() {
               id={showAdress ? `` : `${styles.hide}`}
               className={styles.backgroundBlur}
             >
-              <IonItem>
-                <IonInput
-                  placeholder="Adress"
-                  onIonChange={(e) => {
-                    if (!e.detail?.value) {
-                      return;
-                    }
-                    setAdress(e.detail.value);
-                  }}
-                />
-                <IonButton onClick={() => setShowAdress(false)}>Done</IonButton>
-              </IonItem>
+              <IonCard>
+                <IonCardHeader>
+                  <IonCardTitle color="secondary">
+                    Adress veranderen
+                  </IonCardTitle>
+                </IonCardHeader>
+                <IonItem>
+                  <IonInput
+                    placeholder={adress}
+                    onIonChange={(e) => {
+                      if (!e.detail?.value) {
+                        return;
+                      }
+                      setAdress(e.detail.value);
+                    }}
+                  />
+                </IonItem>
+                <IonButton
+                  color="primary"
+                  fill="clear"
+                  onClick={() => setShowAdress(false)}
+                >
+                  Cancel
+                </IonButton>
+                <IonButton
+                  color="secondary"
+                  fill="clear"
+                  onClick={() => setShowAdress(false)}
+                >
+                  Bewaar
+                </IonButton>
+              </IonCard>
             </div>
           </div>
           {/* Email */}
@@ -184,19 +207,38 @@ export default function Instellingen() {
               id={showEmail ? `` : `${styles.hide}`}
               className={styles.backgroundBlur}
             >
-              <IonItem>
-                <IonInput
-                  type="email"
-                  placeholder="Email"
-                  onIonChange={(e) => {
-                    if (!e.detail?.value) {
-                      return;
-                    }
-                    setEmail(e.detail.value);
-                  }}
-                />
-                <IonButton onClick={() => setShowEmail(false)}>Done</IonButton>
-              </IonItem>
+              <IonCard>
+                <IonCardHeader>
+                  <IonCardTitle color="secondary">
+                    Email veranderen
+                  </IonCardTitle>
+                </IonCardHeader>
+                <IonItem>
+                  <IonInput
+                    placeholder={email}
+                    onIonChange={(e) => {
+                      if (!e.detail?.value) {
+                        return;
+                      }
+                      setEmail(e.detail.value);
+                    }}
+                  />
+                </IonItem>
+                <IonButton
+                  color="primary"
+                  fill="clear"
+                  onClick={() => setShowEmail(false)}
+                >
+                  Cancel
+                </IonButton>
+                <IonButton
+                  color="secondary"
+                  fill="clear"
+                  onClick={() => setShowEmail(false)}
+                >
+                  Bewaar
+                </IonButton>
+              </IonCard>
             </div>
           </div>
           {/* T - nummer */}
@@ -217,19 +259,38 @@ export default function Instellingen() {
               id={showNummer ? `` : `${styles.hide}`}
               className={styles.backgroundBlur}
             >
-              <IonItem>
-                <IonInput
-                  type="tel"
-                  placeholder="Adress"
-                  onIonChange={(e) => {
-                    if (!e.detail?.value) {
-                      return;
-                    }
-                    setNummer(e.detail.value);
-                  }}
-                />
-                <IonButton onClick={() => setShowNummer(false)}>Done</IonButton>
-              </IonItem>
+              <IonCard>
+                <IonCardHeader>
+                  <IonCardTitle color="secondary">
+                    T - nummer veranderen
+                  </IonCardTitle>
+                </IonCardHeader>
+                <IonItem>
+                  <IonInput
+                    placeholder={nummer}
+                    onIonChange={(e) => {
+                      if (!e.detail?.value) {
+                        return;
+                      }
+                      setNummer(e.detail.value);
+                    }}
+                  />
+                </IonItem>
+                <IonButton
+                  color="primary"
+                  fill="clear"
+                  onClick={() => setShowNummer(false)}
+                >
+                  Cancel
+                </IonButton>
+                <IonButton
+                  color="secondary"
+                  fill="clear"
+                  onClick={() => setShowNummer(false)}
+                >
+                  Bewaar
+                </IonButton>
+              </IonCard>
             </div>
           </div>
         </IonCol>
