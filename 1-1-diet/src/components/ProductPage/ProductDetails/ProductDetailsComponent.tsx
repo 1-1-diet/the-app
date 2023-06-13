@@ -11,6 +11,7 @@ import ProductStats from "./ProductStats";
 import { card } from "./stats";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Product } from "../Product";
+import { Link } from "react-router-dom";
 
 export default function ProductDetails() {
   return (
@@ -31,12 +32,15 @@ export default function ProductDetails() {
                   size="large"
                   className={styles.navBtn}
                 />
-                <IonIcon
-                  icon={bagHandleOutline}
-                  color="navigation"
-                  size="large"
-                  className={styles.navBtn}
-                />
+
+                <Link to="/tabs/OrderList">
+                  <IonIcon
+                    icon={bagHandleOutline}
+                    color="navigation"
+                    size="large"
+                    className={styles.navBtn}
+                  />
+                </Link>
               </div>
               <div className={styles.titleContainer}>
                 <IonText id={styles.title} color="light">
@@ -99,7 +103,7 @@ export default function ProductDetails() {
         );
       })}
 
-      {/* <div className={styles.extra}>
+      <div className={styles.extra}>
         <IonText id={styles.extraTitle}>Aanbevolen producten</IonText>
         <Swiper slidesPerView={"auto"} grabCursor={true} spaceBetween={10}>
           {card?.map((element: any) => {
@@ -120,7 +124,7 @@ export default function ProductDetails() {
             );
           })}
         </Swiper>
-      </div> */}
+      </div>
     </div>
   );
 }

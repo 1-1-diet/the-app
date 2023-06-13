@@ -19,13 +19,34 @@ import ProductStats from "../../components/ProductPage/ProductDetails/ProductSta
 import { card } from "../../components/ProductPage/ProductDetails/stats";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Product } from "../../components/ProductPage/Product";
+import { useState } from "react";
 
 export const ProductDetails = () => {
-  // const { productId } = useParams<{ productId: string }>();
+  const [count, setCount] = useState(1);
+
+  const increment = () => {
+    setCount(function (prevCount) {
+      if (prevCount < 10) {
+        return (prevCount += 1);
+      } else {
+        return (prevCount = 10);
+      }
+    });
+  };
+
+  const decrement = () => {
+    setCount(function (prevCount) {
+      if (prevCount > 1) {
+        return (prevCount -= 1);
+      } else {
+        return (prevCount = 1);
+      }
+    });
+  };
+
   const { productId } = useParams<{ productId: string }>();
 
   const product = Product.find((p) => p.id === productId);
-  console.log(productId, product);
 
   if (product === undefined) {
     return <div>loading...</div>;
@@ -51,12 +72,14 @@ export const ProductDetails = () => {
                     className={styles.navBtn}
                   />
                 </IonRouterLink>
-                <IonIcon
-                  icon={bagHandleOutline}
-                  color="navigation"
-                  size="large"
-                  className={styles.navBtn}
-                />
+                <IonRouterLink routerLink="/tabs/OrderList">
+                  <IonIcon
+                    icon={bagHandleOutline}
+                    color="navigation"
+                    size="large"
+                    className={styles.navBtn}
+                  />
+                </IonRouterLink>
               </div>
               <div className={styles.titleContainer}>
                 <IonText id={styles.title} color="light">
@@ -82,17 +105,19 @@ export const ProductDetails = () => {
                     className={styles.amountBtn}
                     size="small"
                     color="secondaryAccent"
+                    onClick={decrement}
                   >
                     <IonIcon
                       className={styles.amountText}
                       icon={removeOutline}
                     />
                   </IonButton>
-                  <IonText id={styles.amount}>1</IonText>
+                  <IonText id={styles.amount}>{count}</IonText>
                   <IonButton
                     className={styles.amountBtn}
                     size="small"
                     color="secondary"
+                    onClick={increment}
                   >
                     <IonIcon className={styles.amountText} icon={addOutline} />
                   </IonButton>
@@ -117,27 +142,32 @@ export const ProductDetails = () => {
             </div>
           </div>
           {/* <div className={styles.extra}>
-        <IonText id={styles.extraTitle}>Aanbevolen producten</IonText>
-        <Swiper slidesPerView={"auto"} grabCursor={true} spaceBetween={10}>
-          {card?.map((element: any) => {
-            return (
-              <SwiperSlide className={styles.swiperSlide} key={element.title}>
-                <div className={styles.cardContainer}>
-                  <img
-                    src={require(`../../../Images/${element.img}.png`)}
-                    alt="Product"
-                    className={styles.cardImg}
-                  />
-                  <div className={styles.cardText}>
-                    <IonText id={styles.cardTitle}>{element.title}</IonText>
-                    <IonText id={styles.cardSub}>{element.subTitle}</IonText>
-                  </div>
-                </div>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </div> */}
+            <IonText id={styles.extraTitle}>Aanbevolen producten</IonText>
+            <Swiper slidesPerView={"auto"} grabCursor={true} spaceBetween={10}>
+              {card?.map((element: any) => {
+                return (
+                  <SwiperSlide
+                    className={styles.swiperSlide}
+                    key={element.title}
+                  >
+                    <div className={styles.cardContainer}>
+                      <img
+                        src={require(`../../../Images/${element.img}.png`)}
+                        alt="Product"
+                        className={styles.cardImg}
+                      />
+                      <div className={styles.cardText}>
+                        <IonText id={styles.cardTitle}>{element.title}</IonText>
+                        <IonText id={styles.cardSub}>
+                          {element.subTitle}
+                        </IonText>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div> */}
         </div>
       </IonContent>
     </IonPage>
