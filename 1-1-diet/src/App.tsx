@@ -57,6 +57,7 @@ import Tab4 from "./pages/Tab4/Tab4";
 import { ProductDetails } from "./pages/Tab4/ProductDetails";
 import OrderList from "./components/OrderList/OrderList";
 import ShoppingCart from "./components/OrderList/ShoppingCart/ShoppingCart";
+import FinishOrder from "./components/OrderList/FinishOrder/FinishOrder";
 
 import Tab5 from "./pages/Tab5/Tab5";
 import chat from "./components/Chat/Chat";
@@ -162,6 +163,11 @@ const App: React.FC = () => {
                     exact
                     path="/tabs/OrderList"
                     component={ShoppingCart}
+                  />
+                  <Route
+                    exact
+                    path="/tabs/OrderList/Finish"
+                    component={FinishOrder}
                   />
                 </IonRouterOutlet>
 

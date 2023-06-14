@@ -62,18 +62,18 @@
   border-radius: 2em;
 }
 
-.orderConfirm {
-  background-color: white;
-  color: black;
-  border-radius: 2em;
-  width: 100%;
-}
-
 #headerptrn2 {
   position: absolute;
   width: 100vw;
   height: 28vh;
   object-fit: cover;
-  z-index: 10;
   opacity: 10%;
+}
+
+.orderConfirm {
+  background-color: white;
+  color: black;
+  border-radius: 2em;
+  width: 100%;
+  z-index: 10;
 }

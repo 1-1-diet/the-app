@@ -183,8 +183,12 @@ export default function Product() {
                   </IonCol>
                 </IonRow>
                 <IonCol>
-                  <IonButton className={styles.orderConfirm} color="white-blue">
-                    <p>Bestelling afronden</p>
+                  <IonButton
+                    href="/tabs/OrderList/Finish"
+                    className={styles.orderConfirm}
+                    color="white-blue"
+                  >
+                    Bestelling afrekenen
                   </IonButton>
                 </IonCol>
               </IonCol>

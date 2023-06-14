@@ -1,0 +1,39 @@
+#headerptrn {
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  height: 28vh;
+  object-fit: cover;
+  z-index: 10;
+  opacity: 10%;
+}
+
+#headerptrn2 {
+  position: absolute;
+  width: 100vw;
+  height: 28vh;
+  object-fit: cover;
+  opacity: 10%;
+}
+
+.content {
+  margin-top: 5em;
+}
+
+.orderConfirm {
+  background-color: white;
+  color: black;
+  border-radius: 2em;
+  width: 100%;
+  z-index: 10;
+}
+
+.orders {
+  background-color: #2b2e6b;
+  padding: 1em;
+  margin: 1em;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  border-radius: 2em;
+}
