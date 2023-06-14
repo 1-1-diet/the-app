@@ -45,13 +45,13 @@
   right: 1.8em;
   width: 4em;
   height: 4em;
-  padding: 0 0 !important;
+  --padding-start: 0;
+  --padding-end: 0;
 }
 
-/* Om de icon te fixen moet --padding-start 0 --padding-end 0 */
 .icon {
-  width: 60%;
-  height: 60%;
+  width: 50%;
+  height: 50%;
 }
 
 .filterContainer {
@@ -78,7 +78,7 @@
 
 .markerContainer {
   position: absolute;
-  color: black;
+  color: var(--ion-color-primary);
   --background: transparent;
   --background-activated: transparent;
 }
