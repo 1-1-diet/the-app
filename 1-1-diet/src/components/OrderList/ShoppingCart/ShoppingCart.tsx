@@ -12,8 +12,14 @@ import {
   IonContent,
   IonIcon,
   IonButton,
+  IonText,
 } from "@ionic/react";
-import { trashBin, addOutline, removeOutline } from "ionicons/icons";
+import {
+  trashBin,
+  addOutline,
+  removeOutline,
+  chevronBackOutline,
+} from "ionicons/icons";
 import ptrn from "../../../Images/BACKGROUND 2.svg";
 import ptrn2 from "../images/orderBackground.svg";
 import soep from "../images/soep.png";
@@ -30,14 +36,14 @@ type Cart = Product[];
 const products: Cart = [
   {
     img: soep,
-    name: "soep",
+    name: "Soep",
     price: 3.5,
     weight: "300g",
   },
   {
     img: pannenkoek,
-    name: "pannenkoek",
-    price: 3.95,
+    name: "Pannenkoek",
+    price: 3.9,
     weight: "300g",
   },
 ];
@@ -92,38 +98,51 @@ export default function Product() {
   return (
     <IonPage className={styles.page}>
       <IonContent fullscreen>
-        <div>
-          <img src={ptrn} alt="food ptrn" id={styles.headerptrn} />
-          <div className={styles.content}>
-            <IonGrid>
-              <IonCol>
-                <h1>Bestelling details</h1>
-              </IonCol>
-              <div className={styles.chat}>
-                {products.map((product) => (
-                  <div key={product.name} className={styles.products}>
-                    <IonItemSliding className={styles.itemSlider}>
-                      <IonItem className={styles.slider}>
-                        <IonCol size="3">
-                          <img
-                            className={styles.image}
-                            src={product.img}
-                            alt=""
-                          />
-                        </IonCol>
-                        <IonCol size="3">
-                          <IonRow>
-                            <p className={styles.product}>{product.name}</p>
-                            <p>{product.weight}</p>
-                          </IonRow>
-                          <IonRow className={styles.price}>
-                            {product.price} €
-                          </IonRow>
-                        </IonCol>
-                        <IonCol size="7">
+        <img src={ptrn} alt="food ptrn" id={styles.headerptrn} />
+        <IonIcon
+          icon={chevronBackOutline}
+          color="navigation"
+          size="large"
+          className={styles.navBtn}
+        />
+        <div className={styles.content}>
+          <IonGrid>
+            <IonCol>
+              <h1>Bestelling details</h1>
+            </IonCol>
+            <div className={styles.chat}>
+              {products.map((product) => (
+                <div key={product.name} className={styles.products}>
+                  <IonItemSliding className={styles.itemSlider}>
+                    <IonItem className={styles.slider}>
+                      <div className={styles.flexContainer}>
+                        <div className={styles.contentContainer}>
+                          <IonCol size="3" className={styles.col}>
+                            <img
+                              className={styles.image}
+                              src={product.img}
+                              alt=""
+                            />
+                          </IonCol>
+                          <div className={styles.productText}>
+                            <div className={styles.row}>
+                              <IonText id={styles.productName}>
+                                {product.name}
+                              </IonText>
+                              <IonText id={styles.productWeight}>
+                                {product.weight}
+                              </IonText>
+                            </div>
+                            <IonText className={styles.price}>
+                              € {product.price}0
+                            </IonText>
+                          </div>
+                        </div>
+                        <IonCol>
                           <IonRow className="ion-justify-content-evenly">
                             <div className={styles.button}>
                               <IonButton
+                                className={styles.btn}
                                 color="tertiary"
                                 onClick={() => remove(product)}
                               >
@@ -139,6 +158,7 @@ export default function Product() {
                                 )}
                               </p>
                               <IonButton
+                                className={styles.btn}
                                 color="secondary"
                                 onClick={() => add(product)}
                               >
@@ -147,54 +167,54 @@ export default function Product() {
                             </div>
                           </IonRow>
                         </IonCol>
-                      </IonItem>
-                      <IonItemOptions>
-                        <IonItemOption className={styles.trash} color="primary">
-                          <IonIcon slot="icon-only" icon={trashBin}></IonIcon>
-                        </IonItemOption>
-                      </IonItemOptions>
-                    </IonItemSliding>
-                  </div>
-                ))}
-              </div>
-            </IonGrid>
-          </div>
-          <IonGrid>
-            <div className={styles.orders}>
-              <img src={ptrn2} alt="food ptrn" id={styles.headerptrn2} />
-              <IonCol>
-                <IonRow className="ion-justify-content-evenly">
-                  <IonCol>
-                    <p>Totaal</p>
-                    <p>Verzendkosten</p>
-                    <p>Korting</p>
-                    <p>Totale bedrag</p>
-                  </IonCol>
-                  <IonCol className="ion-text-end">
-                    <p>{cart.length}</p>
-                    <p>{verzendkosten} €</p>
-                    <p>{korting} €</p>
-                    <p>
-                      {Math.round(
-                        (getTotal(cart) + korting + verzendkosten) * 100
-                      ) / 100}{" "}
-                      €
-                    </p>
-                  </IonCol>
-                </IonRow>
-                <IonCol>
-                  <IonButton
-                    href="/tabs/OrderList/Finish"
-                    className={styles.orderConfirm}
-                    color="white-blue"
-                  >
-                    Bestelling afrekenen
-                  </IonButton>
-                </IonCol>
-              </IonCol>
+                      </div>
+                    </IonItem>
+                    <IonItemOptions>
+                      <IonItemOption className={styles.trash} color="primary">
+                        <IonIcon slot="icon-only" icon={trashBin}></IonIcon>
+                      </IonItemOption>
+                    </IonItemOptions>
+                  </IonItemSliding>
+                </div>
+              ))}
             </div>
           </IonGrid>
         </div>
+        <IonGrid>
+          <div className={styles.orders}>
+            <img src={ptrn2} alt="food ptrn" id={styles.headerptrn2} />
+            <IonCol>
+              <IonRow className="ion-justify-content-evenly">
+                <IonCol>
+                  <p>Totaal</p>
+                  <p>Verzendkosten</p>
+                  <p>Korting</p>
+                  <p>Totale bedrag</p>
+                </IonCol>
+                <IonCol className="ion-text-end">
+                  <p>{cart.length}</p>
+                  <p>€ {verzendkosten}</p>
+                  <p>€ {korting}</p>
+                  <p>
+                    €{" "}
+                    {Math.round(
+                      (getTotal(cart) + korting + verzendkosten) * 100
+                    ) / 100}
+                  </p>
+                </IonCol>
+              </IonRow>
+              <IonCol>
+                <IonButton
+                  href="/tabs/OrderList/Finish"
+                  className={styles.orderConfirm}
+                  color="white-blue"
+                >
+                  Bestelling afrekenen
+                </IonButton>
+              </IonCol>
+            </IonCol>
+          </div>
+        </IonGrid>
       </IonContent>
     </IonPage>
   );

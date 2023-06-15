@@ -2,7 +2,7 @@
   position: absolute;
   width: 100vw;
   top: 0;
-  height: 28vh;
+  height: 2vh;
   object-fit: cover;
   z-index: 10;
   opacity: 10%;
@@ -22,9 +22,13 @@
 }
 
 .button {
-  height: 100%;
   display: flex;
   align-items: center;
+}
+
+.btn {
+  width: 1em !important;
+  height: 1em !important;
 }
 
 .count {
