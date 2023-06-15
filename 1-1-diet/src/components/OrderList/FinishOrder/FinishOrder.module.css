@@ -1,0 +1,108 @@
+#headerptrn {
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  height: 20vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 10%;
+}
+
+#headerptrn2 {
+  position: absolute;
+  width: 100vw;
+  height: 28vh;
+  object-fit: cover;
+  opacity: 10%;
+}
+
+.navBtn {
+  position: absolute;
+  top: 0.7em;
+  left: 0.7em;
+  background-color: #5c9ad03e;
+  padding: 0.3em;
+  border-radius: 0.5em;
+}
+
+.content {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  padding-bottom: 0;
+}
+
+.content hr {
+  background: lightgrey;
+  height: 0.1em;
+  width: 100%;
+  opacity: 50%;
+}
+
+.adresContainer h2 {
+  margin: 0 0;
+  margin-bottom: 1em;
+}
+.adresContainer p {
+  margin: 0 0;
+}
+
+.containers {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.img {
+  aspect-ratio: 3/2;
+  width: 13vw;
+  object-fit: contain;
+}
+.containers h2 {
+  margin: 0 0;
+}
+.pay {
+  font-size: large;
+}
+
+.input {
+  border: solid 2px #d5dde0;
+  background-color: #f7f8f9;
+  width: 90vw;
+  color: black;
+  border-radius: 1em;
+  padding: 0.5em;
+}
+
+.endContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8em;
+}
+.orders {
+  background-color: #2b2e6b;
+  padding: 1em;
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  border-radius: 1em;
+}
+.orderConfirm {
+  background-color: white;
+  color: black;
+  border-radius: 1em;
+  width: 100%;
+  z-index: 10;
+}
+
+.name {
+  color: grey;
+  font-size: larger;
+}
+.adres {
+  opacity: 70%;
+  color: lightgrey;
+  font-size: medium;
+}

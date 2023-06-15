@@ -25,11 +25,11 @@ export default function Counter() {
   return (
     <div>
       <div className={styles.button}>
-        <IonButton color="secondary" onClick={decrement}>
+        <IonButton className={styles.btn} color="secondary" onClick={decrement}>
           <IonIcon slot="icon-only" icon={removeOutline} />
         </IonButton>
         <p className={styles.count}>{count}</p>
-        <IonButton color="secondary" onClick={increment}>
+        <IonButton className={styles.btn} color="secondary" onClick={increment}>
           <IonIcon slot="icon-only" icon={addOutline} />
         </IonButton>
       </div>

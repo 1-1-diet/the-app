@@ -35,53 +35,51 @@ export default function OrderList() {
   return (
     <IonPage>
       <IonContent fullscreen>
-        <div>
-          <img src={ptrn} alt="food ptrn" id={styles.headerptrn} />
-          <div className={styles.content}>
-            <IonGrid>
-              <IonCol>
-                <h1>Bestelling details</h1>
-              </IonCol>
-              <div className={styles.chat}>
-                {orders?.map((element: any) => {
-                  return (
-                    <div key={element.product} className={styles.products}>
-                      <IonItemSliding>
-                        <IonItem>
-                          <IonCol size="3">
-                            <img
-                              className={styles.image}
-                              src={element.img}
-                              alt=""
-                            />
-                          </IonCol>
-                          <IonCol size="3">
-                            <IonRow className={styles.product}>
-                              {element.product}
-                              <p>{element.weight}</p>
-                            </IonRow>
-                            <IonRow className={styles.price}>
-                              {element.price}
-                            </IonRow>
-                          </IonCol>
-                          <IonCol size="7">
-                            <IonRow className="ion-justify-content-evenly">
-                              <Counter />
-                            </IonRow>
-                          </IonCol>
-                        </IonItem>
-                        <IonItemOptions>
-                          <IonItemOption color="primary">
-                            <IonIcon slot="icon-only" icon={trashBin}></IonIcon>
-                          </IonItemOption>
-                        </IonItemOptions>
-                      </IonItemSliding>
-                    </div>
-                  );
-                })}
-              </div>
-            </IonGrid>
-          </div>
+        <img src={ptrn} alt="food ptrn" id={styles.headerptrn} />
+        <div className={styles.content}>
+          <IonGrid>
+            <IonCol>
+              <h1>Bestelling details</h1>
+            </IonCol>
+            <div className={styles.chat}>
+              {orders?.map((element: any) => {
+                return (
+                  <div key={element.product} className={styles.products}>
+                    <IonItemSliding>
+                      <IonItem>
+                        <IonCol size="3">
+                          <img
+                            className={styles.image}
+                            src={element.img}
+                            alt=""
+                          />
+                        </IonCol>
+                        <IonCol size="3">
+                          <IonRow className={styles.product}>
+                            {element.product}
+                            <p>{element.weight}</p>
+                          </IonRow>
+                          <IonRow className={styles.price}>
+                            {element.price}
+                          </IonRow>
+                        </IonCol>
+                        <IonCol size="7">
+                          <IonRow className="ion-justify-content-evenly">
+                            <Counter />
+                          </IonRow>
+                        </IonCol>
+                      </IonItem>
+                      <IonItemOptions>
+                        <IonItemOption color="primary">
+                          <IonIcon slot="icon-only" icon={trashBin}></IonIcon>
+                        </IonItemOption>
+                      </IonItemOptions>
+                    </IonItemSliding>
+                  </div>
+                );
+              })}
+            </div>
+          </IonGrid>
         </div>
       </IonContent>
     </IonPage>
