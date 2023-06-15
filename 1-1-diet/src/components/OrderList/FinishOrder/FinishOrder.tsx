@@ -9,6 +9,7 @@ import {
   IonInput,
   IonIcon,
   IonText,
+  IonRouterLink,
 } from "@ionic/react";
 import ptrn from "../../../Images/BACKGROUND 2.svg";
 import ptrn2 from "../images/orderBackground.svg";
@@ -23,12 +24,14 @@ export default function FinishOrder() {
       <IonContent fullscreen>
         <div>
           <img src={ptrn} alt="food ptrn" id={styles.headerptrn} />
-          <IonIcon
-            icon={chevronBackOutline}
-            color="navigation"
-            size="large"
-            className={styles.navBtn}
-          />
+          <IonRouterLink href="/tabs/OrderList">
+            <IonIcon
+              icon={chevronBackOutline}
+              color="navigation"
+              size="large"
+              className={styles.navBtn}
+            />
+          </IonRouterLink>
           <div className={styles.content}>
             <IonGrid>
               <IonCol>
@@ -86,14 +89,18 @@ export default function FinishOrder() {
                     <p>Totale bedrag</p>
                   </IonCol>
                   <IonCol className="ion-text-end">
-                    <p></p>
-                    <p> €</p>
-                    <p> €</p>
-                    <p>€</p>
+                    <p>2</p>
+                    <p>€ 5,95</p>
+                    <p>€ -10</p>
+                    <p>€ 3,35</p>
                   </IonCol>
                 </IonRow>
                 <IonCol>
-                  <IonButton className={styles.orderConfirm} color="white-blue">
+                  <IonButton
+                    href="/tabs/tab4"
+                    className={styles.orderConfirm}
+                    color="white-blue"
+                  >
                     Bestelling afronden
                   </IonButton>
                 </IonCol>

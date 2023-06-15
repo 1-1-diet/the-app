@@ -13,6 +13,7 @@ import {
   IonIcon,
   IonButton,
   IonText,
+  IonRouterLink,
 } from "@ionic/react";
 import {
   trashBin,
@@ -99,12 +100,14 @@ export default function Product() {
     <IonPage className={styles.page}>
       <IonContent fullscreen>
         <img src={ptrn} alt="food ptrn" id={styles.headerptrn} />
-        <IonIcon
-          icon={chevronBackOutline}
-          color="navigation"
-          size="large"
-          className={styles.navBtn}
-        />
+        <IonRouterLink href="/tabs/tab4">
+          <IonIcon
+            icon={chevronBackOutline}
+            color="navigation"
+            size="large"
+            className={styles.navBtn}
+          />
+        </IonRouterLink>
         <div className={styles.content}>
           <IonGrid>
             <IonCol>
