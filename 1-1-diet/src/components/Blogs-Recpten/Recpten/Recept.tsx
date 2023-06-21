@@ -4,6 +4,7 @@ import { IonContent, IonIcon, IonPage, IonText } from "@ionic/react";
 import { Recepten } from "../data";
 
 import { timeOutline, heart, chevronDownOutline } from "ionicons/icons";
+import BackButton from "../../BackButton";
 
 export default function Recept() {
   return (
@@ -12,6 +13,7 @@ export default function Recept() {
         {Recepten?.map((recept) => {
           return (
             <div key={recept.id} className={styles.mainContainer}>
+              <BackButton />
               <div className={styles.headerContainer}>
                 <img src={recept.image} alt="image" />
                 <div className={styles.header__gradient}>

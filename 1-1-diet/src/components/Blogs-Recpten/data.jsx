@@ -36,6 +36,7 @@ export const Blogs = [
     image: aardbij,
     title: "Weer op de weegschaal",
     date: "Sep 4 2022",
+    yummies: "150",
     tag: "populair",
     discription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ipsum quis augue laoreet, nec finibus felis dignissim. Aenean dignissim hendrerit aliquam. Aliquam erat volutpat. Nam bibendum purus vel pretium varius. Suspendisse egestas felis eu ipsum fringilla sagittis. Proin consectetur, nisi vitae aliquam pellentesque, tellus sem finibus orci, eu tristique ante libero sit amet elit. Phasellus ornare vel enim non ultrices.",

@@ -1,5 +1,5 @@
 import React from "react";
-import { IonCard, IonIcon, IonLabel } from "@ionic/react";
+import { IonCard, IonIcon, IonLabel, IonRouterLink } from "@ionic/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import styles from "./RecomendedBlogs.module.css";
@@ -19,23 +19,25 @@ const RecomendedBlogs: React.FC = () => {
         {Blogs?.map((element: any) => {
           return (
             <SwiperSlide key={element.title}>
-              <IonCard className={styles.BlogImg}>
-                <img
-                  alt={element.title}
-                  src={require(`../../Images/${element.img}`)}
-                  className={styles.img}
-                />
-                <div className={styles.BlogText}>
-                  <IonLabel className={styles.titleContent}>
-                    {element.title}
-                  </IonLabel>
-                  <div className={styles.Ptext}>
-                    <p>{element.readTime}</p>
-                    <IonIcon icon={book} />
-                    <p>{element.date}</p>
+              <IonRouterLink href="/tabs/Blog">
+                <IonCard className={styles.BlogImg}>
+                  <img
+                    alt={element.title}
+                    src={require(`../../Images/${element.img}`)}
+                    className={styles.img}
+                  />
+                  <div className={styles.BlogText}>
+                    <IonLabel className={styles.titleContent}>
+                      {element.title}
+                    </IonLabel>
+                    <div className={styles.Ptext}>
+                      <p>{element.readTime}</p>
+                      <IonIcon icon={book} />
+                      <p>{element.date}</p>
+                    </div>
                   </div>
-                </div>
-              </IonCard>
+                </IonCard>
+              </IonRouterLink>
             </SwiperSlide>
           );
         })}
