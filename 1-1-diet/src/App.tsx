@@ -49,6 +49,11 @@ import UploadImageComplete from "./pages/Register/UploadImageComplete";
 import { location, home, person, cart, chatbubble } from "ionicons/icons";
 import Tab1 from "./pages/Tab1/Tab1";
 
+import Recept from "./components/Blogs-Recpten/Recpten/Recept";
+import ReceptAll from "./components/Blogs-Recpten/Recpten/ReceptAll";
+import Blog from "./components/Blogs-Recpten/Blogs/Blog";
+import BlogAll from "./components/Blogs-Recpten/Blogs/BlogAll";
+
 // import Tab2 from "./pages/Tab2/Tab2";
 import Tab2 from "./components/NieuwConsulentZoeken/ConsulentZoeken";
 import AfsraakMaken from "./components/AfspraakMaken/AfspraakMaken";
@@ -178,6 +183,12 @@ const App: React.FC = () => {
                     path="/tabs/OrderList/Finish"
                     component={FinishOrder}
                   />
+
+                  <Route exact path="/tabs/Recept" component={Recept} />
+                  <Route exact path="/tabs/ReceptAll" component={ReceptAll} />
+
+                  <Route exact path="/tabs/Blog" component={Blog} />
+                  <Route exact path="/tabs/BlogALl" component={BlogAll} />
                 </IonRouterOutlet>
 
                 <IonTabBar slot="bottom">
