@@ -12,7 +12,8 @@ import {
 
 export const Recepten = [
   {
-    id: 0,
+    id: "1",
+    recept: 0,
     image: aardbij,
     title: "Yoguhrt met aardbei",
     bakeTime: "5 minuten",
@@ -31,7 +32,8 @@ export const Recepten = [
     ],
   },
   {
-    id: 1,
+    id: "2",
+    recept: 1,
     image: advocado,
     title: "Advocado",
     bakeTime: "10 minuten",
@@ -53,6 +55,7 @@ export const Recepten = [
 
 export const Blogs = [
   {
+    id: "1",
     image: aardbij,
     title: "Weer op de weegschaal",
     date: "Sep 4 2022",
@@ -62,6 +65,7 @@ export const Blogs = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ipsum quis augue laoreet, nec finibus felis dignissim. Aenean dignissim hendrerit aliquam. Aliquam erat volutpat. Nam bibendum purus vel pretium varius. Suspendisse egestas felis eu ipsum fringilla sagittis. Proin consectetur, nisi vitae aliquam pellentesque, tellus sem finibus orci, eu tristique ante libero sit amet elit. Phasellus ornare vel enim non ultrices.",
   },
   {
+    id: "2",
     image: advocado,
     title: "Weer een advocado",
     date: "Dec 4 2022",

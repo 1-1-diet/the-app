@@ -5,36 +5,40 @@ import { Blogs } from "../data";
 
 import { heart } from "ionicons/icons";
 import BackButton from "../../BackButton";
+import { useParams } from "react-router";
 
 export default function Blog() {
+  const { blogId } = useParams<{ blogId: string }>();
+
+  const blogs = Blogs.find((p) => p.id === blogId);
+
+  if (blogs === undefined) {
+    return <div>loading...</div>;
+  }
   return (
     <IonPage>
       <IonContent fullscreen>
-        {Blogs?.map((blog) => {
-          return (
-            <div className={styles.mainContainer}>
-              <BackButton />
-              <div className={styles.headerContainer}>
-                <img src={blog.image} alt={blog.title} />
-                <div className={styles.header__gradient}>
-                  <div className={styles.header__titleContainer}>
-                    <IonText id={styles.header__title}>{blog.title}</IonText>
-                    <div className={styles.header__subContainer}>
-                      <IonText id={styles.header__subTitle}>
-                        <IonIcon icon={heart} />
-                        {blog.yummies} yummies
-                      </IonText>
-                      <IonText id={styles.header__tag}>{blog.tag}</IonText>
-                    </div>
-                  </div>
+        <div className={styles.mainContainer}>
+          <BackButton />
+          <div className={styles.headerContainer}>
+            <img src={blogs.image} alt={blogs.title} />
+            <div className={styles.header__gradient}>
+              <div className={styles.header__titleContainer}>
+                <IonText id={styles.header__title}>{blogs.title}</IonText>
+                <div className={styles.header__subContainer}>
+                  <IonText id={styles.header__subTitle}>
+                    <IonIcon icon={heart} />
+                    {blogs.yummies} yummies
+                  </IonText>
+                  <IonText id={styles.header__tag}>{blogs.tag}</IonText>
                 </div>
               </div>
-              <div className={styles.mainContent}>
-                <IonText>{blog.discription}</IonText>
-              </div>
             </div>
-          );
-        })}
+          </div>
+          <div className={styles.mainContent}>
+            <IonText>{blogs.discription}</IonText>
+          </div>
+        </div>
       </IonContent>
     </IonPage>
   );

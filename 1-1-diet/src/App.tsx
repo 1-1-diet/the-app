@@ -49,7 +49,7 @@ import UploadImageComplete from "./pages/Register/UploadImageComplete";
 import { location, home, person, cart, chatbubble } from "ionicons/icons";
 import Tab1 from "./pages/Tab1/Tab1";
 
-import Recept from "./components/Blogs-Recpten/Recpten/Recept";
+import { Recept } from "./components/Blogs-Recpten/Recpten/Recept";
 import ReceptAll from "./components/Blogs-Recpten/Recpten/ReceptAll";
 import Blog from "./components/Blogs-Recpten/Blogs/Blog";
 import BlogAll from "./components/Blogs-Recpten/Blogs/BlogAll";
@@ -160,10 +160,21 @@ const App: React.FC = () => {
                   <Route exact path="/tabs/tab3" component={Tab3} />
                   <Route exact path="/tabs/tab4" component={Tab4} />
                   <Route exact path="/tabs/tab5" component={Tab5} />
+
                   <Route
                     path="/tabs/tab4/:productId"
                     component={ProductDetails}
                   />
+                  <Route
+                    path="/tabs/tab1/recept/:receptId"
+                    component={Recept}
+                  />
+                  <Route
+                    exact
+                    path="/tabs/tab1/blog/:blogId"
+                    component={Blog}
+                  />
+
                   <Route exact path="/tabs/chat" component={chat} />
                   <Route exact path="/tabs/call" component={call} />
 
@@ -184,10 +195,7 @@ const App: React.FC = () => {
                     component={FinishOrder}
                   />
 
-                  <Route exact path="/tabs/Recept" component={Recept} />
                   <Route exact path="/tabs/ReceptAll" component={ReceptAll} />
-
-                  <Route exact path="/tabs/Blog" component={Blog} />
                   <Route exact path="/tabs/BlogALl" component={BlogAll} />
                 </IonRouterOutlet>
 
