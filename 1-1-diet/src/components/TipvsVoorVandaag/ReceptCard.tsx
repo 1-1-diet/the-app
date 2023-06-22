@@ -5,10 +5,10 @@ import { heart } from "ionicons/icons";
 export const ReceptCard = (recept: any) => {
   return (
     <div className={styles.mainContent}>
-      <IonRouterLink href="/tabs/Recept">
+      <IonRouterLink href={`/tabs/tab1/recept/${recept.id}`}>
         <img
           alt="Yoghert met aardbij"
-          src={require(`../../Images/${recept.img}`)}
+          src={recept.img}
           className={styles.img}
         />
         <div className={styles.textContent}>

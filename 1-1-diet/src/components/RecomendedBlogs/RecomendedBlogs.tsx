@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import styles from "./RecomendedBlogs.module.css";
 import { book } from "ionicons/icons";
-import { Blogs } from "./Blogs";
+import { Blogs } from "../Blogs-Recpten/data";
 
 const RecomendedBlogs: React.FC = () => {
   return (
@@ -19,11 +19,11 @@ const RecomendedBlogs: React.FC = () => {
         {Blogs?.map((element: any) => {
           return (
             <SwiperSlide key={element.title}>
-              <IonRouterLink href="/tabs/Blog">
+              <IonRouterLink href={`/tabs/tab1/blog/${element.id}`}>
                 <IonCard className={styles.BlogImg}>
                   <img
                     alt={element.title}
-                    src={require(`../../Images/${element.img}`)}
+                    src={element.image}
                     className={styles.img}
                   />
                   <div className={styles.BlogText}>

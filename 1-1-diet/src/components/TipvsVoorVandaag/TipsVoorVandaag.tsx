@@ -4,6 +4,7 @@ import "swiper/css";
 import styles from "./TipsVoorVandaag.module.css";
 import ReceptCard from "./ReceptCard";
 import { Recept } from "./recept";
+import { Recepten } from "../Blogs-Recpten/data";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function TipsVoorVandaag() {
@@ -11,7 +12,7 @@ export default function TipsVoorVandaag() {
   const [cat, setCat] = useState("ontbijt");
 
   const filteredRecipes = useMemo(() => {
-    return Recept.filter((recipe) => {
+    return Recepten.filter((recipe) => {
       return recipe.time === filteredOption;
     });
   }, [filteredOption]);
@@ -65,10 +66,11 @@ export default function TipsVoorVandaag() {
             return (
               <SwiperSlide key={element.title} className={styles.swiperSlide}>
                 <ReceptCard
+                  id={element.id}
                   title={element.title}
                   bakeTime={element.bakeTime}
                   yummies={element.yummies}
-                  img={element.img}
+                  img={element.image}
                 />
               </SwiperSlide>
             );
