@@ -149,3 +149,7 @@
   aspect-ratio: 1/1;
   object-fit: cover;
 }
+
+.extra {
+  margin-bottom: 15vh;
+}

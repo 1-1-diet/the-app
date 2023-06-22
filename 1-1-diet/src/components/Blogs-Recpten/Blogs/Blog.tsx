@@ -6,6 +6,7 @@ import { Blogs } from "../data";
 import { heart } from "ionicons/icons";
 import BackButton from "../../BackButton";
 import { useParams } from "react-router";
+import RecomendedBlogs from "../../RecomendedBlogs/RecomendedBlogs";
 
 export default function Blog() {
   const { blogId } = useParams<{ blogId: string }>();
@@ -36,7 +37,12 @@ export default function Blog() {
             </div>
           </div>
           <div className={styles.mainContent}>
-            <IonText>{blogs.discription}</IonText>
+            <div className={styles.center}>
+              <IonText>{blogs.discription}</IonText>
+            </div>
+            <div className={styles.recommendContainer}>
+              <RecomendedBlogs />
+            </div>
           </div>
         </div>
       </IonContent>

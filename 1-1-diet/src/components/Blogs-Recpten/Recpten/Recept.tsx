@@ -6,6 +6,7 @@ import { Recepten } from "../data";
 import { timeOutline, heart, chevronDownOutline } from "ionicons/icons";
 import BackButton from "../../BackButton";
 import { useParams } from "react-router";
+import TipsVoorVandaag from "../../TipvsVoorVandaag/TipsVoorVandaag";
 
 export const Recept = () => {
   const { receptId } = useParams<{ receptId: string }>();
@@ -73,6 +74,9 @@ export const Recept = () => {
                   );
                 })}
               </div>
+            </div>
+            <div className={styles.extra}>
+              <TipsVoorVandaag />
             </div>
           </div>
         </div>
