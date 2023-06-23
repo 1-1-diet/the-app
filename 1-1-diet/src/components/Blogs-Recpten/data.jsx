@@ -268,7 +268,7 @@ export const Blogs = [
   {
     id: "3",
     image: advocado,
-    title: "Gelukkig mag ik weer langs bij mijn consulent",
+    title: "Weer langs mijn consulent",
     date: "Dec 4 2022",
     yummies: "150",
     tag: "populair",

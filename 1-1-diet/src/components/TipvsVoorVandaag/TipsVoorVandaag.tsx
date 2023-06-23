@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { IonButton, IonLabel, IonText } from "@ionic/react";
+import { IonButton, IonLabel, IonRouterLink, IonText } from "@ionic/react";
 import "swiper/css";
 import styles from "./TipsVoorVandaag.module.css";
 import ReceptCard from "./ReceptCard";
@@ -30,7 +30,9 @@ export default function TipsVoorVandaag() {
         <div className={styles.headerContent}>
           <div className={styles.titleContent}>
             <h1 id={styles.title}>Tips van de week</h1>
-            <IonLabel id={styles.toonAlle}>Toon alle</IonLabel>
+            <IonRouterLink href="/tabs/ReceptAll">
+              <IonLabel id={styles.toonAlle}>Toon alle</IonLabel>
+            </IonRouterLink>
           </div>
           <Swiper
             className={styles.catContainer}

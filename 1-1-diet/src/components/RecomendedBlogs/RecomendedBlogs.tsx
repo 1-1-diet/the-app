@@ -12,7 +12,9 @@ const RecomendedBlogs: React.FC = () => {
       <div className={styles.centerHeader}>
         <div className={styles.titleContent}>
           <h1 id={styles.title}>Aanbevolen blogs</h1>
-          <IonLabel id={styles.toonAlle}>Toon Alle</IonLabel>
+          <IonRouterLink href="/tabs/BlogAll">
+            <IonLabel id={styles.toonAlle}>Toon Alle</IonLabel>
+          </IonRouterLink>
         </div>
       </div>
       <Swiper slidesPerView={1.2} grabCursor={true}>

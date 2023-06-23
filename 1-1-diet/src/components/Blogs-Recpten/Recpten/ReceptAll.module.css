@@ -1,0 +1,51 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5em;
+}
+.mainContainer h1 {
+  margin: 0 0;
+}
+
+.Container {
+  margin-top: 3em;
+  margin-bottom: 8em;
+}
+
+.Container p {
+  margin: 0 0;
+  padding: 0 0;
+  font-size: 1em;
+}
+.icon {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.image {
+  width: 25vw;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 1em;
+}
+
+hr {
+  background: lightgrey;
+  height: 0.1em;
+  width: 90%;
+  opacity: 50%;
+}
+
+.title {
+  display: flex;
+  text-align: center;
+}
+
+#title {
+  margin-top: 0;
+  font-size: 1.3em;
+}
+
+.unset {
+  all: unset;
+}
