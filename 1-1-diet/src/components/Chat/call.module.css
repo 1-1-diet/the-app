@@ -54,7 +54,7 @@
 }
 
 .buttons {
-  top: 25dvh;
+  top: 20dvh;
   display: flex;
   justify-content: space-evenly;
   gap: 1em;

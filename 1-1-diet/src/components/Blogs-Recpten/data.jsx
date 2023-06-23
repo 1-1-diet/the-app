@@ -16,7 +16,7 @@ export const Recepten = [
     recept: 0,
     time: "ontbijt",
     image: aardbij,
-    title: "Yoguhrt met aardbei",
+    title: "Yoghurt met aardbei",
     bakeTime: "5 minuten",
     yummies: "150",
     tags: [
@@ -29,7 +29,7 @@ export const Recepten = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ipsum quis augue laoreet, nec finibus felis dignissim. Aenean dignissim hendrerit aliquam. Aliquam erat volutpat. Nam bibendum purus vel pretium varius. Suspendisse egestas felis eu ipsum fringilla sagittis. Proin consectetur, nisi vitae aliquam pellentesque, tellus sem finibus orci, eu tristique ante libero sit amet elit. Phasellus ornare vel enim non ultrices.",
     ingridient: [
       { image: aardbij, title: "Yoghurt", wheight: "200g" },
-      { image: aardbij, title: "Aardbiij", wheight: "200g" },
+      { image: aardbij, title: "Aardbei", wheight: "200g" },
     ],
   },
   {
@@ -50,7 +50,7 @@ export const Recepten = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ipsum quis augue laoreet, nec finibus felis dignissim. Aenean dignissim hendrerit aliquam. Aliquam erat volutpat. Nam bibendum purus vel pretium varius. Suspendisse egestas felis eu ipsum fringilla sagittis. Proin consectetur, nisi vitae aliquam pellentesque, tellus sem finibus orci, eu tristique ante libero sit amet elit. Phasellus ornare vel enim non ultrices.",
     ingridient: [
       { image: aardbij, title: "Yoghurt", wheight: "200g" },
-      { image: aardbij, title: "Aardbiij", wheight: "200g" },
+      { image: aardbij, title: "Aardbei", wheight: "200g" },
     ],
   },
   {
@@ -71,7 +71,7 @@ export const Recepten = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ipsum quis augue laoreet, nec finibus felis dignissim. Aenean dignissim hendrerit aliquam. Aliquam erat volutpat. Nam bibendum purus vel pretium varius. Suspendisse egestas felis eu ipsum fringilla sagittis. Proin consectetur, nisi vitae aliquam pellentesque, tellus sem finibus orci, eu tristique ante libero sit amet elit. Phasellus ornare vel enim non ultrices.",
     ingridient: [
       { image: aardbij, title: "Yoghurt", wheight: "200g" },
-      { image: aardbij, title: "Aardbiij", wheight: "200g" },
+      { image: aardbij, title: "Aardbei", wheight: "200g" },
     ],
   },
   {
@@ -92,7 +92,7 @@ export const Recepten = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ipsum quis augue laoreet, nec finibus felis dignissim. Aenean dignissim hendrerit aliquam. Aliquam erat volutpat. Nam bibendum purus vel pretium varius. Suspendisse egestas felis eu ipsum fringilla sagittis. Proin consectetur, nisi vitae aliquam pellentesque, tellus sem finibus orci, eu tristique ante libero sit amet elit. Phasellus ornare vel enim non ultrices.",
     ingridient: [
       { image: aardbij, title: "Yoghurt", wheight: "200g" },
-      { image: aardbij, title: "Aardbiij", wheight: "200g" },
+      { image: aardbij, title: "Aardbei", wheight: "200g" },
     ],
   },
   {
@@ -113,7 +113,7 @@ export const Recepten = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ipsum quis augue laoreet, nec finibus felis dignissim. Aenean dignissim hendrerit aliquam. Aliquam erat volutpat. Nam bibendum purus vel pretium varius. Suspendisse egestas felis eu ipsum fringilla sagittis. Proin consectetur, nisi vitae aliquam pellentesque, tellus sem finibus orci, eu tristique ante libero sit amet elit. Phasellus ornare vel enim non ultrices.",
     ingridient: [
       { image: aardbij, title: "Yoghurt", wheight: "200g" },
-      { image: aardbij, title: "Aardbiij", wheight: "200g" },
+      { image: aardbij, title: "Aardbei", wheight: "200g" },
     ],
   },
   {
@@ -134,7 +134,7 @@ export const Recepten = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ipsum quis augue laoreet, nec finibus felis dignissim. Aenean dignissim hendrerit aliquam. Aliquam erat volutpat. Nam bibendum purus vel pretium varius. Suspendisse egestas felis eu ipsum fringilla sagittis. Proin consectetur, nisi vitae aliquam pellentesque, tellus sem finibus orci, eu tristique ante libero sit amet elit. Phasellus ornare vel enim non ultrices.",
     ingridient: [
       { image: aardbij, title: "Yoghurt", wheight: "200g" },
-      { image: aardbij, title: "Aardbiij", wheight: "200g" },
+      { image: aardbij, title: "Aardbei", wheight: "200g" },
     ],
   },
   {
@@ -155,7 +155,7 @@ export const Recepten = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ipsum quis augue laoreet, nec finibus felis dignissim. Aenean dignissim hendrerit aliquam. Aliquam erat volutpat. Nam bibendum purus vel pretium varius. Suspendisse egestas felis eu ipsum fringilla sagittis. Proin consectetur, nisi vitae aliquam pellentesque, tellus sem finibus orci, eu tristique ante libero sit amet elit. Phasellus ornare vel enim non ultrices.",
     ingridient: [
       { image: aardbij, title: "Yoghurt", wheight: "200g" },
-      { image: aardbij, title: "Aardbiij", wheight: "200g" },
+      { image: aardbij, title: "Aardbei", wheight: "200g" },
     ],
   },
   {
@@ -176,7 +176,7 @@ export const Recepten = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ipsum quis augue laoreet, nec finibus felis dignissim. Aenean dignissim hendrerit aliquam. Aliquam erat volutpat. Nam bibendum purus vel pretium varius. Suspendisse egestas felis eu ipsum fringilla sagittis. Proin consectetur, nisi vitae aliquam pellentesque, tellus sem finibus orci, eu tristique ante libero sit amet elit. Phasellus ornare vel enim non ultrices.",
     ingridient: [
       { image: aardbij, title: "Yoghurt", wheight: "200g" },
-      { image: aardbij, title: "Aardbiij", wheight: "200g" },
+      { image: aardbij, title: "Aardbei", wheight: "200g" },
     ],
   },
   {
@@ -197,7 +197,7 @@ export const Recepten = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ipsum quis augue laoreet, nec finibus felis dignissim. Aenean dignissim hendrerit aliquam. Aliquam erat volutpat. Nam bibendum purus vel pretium varius. Suspendisse egestas felis eu ipsum fringilla sagittis. Proin consectetur, nisi vitae aliquam pellentesque, tellus sem finibus orci, eu tristique ante libero sit amet elit. Phasellus ornare vel enim non ultrices.",
     ingridient: [
       { image: aardbij, title: "Yoghurt", wheight: "200g" },
-      { image: aardbij, title: "Aardbiij", wheight: "200g" },
+      { image: aardbij, title: "Aardbei", wheight: "200g" },
     ],
   },
   {
@@ -218,7 +218,7 @@ export const Recepten = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ipsum quis augue laoreet, nec finibus felis dignissim. Aenean dignissim hendrerit aliquam. Aliquam erat volutpat. Nam bibendum purus vel pretium varius. Suspendisse egestas felis eu ipsum fringilla sagittis. Proin consectetur, nisi vitae aliquam pellentesque, tellus sem finibus orci, eu tristique ante libero sit amet elit. Phasellus ornare vel enim non ultrices.",
     ingridient: [
       { image: aardbij, title: "Yoghurt", wheight: "200g" },
-      { image: aardbij, title: "Aardbiij", wheight: "200g" },
+      { image: aardbij, title: "Aardbei", wheight: "200g" },
     ],
   },
   {
@@ -239,7 +239,7 @@ export const Recepten = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ipsum quis augue laoreet, nec finibus felis dignissim. Aenean dignissim hendrerit aliquam. Aliquam erat volutpat. Nam bibendum purus vel pretium varius. Suspendisse egestas felis eu ipsum fringilla sagittis. Proin consectetur, nisi vitae aliquam pellentesque, tellus sem finibus orci, eu tristique ante libero sit amet elit. Phasellus ornare vel enim non ultrices.",
     ingridient: [
       { image: aardbij, title: "Yoghurt", wheight: "200g" },
-      { image: aardbij, title: "Aardbiij", wheight: "200g" },
+      { image: aardbij, title: "Aardbei", wheight: "200g" },
     ],
   },
 ];
