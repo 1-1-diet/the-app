@@ -100,10 +100,10 @@ export default function Instellingen() {
               </IonCardSubtitle>
             </IonCardHeader>
             <IonButton fill="clear" onClick={() => setShowLogout(false)}>
-              Cancel
+              Nee
             </IonButton>
             <IonButton color="danger" fill="clear" href="/">
-              Log uit
+              Ja, log uit
             </IonButton>
           </IonCard>
         </div>

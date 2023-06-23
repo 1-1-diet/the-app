@@ -6,6 +6,11 @@ import {
   IonRouterLink,
   IonPage,
   IonContent,
+  IonCard,
+  IonCardHeader,
+  IonCardTitle,
+  IonItem,
+  IonInput,
 } from "@ionic/react";
 import styles from "../../components/ProductPage/ProductDetails/ProductDetails.module.css";
 import {
@@ -42,6 +47,12 @@ export const ProductDetails = () => {
         return (prevCount = 1);
       }
     });
+  };
+
+  const [added, setAdded] = useState("siliciumweg 12a");
+  const [showAdded, setShowAdded] = useState(false);
+  const toggleShowAdded = () => {
+    setShowAdded(!showAdded);
   };
 
   const { productId } = useParams<{ productId: string }>();
@@ -129,16 +140,55 @@ export const ProductDetails = () => {
                 <IonText>{product.description}</IonText>
               </div>
               <div className={styles.btnCotainer}>
-                <IonButton id={styles.shoppingCard} color="secondary">
+                <IonButton
+                  onClick={toggleShowAdded}
+                  id={styles.shoppingCard}
+                  color="secondary"
+                >
                   <div className={styles.shoppingCardBtn}>
                     Winkelmandje
                     <IonIcon icon={bagHandleOutline} size="large" />
                   </div>
                 </IonButton>
-                <IonButton id={styles.buyNow} color="navigation">
-                  Bestel nu
+                <IonButton
+                  href="/tabs/OrderList/Finish"
+                  id={styles.buyNow}
+                  color="navigation"
+                >
+                  Snel bestellen
                 </IonButton>
               </div>
+            </div>
+            <div
+              id={showAdded ? `` : `${styles.hide}`}
+              className={styles.backgroundBlur}
+            >
+              <IonCard>
+                <IonCardHeader>
+                  <IonCardTitle color="secondary">
+                    <h1>
+                      {product.title} is succesvol toegevoegd aan je
+                      Winkelmandje
+                    </h1>
+                  </IonCardTitle>
+                </IonCardHeader>
+                <IonButton
+                  color="primary"
+                  fill="clear"
+                  onClick={() => setShowAdded(false)}
+                  href="/tabs/OrderList/Finish"
+                >
+                  Bestel nu
+                </IonButton>
+                <IonButton
+                  color="secondary"
+                  fill="solid"
+                  onClick={() => setShowAdded(false)}
+                  href="/tabs/tab4"
+                >
+                  Winkel verder
+                </IonButton>
+              </IonCard>
             </div>
           </div>
           {/* <div className={styles.extra}>

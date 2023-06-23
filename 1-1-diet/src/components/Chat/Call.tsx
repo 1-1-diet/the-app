@@ -51,7 +51,10 @@ export default function Call() {
                     icon={volumeMediumOutline}
                   />
                 </div>
-                <IonRouterLink href="/tabs/chat" style={{ zIndex: "100" }}>
+                <IonRouterLink
+                  href="javascript:history.back()"
+                  style={{ zIndex: "100" }}
+                >
                   <div className={styles.button2}>
                     <IonIcon
                       slot="icon-only"

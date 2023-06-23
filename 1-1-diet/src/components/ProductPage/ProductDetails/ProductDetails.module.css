@@ -196,3 +196,38 @@
 #extraTitle {
   font-size: 2em;
 }
+
+.backgroundBlur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100vw;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#hide {
+  display: none;
+}
+
+.backgroundBlur ion-card {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.backgroundBlur ion-item {
+  width: 80vw;
+}
+
+.backgroundBlur ion-item ion-button {
+  z-index: 999;
+}
+
+.backgroundBlur h1 {
+  font-size: 1.2em;
+  margin-top: 0;
+}
